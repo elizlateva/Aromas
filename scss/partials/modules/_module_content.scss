@@ -1,0 +1,69 @@
+/* ------------------------------------------------------------ *\
+	Content
+\* ------------------------------------------------------------ */
+
+.content {
+    padding: 0 20px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    margin-bottom: 100px;
+    & h1 {
+        font-size: 20px;
+    }
+    & .text-wrapper {
+        & .text {
+            text-align: center;
+            margin: 20px 0;
+        }
+    }
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+    & a.button.black_border {
+        margin: 0 auto;
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+    & .image-wrapper {
+        width: 100%;
+    }
+}
+
+@media #{$desktop} {
+    .content {
+        padding: 0;
+        & h1 {
+            font-size: $font-size-26;
+        }
+        & .text-wrapper {
+            & .text {
+                text-align: right;
+                margin: 20px;
+            }
+        }
+        & a.button.black_border {
+            margin-right: 35px;
+            float: right;
+            overflow: hidden;
+        }
+        & .image-wrapper {
+            float: right;
+            overflow: hidden;
+            &:after {
+                clear: both;
+                content: '';
+                display: block;
+            }
+        }
+    }
+}
+
+@media #{$hd_desktop} {
+    .content .text-wrapper .text {
+        margin: 100px 20px;
+    }
+}

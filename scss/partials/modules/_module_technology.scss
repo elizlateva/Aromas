@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------ *\
+	Technology
+\* ------------------------------------------------------------ */
+
+.technology {
+    padding: 0 20px 20px;
+    overflow: hidden;
+    margin-bottom: 100px;
+    & h1 {
+        font-size: 20px;
+    }
+    & .image-wrapper {
+        text-align: center;
+        background: $white;
+    }
+    & .text-wrapper {
+        background: $black;
+        padding: 40px;
+        & .text p {
+            line-height: 25px;
+            color: $white;
+            &:first-child {
+                font-weight: bold;
+            }
+        }
+    }
+    & a.button.white_border {
+        margin-top: 40px;
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+}
+
+@media #{$desktop} {
+    .technology {
+        padding: 0;
+        & h1 {
+            font-size: $font-size-26;
+        }
+        & .image-wrapper {
+            float: left;
+        }
+        & .text-wrapper {
+            float: right;
+            height: 427px;
+            padding: 70px 40px;
+            & .text p {
+                line-height: 30px;
+            }
+        }
+        & a.button.white_border {
+            margin-top: 70px;
+        }
+    }
+}

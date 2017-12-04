@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	Image-wrapper
+\* ------------------------------------------------------------ */
+
+.content .image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+@media #{$desktop} {
+    .content .image-wrapper {
+        width: 50%;
+    }
+}
+
+.technology .image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+@media #{$desktop} {
+    .technology .image-wrapper {
+        width: 50%;
+    }
+}

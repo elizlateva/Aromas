@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+    Variables
+\* ------------------------------------------------------------ */
+
+
+/*  Colors  */
+
+$white: #fff;
+$black: #000;
+
+/*  Base body  */
+
+$font-family: "Open Sans",
+sans-serif;
+$font-family-1: "Monotype Corsiva";
+$font-family-2: "DancingScript";
+$font-size-15: 15px;
+$font-size-17: 17px;
+$font-size-26: 26px;
+$font-size-button:20px;
+
+/*  Links  */
+
+$color-link: inherit;
+
+/*  @media */
+
+$smartphone: "only screen and (min-width : 480px)";
+$tablet: "only screen and (min-width : 768px)";
+$desktop: "only screen and (min-width : 1023px)";
+$hd_desktop:"only screen and (min-width: 1600px)";

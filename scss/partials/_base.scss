@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+body {
+    background: url("/css/images/background.png") repeat fixed;
+    background-size: cover;
+    font-family: $font-family;
+    font-size: $font-size-15;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1 {
+    font-family: $font-family;
+    font-size: $font-size-26;
+    font-weight: 400;
+    text-align: center;
+    color: $black;
+    text-transform: uppercase;
+    background: $white;
+    padding: 10px 0;
+}
+
+h2 {
+    font-family: $font-family;
+    font-size: $font-size-17;
+    font-weight: 400;
+    color: $white;
+    line-height: 30px;
+}

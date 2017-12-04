@@ -1,0 +1,13 @@
+.text {
+    font-family: $font-family;
+    font-size: $font-size-15;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+@media #{$desktop} {
+    .text {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}

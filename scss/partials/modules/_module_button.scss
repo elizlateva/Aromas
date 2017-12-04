@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+a.button {
+    width: 135px;
+    padding: 7px;
+    font-family: $font-family;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    &.black_border {
+        border: 2px solid $black;
+        color: $black;
+    }
+    &.white_border {
+        border: 2px solid $white;
+        color: $white;
+    }
+}
