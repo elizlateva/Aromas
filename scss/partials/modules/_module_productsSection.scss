@@ -7,40 +7,40 @@
     & h1 {
         font-size: 20px;
     }
-    .swiper-container {
+    & .swiper-container {
         margin-bottom: 100px;
         & .swiper-slide {
             position: relative;
-            &:hover {
-                & .overlay {
-                    opacity: 1;
-                }
-                & span:after {
-                    width: 90%;
-                    left: 1%;
-                    content: "";
-                    position: absolute;
-                    bottom: -10px;
-                    border-bottom: 2px solid $white;
-                }
-                & a.button.white_border.overlay {
-                    background: none;
-                }
-            }
-            & img {
-                height: auto;
-                width: 100%;
-            }
-            & span {
-                font-family: $font-family-2;
-                font-size: 30px;
-                font-weight: 300;
-                color: $white;
+            // &:hover {
+            //     & .overlay {
+            //         opacity: 0;
+            //     }
+            & span:after {
+                width: 90%;
+                left: 1%;
+                content: "";
                 position: absolute;
-                z-index: 1;
-                top: 30%;
-                left: 20%;
+                bottom: -10px;
+                border-bottom: 2px solid $white;
             }
+            & a.button.white_border.overlay {
+                background: none;
+            }
+        }
+        & a img {
+            height: auto;
+            width: 100%;
+            display: block;
+        }
+        & span {
+            font-family: $font-family-2;
+            font-size: 30px;
+            font-weight: 300;
+            color: $white;
+            position: absolute;
+            z-index: 1;
+            top: 35%;
+            left: 10%;
         }
     }
 }
@@ -64,12 +64,25 @@ a.button.white_border.overlay {
     width: 150px;
     height: 40px;
     text-align: center;
-    left: 20%;
-    top: 60%;
+    left: 10%;
+    top: 75%;
 }
 
 @media #{$desktop} {
-    .products h1 {
-        font-size: $font-size-26;
+    .products {
+        & h1 {
+            font-size: $font-size-26;
+        }
+        & .swiper-container .swiper-slide {
+            &:hover {
+                & .overlay {
+                    opacity: 1;
+                }
+            }
+        }
+        & span {
+            top: 30%;
+            left: 20%;
+        }
     }
 }
