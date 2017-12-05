@@ -1,0 +1,101 @@
+/* ------------------------------------------------------------ *\
+	Blog-article
+\* ------------------------------------------------------------ */
+
+.blog_article {
+    padding: 0 20px 20px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, .8);
+    font-family: $font-family;
+    color: $black;
+    margin-bottom: 100px;
+    & h1 {
+        font-size: 20px;
+    }
+    & .subtitle {
+        font-size: 18px;
+        line-height: 35px;
+        padding: 10px 0;
+    }
+}
+
+ul.user {
+    text-align: left;
+    padding: 20px 0;
+    font-size: 15px;
+    color: #022264;
+    & li {
+        display: inline;
+        padding-right: 40px;
+        &.author:before {
+            content: url("/css/images/author_icon.png");
+            display: inline-block;
+            margin-right: 10px;
+        }
+        &.date:before {
+            content: url("/css/images/date-icon.png");
+            display: inline-block;
+            margin-right: 10px;
+        }
+        & a {
+            color: #022264;
+        }
+    }
+}
+
+.blog_text p,
+.blog_text ul li,
+.blog_comments p {
+    font-size: 15px;
+    font-family: $font-family;
+    line-height: 20px;
+    font-weight: 300;
+    word-break: keep-all;
+    text-align: left;
+}
+
+.blog_text ul li {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.fb_share_button {
+    padding: 10px 0;
+}
+
+.blog_comments ul.user li {
+    display: block;
+}
+
+.blog_comments ul.user li.author::before,
+.blog_comments ul.user li.date::before {
+    display: none;
+}
+
+.blog_submit_form {
+    width: 100%;
+    margin: 0 auto;
+    color: $black;
+    font-size: 15px;
+    margin: 20px 0;
+    & .name_input {
+        border: 1px solid $black;
+        width: 100%;
+        height: 35px;
+        text-indent: 20px;
+    }
+    & .enter_text {
+        border: 1px solid $black;
+        width: 100%;
+        height: 200px;
+        text-indent: 20px;
+        padding: 10px 0;
+        margin: 10px 0;
+    }
+    & .submit {
+        width: 50%;
+        height: 35px;
+        border: 2px solid $black;
+    }
+}

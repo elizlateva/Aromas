@@ -3,11 +3,11 @@
 \* ------------------------------------------------------------ */
 
 .skrollr-body {
-    margin: 50px auto;
+    margin: 100px auto;
 }
 
 @media #{$desktop} {
     .skrollr-body {
-        margin: 150px auto 0;
+        margin: 150px auto;
     }
 }
