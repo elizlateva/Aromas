@@ -12,14 +12,9 @@
     }
     & .text-wrapper {
         & .text {
-            text-align: center;
+            overflow: hidden;
             margin: 20px 0;
         }
-    }
-    &:after {
-        display: block;
-        content: "";
-        clear: both;
     }
     & a.button.black_border {
         margin: 0 auto;
@@ -40,9 +35,18 @@
             font-size: $font-size-26;
         }
         & .text-wrapper {
+            float: left;
             & .text {
+                float: right;
+                width: 100%;
                 text-align: right;
-                margin: 20px;
+                padding: 20px;
+                overflow: hidden;
+            }
+            &:after {
+                clear: both;
+                content: '';
+                display: block;
             }
         }
         & a.button.black_border {
@@ -64,6 +68,14 @@
 
 @media #{$hd_desktop} {
     .content .text-wrapper .text {
-        margin: 100px 20px;
+        width: 70%;
+        padding: 50px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .content .text-wrapper .text {
+        width: 50%;
+        padding: 10 0px;
     }
 }

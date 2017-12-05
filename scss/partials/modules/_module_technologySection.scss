@@ -12,10 +12,14 @@
     & .image-wrapper {
         text-align: center;
         background: $white;
+        & img {
+            width: 200px;
+        }
     }
     & .text-wrapper {
         background: $black;
         padding: 40px;
+        text-align: center;
         & .text p {
             line-height: 25px;
             color: $white;
@@ -25,7 +29,7 @@
         }
     }
     & a.button.white_border {
-        margin-top: 40px;
+        margin: 40px auto 0;
         &:hover {
             background-color: $white;
             color: $black;
@@ -41,6 +45,9 @@
         }
         & .image-wrapper {
             float: left;
+            & img {
+                width: auto;
+            }
         }
         & .text-wrapper {
             float: right;
@@ -48,10 +55,11 @@
             padding: 70px 40px;
             & .text p {
                 line-height: 30px;
+                text-align: left;
             }
         }
         & a.button.white_border {
-            margin-top: 70px;
+            margin: 70px 0;
         }
     }
 }

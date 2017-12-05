@@ -8,95 +8,50 @@
     & ul {
         & a {
             display: block;
-            padding: 7px 0 7px 4px;
+            padding: 20px 0;
+            &:hover {
+                background-color: #dcd9de;
+            }
         }
     }
     &.active {
         display: block;
         transform: translateX(0);
-        right: 0;
-        position: absolute;
         height: 100vh;
         width: 100%;
         background: $white;
-        margin-top: 10px;
+        margin-top: 22px;
         text-align: center;
-        & li {
-            margin-bottom: 15px;
-        }
-    }
-}
-
-@media #{$desktop} {
-    .nav {
-        & ul {
-            display: block;
-            position: absolute;
-            top: -41px;
-            right: 0;
-            margin: auto;
-            left: 174px;
-            width: 838px;
-            & li {
-                display: inline-block;
-                &:hover .sub-list {
-                    display: block;
-                }
-                & a {
-                    position: relative;
-                    padding: 19px 14px;
-                    &:hover:after {
-                        width: 50%;
-                        left: 25%;
-                        content: "";
-                        position: absolute;
-                        height: 1px;
-                        bottom: 10px;
-                        border-bottom: 2px solid $black;
-                    }
-                }
-            }
-        }
     }
 }
 
 .nav ul.sub-list {
     display: none;
-    position: absolute;
-    top: 50px;
-    background: $white;
-    width: 145px;
-    left: 150px;
-    text-transform: initial;
-    padding: 10px 0;
+    width: 100%;
     & li {
         display: list-item;
         & a {
-            padding: 5px 14px;
-            &:hover {
-                font-weight: bold;
-            }
-            &:hover:after {
-                border-bottom: none;
-            }
+            padding: 20px 0;
         }
     }
 }
 
-// .nav li.has-sub-list {
-//     display: none;
-// }
+.fa.fa-caret-down {
+    margin-left: 10px;
+}
+
 .nav li.active .sub-list {
-    display: block;
+    display: inline-block;
     position: static;
+    text-transform: uppercase;
 }
 
 .nav-trigger {
     position: absolute;
-    right: 37px;
+    right: 20px;
     top: 20px;
     display: inline-block;
-    z-index: 15;
+    z-index: 3;
     width: 40px;
     height: 26px;
     & span {
@@ -145,14 +100,66 @@
 }
 
 @media #{$desktop} {
+    .nav {
+        display: block;
+        & ul {
+            position: absolute;
+            top: -41px;
+            right: 0;
+            & li {
+                display: inline-block;
+                cursor: pointer;
+                &:hover .sub-list {
+                    display: block;
+                }
+            }
+            & a {
+                position: relative;
+                padding: 20px 10px;
+                &:hover {
+                    background-color: transparent;
+                }
+                &:hover:after {
+                    width: 50%;
+                    left: 25%;
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    bottom: 10px;
+                    border-bottom: 2px solid $black;
+                }
+            }
+        }
+    }
+    .nav ul.sub-list {
+        display: none;
+        position: absolute;
+        top: 54px;
+        background: rgba(255, 255, 255, .8);
+        width: 145px;
+        right: 221px;
+        text-transform: initial;
+        & li {
+            display: list-item;
+            & a {
+                padding: 10px 14px;
+                &:hover {
+                    // font-weight: bold;
+                    background-color: rgba(255, 255, 255, .8);
+                }
+                &:hover:after {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .nav li.has-sub-list a:hover:after {
+        border-bottom: 0;
+    }
     .nav-trigger {
         display: none;
     }
-    .nav {
-        display: block;
-        & li {
-            display: inline-block;
-            cursor: pointer;
-        }
+    .fa.fa-caret-down {
+        display: none;
     }
 }

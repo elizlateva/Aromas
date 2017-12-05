@@ -3,6 +3,7 @@
     font-size: $font-size-15;
     line-height: 20px;
     font-weight: 300;
+    word-break: keep-all;
 }
 
 @media #{$desktop} {

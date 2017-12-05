@@ -48,9 +48,9 @@
 
 @media #{$tablet} {
     .footer_menu_wrapper {
-        width: 80%;
+        width: 46%;
+        padding: 0 5px;
         margin: 0 auto;
-        margin-left: 20%;
         .footer_menu {
             width: 50%;
             text-align: left;
@@ -65,8 +65,8 @@
 @media #{$desktop} {
     .footer_menu_wrapper {
         width: 980px;
-        margin: 10px auto;
         overflow: hidden;
+        padding: 0 20px;
         & .footer_menu {
             width: 23%;
             margin: 0;
@@ -74,6 +74,7 @@
     }
     .social_icon {
         margin-top: 50px;
+        text-align: center;
     }
     .copyright {
         float: left;

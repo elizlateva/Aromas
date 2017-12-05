@@ -3,7 +3,7 @@
 \* ------------------------------------------------------------ */
 
 .header {
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .8);
     position: fixed;
     top: 0;
     left: 0;
@@ -25,21 +25,24 @@
             height: 40px;
         }
     }
-    & .nav-lang {
+    & .nav-lang ul {
         font-size: $font-size-15;
         font-weight: 400;
-        & ul {
-            & li {
-                display: inline-block;
-                &:nth-child(2) {
-                    border-left: 1px solid $black;
-                    line-height: 8px;
+        margin: 10px 0;
+        & li {
+            display: inline-block;
+            &:nth-child(2) {
+                border-left: 1px solid $black;
+                line-height: 8px;
+            }
+            & a {
+                padding: 4px 0 4px 4px;
+                &:hover {
+                    background-color: $white;
+                    font-weight: bold;
                 }
-                & a {
-                    padding: 4px 0 4px 4px;
-                    &:hover:after {
-                        border-bottom: 0;
-                    }
+                &:hover:after {
+                    border-bottom: 0;
                 }
             }
         }
@@ -47,12 +50,9 @@
     & .phone {
         font-size: $font-size-15;
         font-weight: 400;
-        position: absolute;
-        left: 60px;
-        right: 40px;
-        top: 30px;
-        margin: auto;
-        width: 150px;
+        text-align: center;
+        display: block;
+        margin-top: -35px;
         &:before {
             content: url("/css/images/phone.png");
             vertical-align: middle;
@@ -76,19 +76,20 @@
         }
         & .phone {
             font-size: 18px;
-            position: static;
             float: right;
-            margin-right: 70px;
-            width: auto;
+            margin-right: 80px;
+            margin-top: 0;
             overflow: hidden;
+            &:after {
+                clear: both;
+                display: block;
+                content: '';
+            }
         }
-        & .nav-lang {
-            display: inline-block;
-            vertical-align: top;
-            line-height: 18px;
+        & .nav-lang ul {
             position: absolute;
-            top: -20px;
-            right: 228px;
+            top: -70px;
+            right: 10px
         }
     }
     & .nav {
