@@ -1,0 +1,104 @@
+/* ------------------------------------------------------------ *\
+	Products-list
+\* ------------------------------------------------------------ */
+
+.list-container {
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    & .list-box {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        padding: 2px;
+        & a {
+            width: 100%;
+            display: block;
+            max-height: 320px;
+            height: 100%;
+            & img {
+                width: 100%;
+            }
+            & span {
+                font-family: $font-family-2;
+                font-size: 35px;
+                font-weight: 300;
+                color: $white;
+                position: absolute;
+                z-index: 1;
+                top: 35%;
+                left: 10%;
+                text-align: left;
+                &:hover span:after {
+                    width: 90%;
+                    left: 1%;
+                    content: "";
+                    position: absolute;
+                    bottom: -10px;
+                    border-bottom: 2px solid $white;
+                }
+            }
+        }
+    }
+}
+
+.list-container .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    margin: 2px;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    & a.button.white_border.overlay {
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        left: 7%;
+        top: 60%;
+    }
+}
+
+@media #{$tablet} {
+    .list-container {
+        & .list-box {
+            width: 50%;
+            float: left;
+            overflow: hidden;
+        }
+        &:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+    }
+}
+
+@media #{$desktop} {
+    .list-container .list-box {
+        width: 25%;
+        &:hover {
+            & .overlay {
+                opacity: 1;
+            }
+            & a.button.white_border.overlay {
+                background: none;
+            }
+            & span:after {
+                width: 90%;
+                left: 1%;
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                border-bottom: 2px solid $white;
+            }
+        }
+    }
+}

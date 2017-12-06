@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------ *\
+	Products-categories
+\* ------------------------------------------------------------ */
+
+.categories {
+    display: block;
+    padding: 20px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, .8);
+    text-align: center;
+    & ul li a {
+        display: block;
+        border: 1px solid $black;
+        color: $black;
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        &:hover,
+        &:active {
+            background: $black;
+            color: $white;
+        }
+    }
+    & .show_results {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+@media #{$smartphone} {
+    .categories ul li {
+        display: inline-block;
+        width: 25%;
+        margin: 0 10px;
+    }
+}
+
+@media #{$desktop} {
+    .categories {
+        width: 980px;
+        padding: 20px 0;
+        & ul li {
+            display: inline-block;
+            width: 17%;
+            margin: 0 13px;
+            & a {
+                font-size: 20px;
+            }
+        }
+        & .show_results {
+            font-size: 18px;
+        }
+    }
+}

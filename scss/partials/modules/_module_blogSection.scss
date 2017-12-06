@@ -3,7 +3,6 @@
 \* ------------------------------------------------------------ */
 
 .blog {
-    padding: 0 20px 20px;
     margin: 0 auto;
     text-align: center;
     & .blog_wrapper {
@@ -40,29 +39,32 @@
     }
 }
 
+.blog_pagination {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    & a {
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}
+
 @media #{$smartphone} {
     .blog .blog_wrapper {
         width: 400px;
     }
 }
 
-// @media #{$tablet} {
-//     .blog .blog_wrapper {
-//         width: 300px;
-//         display: inline-block;
-//         overflow: hidden;
-//         &:nth-child(3) {
-//             margin-left: 40px;
-//         }
-//     }
-// }
 @media #{$desktop} {
-    .blog {
+    .inner {
+        width: 980px;
+        padding: 0;
         .blog_wrapper {
             width: 300px;
             display: inline-block;
             overflow: hidden;
-            margin: 0 10px;
+            margin: 0 10px 20px;
         }
     }
 }

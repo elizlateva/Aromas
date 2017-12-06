@@ -236,6 +236,7 @@ h2 {
   left: 0;
   right: 0;
   z-index: 22;
+  padding: 13px 0;
 }
 
 .header .nav {
@@ -339,7 +340,7 @@ h2 {
   .inner {
     width: 980px;
     margin: 0 auto;
-    padding: 13px 0;
+    padding: 0;
   }
 }
 
@@ -716,10 +717,6 @@ a.button.white_border {
 
 /* ------------------------------------------------------------ *	Products
 \* ------------------------------------------------------------ */
-.products {
-  position: relative;
-}
-
 .products h1 {
   font-size: 20px;
 }
@@ -730,28 +727,23 @@ a.button.white_border {
 
 .products .swiper-container .swiper-slide {
   position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 2px;
 }
 
-.products .swiper-container .swiper-slide span:after {
-  width: 90%;
-  left: 1%;
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  border-bottom: 2px solid #fff;
-}
-
-.products .swiper-container .swiper-slide a.button.white_border.overlay {
-  background: none;
-}
-
-.products .swiper-container a img {
-  height: auto;
+.products .swiper-container .swiper-slide a {
   width: 100%;
   display: block;
+  max-height: 320px;
+  height: 100%;
 }
 
-.products .swiper-container span {
+.products .swiper-container .swiper-slide a img {
+  width: 100%;
+}
+
+.products .swiper-container .swiper-slide a span {
   font-family: "DancingScript";
   font-size: 35px;
   font-weight: 300;
@@ -760,9 +752,19 @@ a.button.white_border {
   z-index: 1;
   top: 35%;
   left: 10%;
+  text-align: left;
 }
 
-.overlay {
+.products .swiper-container .swiper-slide a span:hover span:after {
+  width: 90%;
+  left: 1%;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  border-bottom: 2px solid #fff;
+}
+
+.swiper-slide .overlay {
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   height: 99%;
@@ -772,17 +774,18 @@ a.button.white_border {
   bottom: 0;
   right: 0;
   opacity: 0;
+  margin: 2px;
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
 }
 
-a.button.white_border.overlay {
+.swiper-slide .overlay a.button.white_border.overlay {
   width: 150px;
   height: 40px;
   text-align: center;
-  left: 10%;
-  top: 75%;
+  left: 7%;
+  top: 60%;
 }
 
 @media only screen and (min-width: 1023px) {
@@ -792,10 +795,178 @@ a.button.white_border.overlay {
   .products .swiper-container .swiper-slide:hover .overlay {
     opacity: 1;
   }
-  .products span {
-    font-size: 30px;
-    top: 30%;
-    left: 20%;
+  .products .swiper-container .swiper-slide:hover a.button.white_border.overlay {
+    background: none;
+  }
+  .products .swiper-container .swiper-slide:hover span:after {
+    width: 90%;
+    left: 1%;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    border-bottom: 2px solid #fff;
+  }
+}
+
+/* ------------------------------------------------------------ *	Products-categories
+\* ------------------------------------------------------------ */
+.categories {
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.categories ul li a {
+  display: block;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.categories ul li a:hover, .categories ul li a:active {
+  background: #000;
+  color: #fff;
+}
+
+.categories .show_results {
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .categories ul li {
+    display: inline-block;
+    width: 25%;
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .categories {
+    width: 980px;
+    padding: 20px 0;
+  }
+  .categories ul li {
+    display: inline-block;
+    width: 17%;
+    margin: 0 13px;
+  }
+  .categories ul li a {
+    font-size: 20px;
+  }
+  .categories .show_results {
+    font-size: 18px;
+  }
+}
+
+/* ------------------------------------------------------------ *	Products-list
+\* ------------------------------------------------------------ */
+.list-container {
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.list-container .list-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.list-container .list-box a {
+  width: 100%;
+  display: block;
+  max-height: 320px;
+  height: 100%;
+}
+
+.list-container .list-box a img {
+  width: 100%;
+}
+
+.list-container .list-box a span {
+  font-family: "DancingScript";
+  font-size: 35px;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  left: 10%;
+  text-align: left;
+}
+
+.list-container .list-box a span:hover span:after {
+  width: 90%;
+  left: 1%;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  border-bottom: 2px solid #fff;
+}
+
+.list-container .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  margin: 2px;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.list-container .overlay a.button.white_border.overlay {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  left: 7%;
+  top: 60%;
+}
+
+@media only screen and (min-width: 768px) {
+  .list-container .list-box {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+  }
+  .list-container:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .list-container .list-box {
+    width: 25%;
+  }
+  .list-container .list-box:hover .overlay {
+    opacity: 1;
+  }
+  .list-container .list-box:hover a.button.white_border.overlay {
+    background: none;
+  }
+  .list-container .list-box:hover span:after {
+    width: 90%;
+    left: 1%;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    border-bottom: 2px solid #fff;
   }
 }
 
@@ -925,7 +1096,6 @@ a.button.white_border.overlay {
 /* ------------------------------------------------------------ *	Blog
 \* ------------------------------------------------------------ */
 .blog {
-  padding: 0 20px 20px;
   margin: 0 auto;
   text-align: center;
 }
@@ -968,6 +1138,16 @@ a.button.white_border.overlay {
   text-decoration: underline;
 }
 
+.blog_pagination {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.blog_pagination a:hover {
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 480px) {
   .blog .blog_wrapper {
     width: 400px;
@@ -975,11 +1155,15 @@ a.button.white_border.overlay {
 }
 
 @media only screen and (min-width: 1023px) {
-  .blog .blog_wrapper {
+  .inner {
+    width: 980px;
+    padding: 0;
+  }
+  .inner .blog_wrapper {
     width: 300px;
     display: inline-block;
     overflow: hidden;
-    margin: 0 10px;
+    margin: 0 10px 20px;
   }
 }
 
@@ -1034,8 +1218,19 @@ ul.user li a {
 }
 
 .blog_text p,
-.blog_text ul li,
 .blog_comments p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 20px;
+  font-weight: 300;
+  word-break: keep-all;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.blog_text ul li {
+  list-style: disc;
+  list-style-position: inside;
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   line-height: 20px;
@@ -1044,13 +1239,19 @@ ul.user li a {
   text-align: left;
 }
 
-.blog_text ul li {
-  list-style: disc;
-  list-style-position: inside;
-}
-
 .fb_share_button {
   padding: 10px 0;
+  text-align: left;
+  display: block;
+}
+
+.blog_comments {
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+}
+
+.blog_comments ul.user {
+  border-top: 1px solid #000;
 }
 
 .blog_comments ul.user li {
@@ -1075,6 +1276,7 @@ ul.user li a {
   width: 100%;
   height: 35px;
   text-indent: 20px;
+  color: #000;
 }
 
 .blog_submit_form .enter_text {
@@ -1082,19 +1284,49 @@ ul.user li a {
   width: 100%;
   height: 200px;
   text-indent: 20px;
-  padding: 10px 0;
-  margin: 10px 0;
+  padding: 20px 0;
+  margin: 20px 0;
 }
 
 .blog_submit_form .submit {
   width: 50%;
   height: 35px;
   border: 2px solid #000;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1023px) {
+  .blog_article {
+    width: 980px;
+    padding: 0;
+  }
+  .blog_article h1 {
+    font-size: 26px;
+  }
+  .blog_article .subtitle {
+    text-align: left;
+  }
+  .blog_submit_form .name_input {
+    width: 30%;
+    display: block;
+    text-align: left;
+  }
+  .blog_submit_form .enter_text {
+    width: 600px;
+    height: 250px;
+    display: block;
+    text-align: left;
+  }
+  .blog_submit_form .submit {
+    width: 20%;
+    display: block;
+    margin-left: 200px;
+  }
 }
 
 /* ------------------------------------------------------------ *	Breadcrumbs
 \* ------------------------------------------------------------ */
-.blog_breadcrumb {
+.breadcrumb {
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   line-height: 38px;
@@ -1104,31 +1336,39 @@ ul.user li a {
   margin: 0 auto;
 }
 
-.blog_breadcrumb ul.breadcrumb {
+.breadcrumb ul.breadcrumb {
   display: inline;
   padding: 10px;
+  cursor: pointer;
 }
 
-.blog_breadcrumb ul.breadcrumb li {
+.breadcrumb ul.breadcrumb li {
   display: inline;
 }
 
-.blog_breadcrumb ul.breadcrumb li + li:before {
+.breadcrumb ul.breadcrumb li + li:before {
   color: black;
   content: '|';
 }
 
-.blog_breadcrumb ul.breadcrumb li.home a {
+.breadcrumb ul.breadcrumb li.home a {
   font-size: 0;
 }
 
-.blog_breadcrumb ul.breadcrumb li.home:before {
+.breadcrumb ul.breadcrumb li.home:before {
   content: url("/css/images/home-icon.png");
   display: inline-block;
 }
 
-.blog_breadcrumb ul.breadcrumb li a:hover {
+.breadcrumb ul.breadcrumb li a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (min-width: 1023px) {
+  .breadcrumb {
+    width: 980px;
+    padding: 0;
+  }
 }
 
 /* ------------------------------------------------------------ *	Partners

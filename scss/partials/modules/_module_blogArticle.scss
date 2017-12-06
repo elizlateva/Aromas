@@ -45,8 +45,19 @@ ul.user {
 }
 
 .blog_text p,
-.blog_text ul li,
 .blog_comments p {
+    font-size: 15px;
+    font-family: $font-family;
+    line-height: 20px;
+    font-weight: 300;
+    word-break: keep-all;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.blog_text ul li {
+    list-style: disc;
+    list-style-position: inside;
     font-size: 15px;
     font-family: $font-family;
     line-height: 20px;
@@ -55,13 +66,18 @@ ul.user {
     text-align: left;
 }
 
-.blog_text ul li {
-    list-style: disc;
-    list-style-position: inside;
-}
-
 .fb_share_button {
     padding: 10px 0;
+    text-align: left;
+    display: block;
+}
+
+.blog_comments {
+    border-bottom: 1px solid $black;
+    padding-bottom: 20px;
+    & ul.user {
+        border-top: 1px solid $black;
+    }
 }
 
 .blog_comments ul.user li {
@@ -84,18 +100,51 @@ ul.user {
         width: 100%;
         height: 35px;
         text-indent: 20px;
+        color: $black;
     }
     & .enter_text {
         border: 1px solid $black;
         width: 100%;
         height: 200px;
         text-indent: 20px;
-        padding: 10px 0;
-        margin: 10px 0;
+        padding: 20px 0;
+        margin: 20px 0;
     }
     & .submit {
         width: 50%;
         height: 35px;
         border: 2px solid $black;
+        text-transform: uppercase;
+    }
+}
+
+@media #{$desktop} {
+    .blog_article {
+        width: 980px;
+        padding: 0;
+        & h1 {
+            font-size: 26px;
+        }
+        & .subtitle {
+            text-align: left;
+        }
+    }
+    .blog_submit_form {
+        & .name_input {
+            width: 30%;
+            display: block;
+            text-align: left;
+        }
+        & .enter_text {
+            width: 600px;
+            height: 250px;
+            display: block;
+            text-align: left;
+        }
+        & .submit {
+            width: 20%;
+            display: block;
+            margin-left: 200px;
+        }
     }
 }

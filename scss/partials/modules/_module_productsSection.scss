@@ -3,7 +3,6 @@
 \* ------------------------------------------------------------ */
 
 .products {
-    position: relative;
     & h1 {
         font-size: 20px;
     }
@@ -11,41 +10,42 @@
         margin-bottom: 100px;
         & .swiper-slide {
             position: relative;
-            // &:hover {
-            //     & .overlay {
-            //         opacity: 0;
-            //     }
-            & span:after {
-                width: 90%;
-                left: 1%;
-                content: "";
-                position: absolute;
-                bottom: -10px;
-                border-bottom: 2px solid $white;
-            }
-            & a.button.white_border.overlay {
-                background: none;
-            }
-        }
-        & a img {
-            height: auto;
-            width: 100%;
             display: block;
-        }
-        & span {
-            font-family: $font-family-2;
-            font-size: 35px;
-            font-weight: 300;
-            color: $white;
-            position: absolute;
-            z-index: 1;
-            top: 35%;
-            left: 10%;
+            overflow: hidden;
+            padding: 2px;
+            & a {
+                width: 100%;
+                display: block;
+                max-height: 320px;
+                height: 100%;
+                & img {
+                    width: 100%;
+                }
+                & span {
+                    font-family: $font-family-2;
+                    font-size: 35px;
+                    font-weight: 300;
+                    color: $white;
+                    position: absolute;
+                    z-index: 1;
+                    top: 35%;
+                    left: 10%;
+                    text-align: left;
+                    &:hover span:after {
+                        width: 90%;
+                        left: 1%;
+                        content: "";
+                        position: absolute;
+                        bottom: -10px;
+                        border-bottom: 2px solid $white;
+                    }
+                }
+            }
         }
     }
 }
 
-.overlay {
+.swiper-slide .overlay {
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
     height: 99%;
@@ -55,17 +55,17 @@
     bottom: 0;
     right: 0;
     opacity: 0;
+    margin: 2px;
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
-}
-
-a.button.white_border.overlay {
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    left: 10%;
-    top: 75%;
+    & a.button.white_border.overlay {
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        left: 7%;
+        top: 60%;
+    }
 }
 
 @media #{$desktop} {
@@ -78,12 +78,18 @@ a.button.white_border.overlay {
                 & .overlay {
                     opacity: 1;
                 }
+                & a.button.white_border.overlay {
+                    background: none;
+                }
+                & span:after {
+                    width: 90%;
+                    left: 1%;
+                    content: "";
+                    position: absolute;
+                    bottom: -10px;
+                    border-bottom: 2px solid $white;
+                }
             }
-        }
-        & span {
-            font-size: 30px;
-            top: 30%;
-            left: 20%;
         }
     }
 }
