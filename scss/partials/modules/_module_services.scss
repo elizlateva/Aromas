@@ -1,0 +1,104 @@
+/* ------------------------------------------------------------ *\
+ Services
+\* ------------------------------------------------------------ */
+
+.services {
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 50px;
+    & h1 {
+        font-size: 20px;
+    }
+    & p {
+        font-size: 15px;
+        font-family: $font-family;
+        line-height: 20px;
+        font-weight: 300;
+        word-break: keep-all;
+        text-align: left;
+        padding: 10px 0;
+    }
+}
+
+.technology-slider {
+    & h1 {
+        font-size: 20px;
+    }
+    & .technology-slider-wrapper {
+        background: rgba(255, 255, 255, 0.8);
+        & .technology-products {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            display: block;
+            position: relative;
+            & h2 {
+                color: $black;
+                font-weight: 400;
+                font-size: 30px;
+                text-transform: uppercase;
+                padding: 20px 0;
+            }
+            & h3 {
+                font-size: 25px;
+                font-weight: 300;
+                margin: 20px 0;
+                color: $black;
+                word-break: break-all;
+            }
+            & .picture {
+                position: relative;
+                display: block;
+                overflow: hidden;
+                min-height: 400px;
+                & img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                }
+            }
+        }
+        // & .technology-swiper-button-next {
+        //     background: url("/css/images/arrow_next.png") no-repeat;
+        // }
+        // & .technology-swiper-button-prev {
+        //     background: url("/css/images/arrow-prev.png") no-repeat;
+        // }
+    }
+}
+
+@media #{$tablet} {
+    .technology-slider {
+        & .swiper-wrapper {
+            width: 50%;
+        }
+    }
+}
+
+@media #{$tablet} {
+    .services {
+        & h1 {
+            font-size: $font-size-26;
+        }
+        & p {
+            text-align: center;
+        }
+    }
+    .technology-slider {
+        & h1 {
+            font-size: $font-size-26;
+        }
+        & .swiper-wrapper {
+            width: 33%;
+        }
+        & .technology.swiper-button-next {
+            background: url("/css/images/arrow_next.png") no-repeat;
+            top: 123%;
+        }
+        & .technology.swiper-button-prev {
+            background: url("/css/images/arrow-prev.png") no-repeat;
+            top: 123%;
+        }
+    }
+}

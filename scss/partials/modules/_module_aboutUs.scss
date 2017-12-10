@@ -1,0 +1,112 @@
+/* ------------------------------------------------------------ *\
+	About-us
+\* ------------------------------------------------------------ */
+
+.about {
+    & h1 {
+        font-size: 20px;
+    }
+    & .inner {
+        background: rgba(255, 255, 255, .8);
+        & p {
+            font-size: 15px;
+            font-family: $font-family;
+            line-height: 20px;
+            font-weight: 300;
+            word-break: keep-all;
+            text-align: left;
+            padding-bottom: 20px;
+        }
+        & ul li {
+            list-style: disc;
+            list-style-position: inside;
+            font-size: 15px;
+            font-family: $font-family;
+            line-height: 20px;
+            font-weight: 300;
+            word-break: keep-all;
+            text-align: left;
+            padding: 10px 0;
+        }
+    }
+}
+
+.about .gallery {
+    display: block;
+    padding: 0 20px;
+    & .gallery-picture {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 10px;
+        position: relative;
+        & img {
+            display: block;
+            width: 100%;
+        }
+    }
+    & .gallery-overlay {
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+        & span {
+            color: $white;
+            font-size: 30px;
+            font-family: $font-family;
+            font-weight: 400;
+            text-align: center;
+            display: block;
+            margin: 30.5% auto;
+        }
+    }
+}
+
+@media #{$tablet} {
+    .about .gallery {
+        padding: 0;
+        & .gallery-picture {
+            width: 48%;
+            float: left;
+            margin: 0 0 10px 10px;
+            &:after {
+                display: block;
+                clear: both;
+                content: "";
+            }
+        }
+        &:after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+    }
+}
+
+@media #{$desktop} {
+    .about {
+        & h1 {
+            font-size: $font-size-26;
+        }
+    }
+    .about .gallery {
+        margin: 50px 0;
+        & .gallery-picture {
+            width: 16.66%;
+            margin: 0;
+            &:hover {
+                & .gallery-overlay {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

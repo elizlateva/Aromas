@@ -1,0 +1,88 @@
+/* ------------------------------------------------------------ *\
+	Brands
+\* ------------------------------------------------------------ */
+
+.brandsSection {
+    & .brands_banner {
+        display: block;
+        margin: 0 auto;
+    }
+    & .brands_list_wrapper {
+        padding: 20px;
+        margin: 0 auto;
+    }
+}
+
+.brands_list {
+    background: $black;
+    color: $white;
+    overflow: hidden;
+    margin: 20px 0;
+    & img {
+        display: block;
+        margin: 20px auto;
+    }
+    & .brands_text {
+        padding: 20px;
+        & h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 25px;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+        & p {
+            text-align: left;
+            word-break: keep-all;
+            line-height: 25px;
+            padding: 10px 0;
+        }
+        & ul li {
+            list-style: disc;
+            list-style-position: inside;
+            line-height: 25px;
+        }
+        & a {
+            display: block;
+            color: $white;
+            font-size: 17px;
+            text-align: left;
+            padding: 20px 0;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media #{$desktop} {
+    .brandsSection {
+        & .brands_list_wrapper {
+            width: 980px;
+            padding: 0;
+        }
+    }
+    .brands_list {
+        & img {
+            float: left;
+            margin-top: 150px;
+            margin-left: 40px;
+        }
+        & .brands_text {
+            float: right;
+            width: 66%;
+            &:after {
+                clear: both;
+                display: block;
+                content: "";
+            }
+            & a {
+                text-align: right;
+                font-size: 21px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

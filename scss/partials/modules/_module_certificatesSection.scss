@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	Certificates-section
+\* ------------------------------------------------------------ */
+
+.certificates {
+    background: rgba(255, 255, 255, .8);
+    & .inner {
+        padding: 0;
+        & .certificates_wrapper {
+            padding: 0 20px 40px;
+            text-align: center;
+            & h2 {
+                color: $black;
+                font-size: 20px;
+                padding: 10px 0;
+            }
+            & p {
+                font-size: 17px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+@media #{$tablet} {
+    .certificates {
+        & .certificates_wrapper {
+            width: 50%;
+            float: left;
+        }
+        &:after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+    }
+}
