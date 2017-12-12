@@ -897,7 +897,7 @@ a.button.white_border {
   height: 40px;
   text-align: center;
   left: 7%;
-  top: 60%;
+  top: 66%;
 }
 
 @media only screen and (min-width: 1023px) {
@@ -1735,6 +1735,7 @@ a.button.white_border {
   margin: 20px auto 0;
   width: 80%;
   display: block;
+  border-radius: 0;
 }
 
 .gallery h1 {
@@ -1747,6 +1748,7 @@ a.button.white_border {
 
 .gallery .gallery-picture {
   margin-bottom: 5px;
+  padding: 0 20px;
 }
 
 @media only screen and (min-width: 1023px) {
@@ -2114,7 +2116,7 @@ ul.user li a {
 }
 
 .breadcrumb ul.breadcrumb li.home:before {
-  content: url("/css/images/home-icon.png");
+  content: url("../css/images/home-icon.png");
   display: inline-block;
 }
 
