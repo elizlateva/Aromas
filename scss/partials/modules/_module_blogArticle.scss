@@ -29,12 +29,12 @@ ul.user {
         display: inline;
         padding-right: 40px;
         &.author:before {
-            content: url("/css/images/author_icon.png");
+            content: url("css/images/author_icon.png");
             display: inline-block;
             margin-right: 10px;
         }
         &.date:before {
-            content: url("/css/images/date-icon.png");
+            content: url("css/images/date-icon.png");
             display: inline-block;
             margin-right: 10px;
         }
