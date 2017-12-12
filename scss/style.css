@@ -5,18 +5,18 @@
 \* ------------------------------------------------------------ */
 @font-face {
   font-family: 'Monotype Corsiva';
-  src: url("/fonts/monotype-corsiva/Monotype Corsiva.ttf") format("truetype");
+  src: url("../fonts/monotype-corsiva/Monotype Corsiva.ttf") format("truetype");
   /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 @font-face {
   font-family: 'DancingScript';
-  src: url("/fonts/Dancing_Script/DancingScript-Regular.ttf") format("truetype");
+  src: url("../fonts/Dancing_Script/DancingScript-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'DancingScript';
-  src: url("/fonts/Dancing_Script/DancingScript-Bold.ttf") format("truetype");
+  src: url("../fonts/Dancing_Script/DancingScript-Bold.ttf") format("truetype");
 }
 
 /* ------------------------------------------------------------ *    Variables
@@ -181,7 +181,7 @@ input {
 /* ------------------------------------------------------------ *	Base
 \* ------------------------------------------------------------ */
 body {
-  background: url("css/images/background.png") repeat fixed;
+  background: url("../css/images/background.png") repeat fixed;
   background-size: cover;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -2114,7 +2114,7 @@ ul.user li a {
 }
 
 .breadcrumb ul.breadcrumb li.home:before {
-  content: url("css/images/home-icon.png");
+  content: url("/css/images/home-icon.png");
   display: inline-block;
 }
 
@@ -2259,11 +2259,11 @@ ul.user li a {
 }
 
 .partners .swiper-button-next {
-  background: url("css/images/arrow_next.png") no-repeat;
+  background: url("../css/images/arrow_next.png") no-repeat;
 }
 
 .partners .swiper-button-prev {
-  background: url("css/images/arrow-prev.png") no-repeat;
+  background: url("../css/images/arrow-prev.png") no-repeat;
 }
 
 @media only screen and (min-width: 1023px) {
