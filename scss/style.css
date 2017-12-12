@@ -181,7 +181,7 @@ input {
 /* ------------------------------------------------------------ *	Base
 \* ------------------------------------------------------------ */
 body {
-  background: url("/css/images/background.png") repeat fixed;
+  background: url("css/images/background.png") repeat fixed;
   background-size: cover;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -666,7 +666,7 @@ h2 {
 \* ------------------------------------------------------------ */
 .intro {
   position: relative;
-  background-image: url("/css/images/intro-icon.png");
+  background-image: url("css/images/intro-icon.png");
   background-repeat: no-repeat;
   background-position: left 0% bottom 0%;
   padding: 50px 0;
@@ -1960,13 +1960,13 @@ ul.user li {
 }
 
 ul.user li.author:before {
-  content: url("/css/images/author_icon.png");
+  content: url("css/images/author_icon.png");
   display: inline-block;
   margin-right: 10px;
 }
 
 ul.user li.date:before {
-  content: url("/css/images/date-icon.png");
+  content: url("css/images/date-icon.png");
   display: inline-block;
   margin-right: 10px;
 }
@@ -2114,7 +2114,7 @@ ul.user li a {
 }
 
 .breadcrumb ul.breadcrumb li.home:before {
-  content: url("/css/images/home-icon.png");
+  content: url("css/images/home-icon.png");
   display: inline-block;
 }
 
@@ -2217,11 +2217,11 @@ ul.user li a {
     width: 33%;
   }
   .technology-slider .technology.swiper-button-next {
-    background: url("/css/images/arrow_next.png") no-repeat;
+    background: url("css/images/arrow_next.png") no-repeat;
     top: 123%;
   }
   .technology-slider .technology.swiper-button-prev {
-    background: url("/css/images/arrow-prev.png") no-repeat;
+    background: url("css/images/arrow-prev.png") no-repeat;
     top: 123%;
   }
 }
@@ -2259,11 +2259,11 @@ ul.user li a {
 }
 
 .partners .swiper-button-next {
-  background: url("/css/images/arrow_next.png") no-repeat;
+  background: url("css/images/arrow_next.png") no-repeat;
 }
 
 .partners .swiper-button-prev {
-  background: url("/css/images/arrow-prev.png") no-repeat;
+  background: url("css/images/arrow-prev.png") no-repeat;
 }
 
 @media only screen and (min-width: 1023px) {
@@ -2431,7 +2431,7 @@ ul.user li a {
 }
 
 .created:after {
-  content: url("/css/images/perspective_icon.png");
+  content: url("css/images/perspective_icon.png");
   display: inline-block;
   vertical-align: middle;
 }
