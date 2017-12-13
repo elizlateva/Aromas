@@ -31,7 +31,7 @@
     }
 }
 
-.about .gallery {
+.gallery {
     display: block;
     padding: 0 20px;
     & .gallery-picture {
@@ -60,18 +60,18 @@
         transition: all 0.4s ease-in-out 0s;
         & span {
             color: $white;
-            font-size: 30px;
+            font-size: 20px;
             font-family: $font-family;
             font-weight: 400;
             text-align: center;
             display: block;
-            margin: 30.5% auto;
+            margin: 25% auto;
         }
     }
 }
 
 @media #{$tablet} {
-    .about .gallery {
+    .gallery {
         padding: 0;
         & .gallery-picture {
             width: 48%;
@@ -97,7 +97,7 @@
             font-size: $font-size-26;
         }
     }
-    .about .gallery {
+    .gallery {
         margin: 50px 0;
         & .gallery-picture {
             width: 16.66%;
@@ -107,6 +107,19 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+}
+
+@media #{$hd_desktop} {
+    .gallery .gallery-overlay {
+        & span {
+            font-size: 25px;
+            font-family: $font-family;
+            font-weight: 400;
+            text-align: center;
+            display: block;
+            margin: 35% auto;
         }
     }
 }

@@ -24,8 +24,8 @@
 }
 
 .zone-up {
-    padding: 40px 0;
-    width: 40%;
+    padding: 50px 0;
+    width: 44%;
     clip-path: url("#part1");
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
@@ -39,11 +39,11 @@
 }
 
 .zone-middle {
-    padding: 40px 0;
-    width: 69%;
+    padding: 20px 0;
+    width: 71%;
     clip-path: url("#part2");
     clip-path: polygon(20.5% 0%, 79.5% 0, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(20.5% 0%, 79.5% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(19% 0%, 81% 0, 100% 100%, 0% 100%);
     background: #8197d9;
     background: -moz-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #8197d9), color-stop(50%, #a0afe2), color-stop(100%, #b8c3e9));
@@ -58,10 +58,10 @@
 }
 
 .zone-down {
-    padding: 40px 0;
+    padding: 30px 0;
     width: 94%;
     clip-path: polygon(13% 0, 87% 0, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(13% 0, 87% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
     background: #5171cb;
     background: -moz-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #5171cb), color-stop(100%, #718ad4));
@@ -104,81 +104,67 @@
     }
 }
 
-.gallery {
-    & h1 {
-        font-size: 20px;
+@media #{$tablet} {
+    .aromas .inner button {
+        width: 30%;
     }
-    & .gallery-overlay {
-        display: none;
-    }
-    & .gallery-picture {
-        margin-bottom: 5px;
-        padding: 0 20px;
-    }
-}
-
-@media #{$desktop} {
     .pyramid {
         shape-outside: polygon(310px 0px, 130px 405px, 558px 405px);
         width: 600px;
         height: auto;
         margin: 0 auto;
     }
-    .zone {
-        padding: 60px 0;
+    .zone-up,
+    .zone-middle,
+    .zone-down {
+        font-size: 15px;
         margin: 15px auto;
-        text-align: center;
-        color: black;
-        background-blend-mode: darken;
-        word-break: break-all;
-        font-size: 14px;
-        line-height: 24px;
-        font-family: $font-family;
+        padding: 40px 0;
     }
-    .zone:nth-child(1) {
-        background: #c7cfed;
-        background: -moz-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #c7cfed), color-stop(50%, #dde1f4), color-stop(100%, #f7f8fc));
-        background: -webkit-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-        background: -o-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-        background: -ms-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-        background: linear-gradient(to top, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-        width: 37%;
+    .zone-up {
+        width: 42%;
+        padding: 90px 0;
         clip-path: url("#part1");
         clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
         -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        & p {
+            width: 100px;
+            margin: 0 auto;
+        }
     }
-    .zone:nth-child(2) {
-        background: #8197d9;
-        background: -moz-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #8197d9), color-stop(50%, #a0afe2), color-stop(100%, #b8c3e9));
-        background: -webkit-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-        background: -o-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-        background: -ms-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-        background: linear-gradient(to top, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-        width: 66%;
+    .zone-middle {
+        width: 67%;
+        padding: 60px 0;
         clip-path: url("#part2");
-        clip-path: polygon(20% 0%, 80% 0, 100% 100%, 0% 100%);
-        -webkit-clip-path: polygon(19.8% 0%, 79.2% 0, 100% 100%, 0% 100%);
-        & .zone-middle {
+        clip-path: polygon(17% 0%, 83% 0, 100% 100%, 0% 100%);
+        -webkit-clip-path: polygon(18% 0%, 82% 0, 100% 100%, 0% 100%);
+        & p {
             width: 300px;
             margin: 0 auto;
         }
     }
-    .zone:nth-child(3) {
+    .zone-down {
         width: 96%;
-        background: #5171cb;
-        background: -moz-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #5171cb), color-stop(100%, #718ad4));
-        background: -webkit-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-        background: -o-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-        background: -ms-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-        background: linear-gradient(to top, #5171cb 0%, #718ad4 100%);
-        clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
-        -webkit-clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
-        & .zone-down {
+        padding: 60px 0;
+        clip-path: polygon(14% 0, 86% 0, 100% 100%, 0% 100%);
+        -webkit-clip-path: polygon(14% 0, 86% 0, 100% 100%, 0% 100%);
+        & p {
             width: 500px;
             margin: 0 auto;
+        }
+    }
+}
+
+@media #{$desktop} {
+    .aromas {
+        & h1 {
+            font-size: $font-size-26;
+        }
+        & .inner {
+            padding: 20px 0;
+            & p {
+                padding: 0 150px;
+            }
         }
     }
 }
