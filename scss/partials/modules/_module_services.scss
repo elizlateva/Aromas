@@ -9,13 +9,13 @@
         font-size: 20px;
     }
     & p {
-        font-size: 15px;
+        font-size: 13px;
         font-family: $font-family;
         line-height: 20px;
         font-weight: 300;
         word-break: keep-all;
         text-align: left;
-        padding: 10px 0;
+        padding: 5px 0;
     }
 }
 
@@ -24,81 +24,107 @@
         font-size: 20px;
     }
     & .technology-slider-wrapper {
+        padding: 0 20px;
         background: rgba(255, 255, 255, 0.8);
-        & .technology-products {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8);
-            display: block;
-            position: relative;
-            & h2 {
-                color: $black;
-                font-weight: 400;
-                font-size: 30px;
-                text-transform: uppercase;
-                padding: 20px 0;
-            }
-            & h3 {
-                font-size: 25px;
-                font-weight: 300;
-                margin: 20px 0;
-                color: $black;
-                word-break: break-all;
-            }
-            & .picture {
-                position: relative;
+        position: relative;
+        & .swiper-container {
+            width: 80%;
+            & .technology-products {
+                text-align: center;
                 display: block;
-                overflow: hidden;
-                min-height: 400px;
-                & img {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    margin: auto;
+                position: relative;
+                & h2 {
+                    color: $black;
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    padding: 20px 0;
+                }
+                & h3 {
+                    font-size: 18px;
+                    font-weight: 300;
+                    margin: 20px 0;
+                    color: $black;
+                    word-break: break-all;
+                }
+                & .picture {
+                    position: relative;
+                    display: block;
+                    overflow: hidden;
+                    min-height: 400px;
+                    & img {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: auto;
+                    }
                 }
             }
         }
-        // & .technology-swiper-button-next {
-        //     background: url("/css/images/arrow_next.png") no-repeat;
-        // }
-        // & .technology-swiper-button-prev {
-        //     background: url("/css/images/arrow-prev.png") no-repeat;
-        // }
-    }
-}
-
-@media #{$tablet} {
-    .technology-slider {
-        & .swiper-wrapper {
-            width: 50%;
+        & .swiper-button-next {
+            background: url("../css/images/arrow_next.png") no-repeat;
+        }
+        & .swiper-button-prev {
+            background: url("../css/images/arrow-prev.png") no-repeat;
         }
     }
 }
 
+.submit {
+    display: block;
+    width: 55%;
+    padding: 10px;
+    margin: 0 auto;
+    background: none;
+    border: 2px solid #000;
+    border-radius: 0;
+    font-size: 15px;
+    font-family: $font-family;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
 @media #{$tablet} {
+    .submit {
+        width: 25%;
+    }
+}
+
+@media #{$desktop} {
     .services {
         & h1 {
             font-size: $font-size-26;
         }
         & p {
             text-align: center;
+            font-size: 15px;
+            padding: 10px 0;
         }
     }
     .technology-slider {
         & h1 {
             font-size: $font-size-26;
         }
-        & .swiper-wrapper {
-            width: 33%;
+        & .technology-slider-wrapper {
+            padding: 0;
+            width: 980px;
+            margin: 0 auto;
+            & .swiper-container {
+                & .technology-products {
+                    & h2 {
+                        font-size: 25px;
+                    }
+                    & h3 {
+                        font-size: 20px;
+                    }
+                }
+            }
         }
-        & .technology.swiper-button-next {
-            background: url("css/images/arrow_next.png") no-repeat;
-            top: 123%;
-        }
-        & .technology.swiper-button-prev {
-            background: url("css/images/arrow-prev.png") no-repeat;
-            top: 123%;
-        }
+    }
+    .submit {
+        width: 280px;
+        font-size: 25px;
     }
 }

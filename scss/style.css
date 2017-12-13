@@ -293,7 +293,7 @@ h2 {
 }
 
 .header .phone:before {
-  content: url("/css/images/phone.png");
+  content: url("../css/images/phone.png");
   vertical-align: middle;
   padding-right: 10px;
   display: inline-block;
@@ -2207,13 +2207,13 @@ ul.user li a {
 }
 
 .services p {
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
   line-height: 20px;
   font-weight: 300;
   word-break: keep-all;
   text-align: left;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .technology-slider h1 {
@@ -2221,40 +2221,45 @@ ul.user li a {
 }
 
 .technology-slider .technology-slider-wrapper {
+  padding: 0 20px;
   background: rgba(255, 255, 255, 0.8);
+  position: relative;
 }
 
-.technology-slider .technology-slider-wrapper .technology-products {
+.technology-slider .technology-slider-wrapper .swiper-container {
+  width: 80%;
+}
+
+.technology-slider .technology-slider-wrapper .swiper-container .technology-products {
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
   display: block;
   position: relative;
 }
 
-.technology-slider .technology-slider-wrapper .technology-products h2 {
+.technology-slider .technology-slider-wrapper .swiper-container .technology-products h2 {
   color: #000;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   padding: 20px 0;
 }
 
-.technology-slider .technology-slider-wrapper .technology-products h3 {
-  font-size: 25px;
+.technology-slider .technology-slider-wrapper .swiper-container .technology-products h3 {
+  font-size: 18px;
   font-weight: 300;
   margin: 20px 0;
   color: #000;
   word-break: break-all;
 }
 
-.technology-slider .technology-slider-wrapper .technology-products .picture {
+.technology-slider .technology-slider-wrapper .swiper-container .technology-products .picture {
   position: relative;
   display: block;
   overflow: hidden;
   min-height: 400px;
 }
 
-.technology-slider .technology-slider-wrapper .technology-products .picture img {
+.technology-slider .technology-slider-wrapper .swiper-container .technology-products .picture img {
   position: absolute;
   top: 0;
   right: 0;
@@ -2263,32 +2268,60 @@ ul.user li a {
   margin: auto;
 }
 
-@media only screen and (min-width: 768px) {
-  .technology-slider .swiper-wrapper {
-    width: 50%;
-  }
+.technology-slider .technology-slider-wrapper .swiper-button-next {
+  background: url("../css/images/arrow_next.png") no-repeat;
+}
+
+.technology-slider .technology-slider-wrapper .swiper-button-prev {
+  background: url("../css/images/arrow-prev.png") no-repeat;
+}
+
+.submit {
+  display: block;
+  width: 55%;
+  padding: 10px;
+  margin: 0 auto;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 0;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin-top: 50px;
 }
 
 @media only screen and (min-width: 768px) {
+  .submit {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
   .services h1 {
     font-size: 26px;
   }
   .services p {
     text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
   }
   .technology-slider h1 {
     font-size: 26px;
   }
-  .technology-slider .swiper-wrapper {
-    width: 33%;
+  .technology-slider .technology-slider-wrapper {
+    padding: 0;
+    width: 980px;
+    margin: 0 auto;
   }
-  .technology-slider .technology.swiper-button-next {
-    background: url("css/images/arrow_next.png") no-repeat;
-    top: 123%;
+  .technology-slider .technology-slider-wrapper .swiper-container .technology-products h2 {
+    font-size: 25px;
   }
-  .technology-slider .technology.swiper-button-prev {
-    background: url("css/images/arrow-prev.png") no-repeat;
-    top: 123%;
+  .technology-slider .technology-slider-wrapper .swiper-container .technology-products h3 {
+    font-size: 20px;
+  }
+  .submit {
+    width: 280px;
+    font-size: 25px;
   }
 }
 
