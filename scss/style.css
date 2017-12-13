@@ -546,7 +546,7 @@ h2 {
 
 @media only screen and (min-width: 1023px) {
   .skrollr-body {
-    margin: 150px auto;
+    margin: 120px auto;
   }
 }
 
@@ -2005,19 +2005,30 @@ a.button.white_border {
 
 .blog_article h1 {
   font-size: 20px;
+  background: transparent;
 }
 
 .blog_article .subtitle {
   font-size: 18px;
-  line-height: 35px;
+  line-height: 28px;
   padding: 10px 0;
+  font-weight: 400;
+}
+
+.blog_article .blog_image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: url("../css/images/peony-flower-white-summer.png") no-repeat center top;
+  background-size: cover;
 }
 
 ul.user {
   text-align: left;
   padding: 20px 0;
-  font-size: 15px;
-  color: #022264;
+  font-size: 13px;
+  line-height: 20px;
+  color: #000;
 }
 
 ul.user li {
@@ -2026,38 +2037,38 @@ ul.user li {
 }
 
 ul.user li.author:before {
-  content: url("css/images/author_icon.png");
+  content: url("../css/images/author_icon.png");
   display: inline-block;
   margin-right: 10px;
 }
 
 ul.user li.date:before {
-  content: url("css/images/date-icon.png");
+  content: url("../css/images/date-icon.png");
   display: inline-block;
   margin-right: 10px;
 }
 
 ul.user li a {
-  color: #022264;
+  color: #000;
 }
 
 .blog_text p,
 .blog_comments p {
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
-  line-height: 20px;
+  line-height: 23px;
   font-weight: 300;
   word-break: keep-all;
   text-align: left;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .blog_text ul li {
   list-style: disc;
   list-style-position: inside;
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
-  line-height: 20px;
+  line-height: 23px;
   font-weight: 300;
   word-break: keep-all;
   text-align: left;
@@ -2078,29 +2089,39 @@ ul.user li a {
   border-top: 1px solid #000;
 }
 
-.blog_comments ul.user li {
+.blog_comments ul.user .author {
   display: block;
+  font-weight: 400;
 }
 
-.blog_comments ul.user li.author::before,
-.blog_comments ul.user li.date::before {
+.blog_comments ul.user .author:before {
+  display: none;
+}
+
+.blog_comments ul.user .date {
+  display: block;
+  font-weight: 300;
+}
+
+.blog_comments ul.user .date:before {
   display: none;
 }
 
 .blog_submit_form {
   width: 100%;
-  margin: 0 auto;
-  color: #000;
-  font-size: 15px;
-  margin: 20px 0;
+  margin: 20px auto;
+  padding-bottom: 49px;
 }
 
 .blog_submit_form .name_input {
   border: 1px solid #000;
   width: 100%;
-  height: 35px;
+  padding: 10px 0;
   text-indent: 20px;
   color: #000;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }
 
 .blog_submit_form .enter_text {
@@ -2110,13 +2131,18 @@ ul.user li a {
   text-indent: 20px;
   padding: 20px 0;
   margin: 20px 0;
+  color: #000;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  outline: none;
 }
 
 .blog_submit_form .submit {
   width: 50%;
-  height: 35px;
+  padding: 10px 0;
   border: 2px solid #000;
-  text-transform: uppercase;
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 1023px) {
@@ -2129,6 +2155,22 @@ ul.user li a {
   }
   .blog_article .subtitle {
     text-align: left;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 20px 0;
+  }
+  .blog_article .blog_image {
+    height: 450px;
+  }
+  .blog_text p,
+  .blog_comments p {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 10px 0;
+  }
+  .blog_text ul li {
+    font-size: 15px;
+    line-height: 25px;
   }
   .blog_submit_form .name_input {
     width: 30%;
@@ -2145,24 +2187,24 @@ ul.user li a {
     width: 20%;
     display: block;
     margin-left: 200px;
+    font-size: 25px;
   }
 }
 
 /* ------------------------------------------------------------ *	Breadcrumbs
 \* ------------------------------------------------------------ */
 .breadcrumb {
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
-  line-height: 38px;
+  line-height: 23px;
   font-weight: 400;
   color: #000;
-  padding: 10px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
 .breadcrumb ul.breadcrumb {
   display: inline;
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -2190,6 +2232,8 @@ ul.user li a {
 
 @media only screen and (min-width: 1023px) {
   .breadcrumb {
+    font-size: 15px;
+    line-height: 25px;
     width: 980px;
     padding: 0;
   }

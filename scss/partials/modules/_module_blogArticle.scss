@@ -12,55 +12,65 @@
     margin-bottom: 100px;
     & h1 {
         font-size: 20px;
+        background: transparent;
     }
     & .subtitle {
         font-size: 18px;
-        line-height: 35px;
+        line-height: 28px;
         padding: 10px 0;
+        font-weight: 400;
+    }
+    & .blog_image {
+        display: block;
+        width: 100%;
+        height: 200px;
+        background: url("../css/images/peony-flower-white-summer.png") no-repeat center top;
+        background-size: cover;
     }
 }
 
 ul.user {
     text-align: left;
     padding: 20px 0;
-    font-size: 15px;
-    color: #022264;
+    font-size: 13px;
+    line-height: 20px;
+    color: $black;
     & li {
         display: inline;
         padding-right: 40px;
         &.author:before {
-            content: url("css/images/author_icon.png");
+            content: url("../css/images/author_icon.png");
             display: inline-block;
             margin-right: 10px;
         }
         &.date:before {
-            content: url("css/images/date-icon.png");
+            content: url("../css/images/date-icon.png");
             display: inline-block;
             margin-right: 10px;
         }
         & a {
-            color: #022264;
+            color: $black;
         }
     }
 }
 
 .blog_text p,
 .blog_comments p {
-    font-size: 15px;
+    font-size: 13px;
     font-family: $font-family;
-    line-height: 20px;
+    line-height: 23px;
     font-weight: 300;
     word-break: keep-all;
     text-align: left;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .blog_text ul li {
     list-style: disc;
     list-style-position: inside;
-    font-size: 15px;
+    font-size: 13px;
     font-family: $font-family;
-    line-height: 20px;
+    line-height: 23px;
     font-weight: 300;
     word-break: keep-all;
     text-align: left;
@@ -80,27 +90,36 @@ ul.user {
     }
 }
 
-.blog_comments ul.user li {
-    display: block;
-}
-
-.blog_comments ul.user li.author::before,
-.blog_comments ul.user li.date::before {
-    display: none;
+.blog_comments ul.user {
+    & .author {
+        display: block;
+        font-weight: 400;
+        &:before {
+            display: none;
+        }
+    }
+    & .date {
+        display: block;
+        font-weight: 300;
+        &:before {
+            display: none;
+        }
+    }
 }
 
 .blog_submit_form {
     width: 100%;
-    margin: 0 auto;
-    color: $black;
-    font-size: 15px;
-    margin: 20px 0;
+    margin: 20px auto;
+    padding-bottom: 49px;
     & .name_input {
         border: 1px solid $black;
         width: 100%;
-        height: 35px;
+        padding: 10px 0;
         text-indent: 20px;
         color: $black;
+        font-size: 15px;
+        font-family: $font-family;
+        font-weight: 400;
     }
     & .enter_text {
         border: 1px solid $black;
@@ -109,12 +128,17 @@ ul.user {
         text-indent: 20px;
         padding: 20px 0;
         margin: 20px 0;
+        color: $black;
+        font-size: 15px;
+        font-family: $font-family;
+        font-weight: 400;
+        outline: none;
     }
     & .submit {
         width: 50%;
-        height: 35px;
+        padding: 10px 0;
         border: 2px solid $black;
-        text-transform: uppercase;
+        font-weight: 400;
     }
 }
 
@@ -127,7 +151,23 @@ ul.user {
         }
         & .subtitle {
             text-align: left;
+            font-size: 20px;
+            line-height: 30px;
+            padding: 20px 0;
         }
+        & .blog_image {
+            height: 450px;
+        }
+    }
+    .blog_text p,
+    .blog_comments p {
+        font-size: 15px;
+        line-height: 25px;
+        padding: 10px 0;
+    }
+    .blog_text ul li {
+        font-size: 15px;
+        line-height: 25px;
     }
     .blog_submit_form {
         & .name_input {
@@ -145,6 +185,7 @@ ul.user {
             width: 20%;
             display: block;
             margin-left: 200px;
+            font-size: 25px;
         }
     }
 }
