@@ -1095,12 +1095,15 @@ a.button.white_border {
 
 /* ------------------------------------------------------------ *	Brands
 \* ------------------------------------------------------------ */
-.brandsSection .brands_banner {
+.brands_section .brands_banner {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+  background: url("../css/images/banner-sofitel.png") no-repeat center;
+  background-size: cover;
 }
 
-.brandsSection .brands_list_wrapper {
+.brands_section .brands_list_wrapper {
   padding: 20px;
   margin: 0 auto;
 }
@@ -1133,21 +1136,28 @@ a.button.white_border {
   text-align: left;
   word-break: keep-all;
   line-height: 25px;
-  padding: 10px 0;
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+.brands_list .brands_text p span {
+  text-transform: uppercase;
 }
 
 .brands_list .brands_text ul li {
   list-style: disc;
   list-style-position: inside;
   line-height: 25px;
+  font-size: 13px;
 }
 
 .brands_list .brands_text a {
   display: block;
   color: #fff;
-  font-size: 17px;
+  font-size: 15px;
   text-align: left;
   padding: 20px 0;
+  font-weight: 400;
 }
 
 .brands_list .brands_text a:hover {
@@ -1155,14 +1165,18 @@ a.button.white_border {
 }
 
 @media only screen and (min-width: 1023px) {
-  .brandsSection .brands_list_wrapper {
-    width: 980px;
+  .brands_section .brands_banner {
+    height: 400px;
+    margin-bottom: 80px;
+  }
+  .brands_section .brands_list_wrapper {
+    width: 900px;
     padding: 0;
   }
   .brands_list img {
     float: left;
     margin-top: 150px;
-    margin-left: 40px;
+    margin-left: 30px;
   }
   .brands_list .brands_text {
     float: right;
@@ -1173,9 +1187,16 @@ a.button.white_border {
     display: block;
     content: "";
   }
+  .brands_list .brands_text p {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .brands_list .brands_text ul li {
+    font-size: 15px;
+  }
   .brands_list .brands_text a {
     text-align: right;
-    font-size: 21px;
+    font-size: 22px;
   }
   .brands_list .brands_text a:hover {
     text-decoration: underline;

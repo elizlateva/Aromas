@@ -2,10 +2,13 @@
 	Brands
 \* ------------------------------------------------------------ */
 
-.brandsSection {
+.brands_section {
     & .brands_banner {
         display: block;
-        margin: 0 auto;
+        width: 100%;
+        height: 200px;
+        background: url("../css/images/banner-sofitel.png") no-repeat center;
+        background-size: cover;
     }
     & .brands_list_wrapper {
         padding: 20px;
@@ -35,19 +38,25 @@
             text-align: left;
             word-break: keep-all;
             line-height: 25px;
-            padding: 10px 0;
+            font-size: 13px;
+            padding: 5px 0;
+            & span {
+                text-transform: uppercase;
+            }
         }
         & ul li {
             list-style: disc;
             list-style-position: inside;
             line-height: 25px;
+            font-size: 13px;
         }
         & a {
             display: block;
             color: $white;
-            font-size: 17px;
+            font-size: $font-size-15;
             text-align: left;
             padding: 20px 0;
+            font-weight: 400;
             &:hover {
                 text-decoration: underline;
             }
@@ -56,9 +65,13 @@
 }
 
 @media #{$desktop} {
-    .brandsSection {
+    .brands_section {
+        & .brands_banner {
+            height: 400px;
+            margin-bottom: 80px;
+        }
         & .brands_list_wrapper {
-            width: 980px;
+            width: 900px;
             padding: 0;
         }
     }
@@ -66,7 +79,7 @@
         & img {
             float: left;
             margin-top: 150px;
-            margin-left: 40px;
+            margin-left: 30px;
         }
         & .brands_text {
             float: right;
@@ -76,9 +89,16 @@
                 display: block;
                 content: "";
             }
+            & p {
+                font-size: $font-size-15;
+                padding: 10px 0;
+            }
+            & ul li {
+                font-size: $font-size-15;
+            }
             & a {
                 text-align: right;
-                font-size: 21px;
+                font-size: 22px;
                 &:hover {
                     text-decoration: underline;
                 }
