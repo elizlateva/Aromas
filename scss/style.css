@@ -677,7 +677,7 @@ h2 {
 \* ------------------------------------------------------------ */
 .intro {
   position: relative;
-  background-image: url("css/images/intro-icon.png");
+  background-image: url("../css/images/intro-icon.png");
   background-repeat: no-repeat;
   background-position: left 0% bottom 0%;
   padding: 50px 0;
@@ -691,6 +691,7 @@ h2 {
   color: #371648;
   text-align: center;
   line-height: 30px;
+  word-break: keep-all;
 }
 
 .intro span {
@@ -706,7 +707,7 @@ h2 {
 .intro .read-more {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 13px;
   display: block;
   text-align: right;
   padding-top: 35px;
@@ -730,7 +731,7 @@ h2 {
   }
   .intro .read-more {
     font-family: "Open Sans", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
@@ -763,6 +764,47 @@ h2 {
 
 .content .image-wrapper {
   width: 100%;
+  height: 200px;
+  background: url("../css/images/Fully-White-Office.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    padding: 0 20px;
+  }
+  .content .text-wrapper {
+    float: left;
+  }
+  .content .text-wrapper .text {
+    float: right;
+    width: 70%;
+    text-align: right;
+    padding: 50px 20px;
+    overflow: hidden;
+  }
+  .content .text-wrapper:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+  .content a.button.black_border {
+    margin-right: 20px;
+    float: right;
+    overflow: hidden;
+  }
+  .content .image-wrapper {
+    float: right;
+    overflow: hidden;
+    height: 450px;
+    background-position: left center;
+  }
+  .content .image-wrapper:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1023px) {
@@ -772,60 +814,27 @@ h2 {
   .content h1 {
     font-size: 26px;
   }
-  .content .text-wrapper {
-    float: left;
-  }
-  .content .text-wrapper .text {
-    float: right;
-    width: 100%;
-    text-align: right;
-    padding: 20px;
-    overflow: hidden;
-  }
-  .content .text-wrapper:after {
-    clear: both;
-    content: '';
-    display: block;
-  }
-  .content a.button.black_border {
-    margin-right: 35px;
-    float: right;
-    overflow: hidden;
-  }
-  .content .image-wrapper {
-    float: right;
-    overflow: hidden;
-  }
-  .content .image-wrapper:after {
-    clear: both;
-    content: '';
-    display: block;
-  }
 }
 
 @media only screen and (min-width: 1366px) {
   .content .text-wrapper .text {
-    width: 70%;
-    padding: 50px;
+    width: 60%;
   }
-}
-
-@media only screen and (min-width: 1920px) {
-  .content .text-wrapper .text {
-    width: 50%;
-    padding: 10 0px;
+  .content .image-wrapper {
+    background-position: bottom center;
   }
 }
 
 /* ------------------------------------------------------------ *	Button
 \* ------------------------------------------------------------ */
 a.button {
-  width: 135px;
-  padding: 7px;
+  width: 50%;
+  padding: 10px 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   display: block;
+  text-align: center;
 }
 
 a.button.black_border {
@@ -836,6 +845,26 @@ a.button.black_border {
 a.button.white_border {
   border: 2px solid #fff;
   color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  a.button {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  a.button {
+    width: 15%;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  a.button {
+    width: 10%;
+    font-size: 20px;
+  }
 }
 
 /* ------------------------------------------------------------ *	Products
@@ -1430,16 +1459,23 @@ a.button.white_border {
 
 .text {
   font-family: "Open Sans", sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 23px;
   font-weight: 300;
   word-break: keep-all;
 }
 
 @media only screen and (min-width: 1023px) {
   .text {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 25px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .text {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -1873,7 +1909,7 @@ a.button.white_border {
   width: 100%;
 }
 
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 768px) {
   .text-wrapper {
     width: 50%;
   }
@@ -1886,7 +1922,7 @@ a.button.white_border {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 768px) {
   .content .image-wrapper {
     width: 50%;
   }
@@ -1897,7 +1933,7 @@ a.button.white_border {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 768px) {
   .technology .image-wrapper {
     width: 50%;
   }

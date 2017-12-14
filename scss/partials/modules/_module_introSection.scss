@@ -4,7 +4,7 @@
 
 .intro {
     position: relative;
-    background-image: url("css/images/intro-icon.png");
+    background-image: url("../css/images/intro-icon.png");
     background-repeat: no-repeat;
     background-position: left 0% bottom 0%;
     padding: 50px 0;
@@ -16,6 +16,7 @@
         color: #371648;
         text-align: center;
         line-height: 30px;
+        word-break: keep-all;
     }
     & span {
         font-size: 20px;
@@ -29,7 +30,7 @@
     & .read-more {
         font-family: $font-family;
         font-weight: 300;
-        font-size: 15px;
+        font-size: 13px;
         display: block;
         text-align: right;
         padding-top: 35px;
@@ -52,7 +53,7 @@
         }
         & .read-more {
             font-family: $font-family;
-            font-size: 20px;
+            font-size: 15px;
         }
     }
 }
