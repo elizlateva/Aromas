@@ -1285,10 +1285,12 @@ a.button.white_border {
 .technology .image-wrapper {
   text-align: center;
   background: #fff;
-}
-
-.technology .image-wrapper img {
-  width: 200px;
+  background: url(../css/images/techology.png) no-repeat;
+  background-color: #fff;
+  background-size: contain;
+  width: 100%;
+  height: 300px;
+  background-position: bottom center;
 }
 
 .technology .text-wrapper {
@@ -1303,7 +1305,7 @@ a.button.white_border {
 }
 
 .technology .text-wrapper .text p:first-child {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .technology a.button.white_border {
@@ -1315,6 +1317,29 @@ a.button.white_border {
   color: #000;
 }
 
+@media only screen and (min-width: 768px) {
+  .technology {
+    padding: 0 20px;
+  }
+  .technology .image-wrapper {
+    float: left;
+    height: 300px;
+  }
+  .technology .text-wrapper {
+    float: right;
+    height: 300px;
+    padding: 50px 20px;
+  }
+  .technology .text-wrapper .text p {
+    line-height: 30px;
+    text-align: left;
+  }
+  .technology a.button.white_border {
+    margin: 40px 0;
+    width: 36%;
+  }
+}
+
 @media only screen and (min-width: 1023px) {
   .technology {
     padding: 0;
@@ -1322,23 +1347,14 @@ a.button.white_border {
   .technology h1 {
     font-size: 26px;
   }
-  .technology .image-wrapper {
-    float: left;
-  }
-  .technology .image-wrapper img {
-    width: auto;
-  }
-  .technology .text-wrapper {
-    float: right;
-    height: 427px;
-    padding: 70px 40px;
-  }
-  .technology .text-wrapper .text p {
-    line-height: 30px;
-    text-align: left;
-  }
   .technology a.button.white_border {
-    margin: 70px 0;
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .technology a.button.white_border {
+    width: 21%;
   }
 }
 
