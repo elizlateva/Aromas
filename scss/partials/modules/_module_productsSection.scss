@@ -8,6 +8,7 @@
     }
     & .swiper-container {
         margin-bottom: 100px;
+        width: 90%;
         & .swiper-slide {
             position: relative;
             display: block;
@@ -28,7 +29,7 @@
                     color: $white;
                     position: absolute;
                     z-index: 1;
-                    top: 35%;
+                    top: 45%;
                     left: 10%;
                     text-align: left;
                     &:hover span:after {
@@ -61,7 +62,7 @@
     transition: all 0.4s ease-in-out 0s;
     & a.button.white_border.overlay {
         width: 150px;
-        height: 40px;
+        height: 46px;
         text-align: center;
         left: 7%;
         top: 66%;
@@ -73,21 +74,61 @@
         & h1 {
             font-size: $font-size-26;
         }
-        & .swiper-container .swiper-slide {
-            &:hover {
-                & .overlay {
-                    opacity: 1;
+        & .swiper-container {
+            width: 100%;
+            .swiper-slide {
+                &:hover {
+                    & .overlay {
+                        opacity: 1;
+                    }
+                    & a.button.white_border.overlay {
+                        background: none;
+                    }
+                    & span {
+                        top: 25%;
+                        &:after {
+                            width: 90%;
+                            left: 1%;
+                            content: "";
+                            position: absolute;
+                            bottom: -10px;
+                            border-bottom: 2px solid $white;
+                        }
+                    }
                 }
-                & a.button.white_border.overlay {
-                    background: none;
+                & a span {
+                    top: 25%;
                 }
-                & span:after {
-                    width: 90%;
-                    left: 1%;
-                    content: "";
-                    position: absolute;
-                    bottom: -10px;
-                    border-bottom: 2px solid $white;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .products {
+        & .swiper-container {
+            .swiper-slide {
+                &:hover {
+                    & .overlay {
+                        opacity: 1;
+                    }
+                    & a.button.white_border.overlay {
+                        background: none;
+                    }
+                    & span {
+                        top: 35%;
+                        &:after {
+                            width: 90%;
+                            left: 1%;
+                            content: "";
+                            position: absolute;
+                            bottom: -10px;
+                            border-bottom: 2px solid $white;
+                        }
+                    }
+                }
+                & a span {
+                    top: 35%;
                 }
             }
         }

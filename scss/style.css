@@ -207,7 +207,7 @@ h1 {
   color: #000;
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.8);
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 h2 {
@@ -566,7 +566,7 @@ h2 {
   line-height: 20px;
   font-weight: 300;
   word-break: keep-all;
-  text-align: left;
+  text-align: center;
   padding-bottom: 20px;
 }
 
@@ -779,9 +779,9 @@ h2 {
   }
   .content .text-wrapper .text {
     float: right;
-    width: 70%;
+    width: 100%;
     text-align: right;
-    padding: 50px 20px;
+    padding: 0 20px;
     overflow: hidden;
   }
   .content .text-wrapper:after {
@@ -797,7 +797,7 @@ h2 {
   .content .image-wrapper {
     float: right;
     overflow: hidden;
-    height: 450px;
+    height: 300px;
     background-position: left center;
   }
   .content .image-wrapper:after {
@@ -813,6 +813,9 @@ h2 {
   }
   .content h1 {
     font-size: 26px;
+  }
+  .content .text-wrapper .text {
+    width: 70%;
   }
 }
 
@@ -831,7 +834,7 @@ a.button {
   width: 50%;
   padding: 10px 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   display: block;
   text-align: center;
@@ -863,7 +866,6 @@ a.button.white_border {
 @media only screen and (min-width: 1366px) {
   a.button {
     width: 10%;
-    font-size: 20px;
   }
 }
 
@@ -875,6 +877,7 @@ a.button.white_border {
 
 .products .swiper-container {
   margin-bottom: 100px;
+  width: 90%;
 }
 
 .products .swiper-container .swiper-slide {
@@ -902,7 +905,7 @@ a.button.white_border {
   color: #fff;
   position: absolute;
   z-index: 1;
-  top: 35%;
+  top: 45%;
   left: 10%;
   text-align: left;
 }
@@ -934,7 +937,7 @@ a.button.white_border {
 
 .swiper-slide .overlay a.button.white_border.overlay {
   width: 150px;
-  height: 40px;
+  height: 46px;
   text-align: center;
   left: 7%;
   top: 66%;
@@ -944,11 +947,17 @@ a.button.white_border {
   .products h1 {
     font-size: 26px;
   }
+  .products .swiper-container {
+    width: 100%;
+  }
   .products .swiper-container .swiper-slide:hover .overlay {
     opacity: 1;
   }
   .products .swiper-container .swiper-slide:hover a.button.white_border.overlay {
     background: none;
+  }
+  .products .swiper-container .swiper-slide:hover span {
+    top: 25%;
   }
   .products .swiper-container .swiper-slide:hover span:after {
     width: 90%;
@@ -957,6 +966,32 @@ a.button.white_border {
     position: absolute;
     bottom: -10px;
     border-bottom: 2px solid #fff;
+  }
+  .products .swiper-container .swiper-slide a span {
+    top: 25%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .products .swiper-container .swiper-slide:hover .overlay {
+    opacity: 1;
+  }
+  .products .swiper-container .swiper-slide:hover a.button.white_border.overlay {
+    background: none;
+  }
+  .products .swiper-container .swiper-slide:hover span {
+    top: 35%;
+  }
+  .products .swiper-container .swiper-slide:hover span:after {
+    width: 90%;
+    left: 1%;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    border-bottom: 2px solid #fff;
+  }
+  .products .swiper-container .swiper-slide a span {
+    top: 35%;
   }
 }
 
@@ -1289,13 +1324,13 @@ a.button.white_border {
   background-color: #fff;
   background-size: contain;
   width: 100%;
-  height: 300px;
+  height: 200px;
   background-position: bottom center;
 }
 
 .technology .text-wrapper {
   background: #000;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -1309,7 +1344,7 @@ a.button.white_border {
 }
 
 .technology a.button.white_border {
-  margin: 40px auto 0;
+  margin: 20px auto 0;
 }
 
 .technology a.button.white_border:hover {
@@ -1336,7 +1371,7 @@ a.button.white_border {
   }
   .technology a.button.white_border {
     margin: 40px 0;
-    width: 36%;
+    width: 38%;
   }
 }
 
@@ -1854,6 +1889,13 @@ a.button.white_border {
   width: 80%;
   display: block;
   border-radius: 0;
+  color: #000;
+}
+
+.aromas .inner button:hover {
+  background: #000;
+  color: #fff;
+  border: 2px dolid #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2015,11 +2057,12 @@ a.button.white_border {
 .blog_pagination a {
   font-size: 20px;
   line-height: 26px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-.blog_pagination a:hover {
-  font-size: 30px;
+.blog_pagination a:active {
+  font-size: 25px;
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2192,9 +2235,7 @@ ul.user li a {
   padding: 10px 0;
   text-indent: 20px;
   color: #000;
-  font-size: 15px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font: 400 15px "Open Sans", sans-serif;
 }
 
 .blog_submit_form .enter_text {
@@ -2205,9 +2246,7 @@ ul.user li a {
   padding: 20px 0;
   margin: 20px 0;
   color: #000;
-  font-size: 15px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font: 400 15px "Open Sans", sans-serif;
   outline: none;
 }
 
@@ -2455,15 +2494,11 @@ ul.user li a {
 
 .partners .slider {
   position: relative;
+  margin: 30px auto;
 }
 
 .partners .swiper-container {
-  margin: 50px auto;
   width: 80%;
-}
-
-.partners .swiper-container .swiper-slide {
-  width: 300px;
 }
 
 .partners .swiper-container .swiper-slide .swiper-slide-image-container {
@@ -2471,7 +2506,23 @@ ul.user li a {
 }
 
 .partners .swiper-container .swiper-slide .swiper-slide-image-container .DS_logo {
-  padding: 30px 0;
+  padding-top: 51px;
+}
+
+.partners .swiper-container .swiper-slide .swiper-slide-image-container .cl_logo {
+  padding-top: 25px;
+}
+
+.partners .swiper-container .swiper-slide .swiper-slide-image-container .telenor_logo {
+  padding-top: 30px;
+}
+
+.partners .swiper-container .swiper-slide .swiper-slide-image-container .pp_logo {
+  padding-top: 6px;
+}
+
+.partners .swiper-container .swiper-slide .swiper-slide-image-container .v6_logo {
+  padding-top: 13px;
 }
 
 .partners .swiper-button-next {
@@ -2491,7 +2542,6 @@ ul.user li a {
   }
   .partners .slider {
     width: 980px;
-    margin: 0 auto;
   }
 }
 
@@ -2505,13 +2555,13 @@ ul.user li a {
 .footer .footer_before {
   background: #000;
   color: #fff;
-  padding: 40px 0;
+  padding: 20px 0 40px;
   margin: 0 auto;
 }
 
 .footer .footer_before h2 {
   text-align: center;
-  margin-top: 20px;
+  padding: 20px 0;
 }
 
 .footer .footer_before:after {
@@ -2536,6 +2586,9 @@ ul.user li a {
 @media only screen and (min-width: 1023px) {
   .footer {
     padding: 0;
+  }
+  .footer_before h2 {
+    font-size: 25px;
   }
   .footer_after {
     width: 980px;
@@ -2661,11 +2714,7 @@ ul.user li a {
   }
   .footer_menu_wrapper .footer_menu {
     width: 50%;
-    text-align: left;
     float: left;
-  }
-  .social_icon {
-    text-align: left;
   }
 }
 
@@ -2678,10 +2727,12 @@ ul.user li a {
   .footer_menu_wrapper .footer_menu {
     width: 23%;
     margin: 0;
+    text-align: left;
   }
   .social_icon {
     margin-top: 50px;
     text-align: center;
+    display: inline-block;
   }
   .copyright {
     float: left;

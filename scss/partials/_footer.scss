@@ -8,11 +8,11 @@
     & .footer_before {
         background: $black;
         color: $white;
-        padding: 40px 0;
+        padding: 20px 0 40px;
         margin: 0 auto;
         & h2 {
             text-align: center;
-            margin-top: 20px;
+            padding: 20px 0;
         }
         &:after {
             clear: both;
@@ -36,6 +36,11 @@
 @media #{$desktop} {
     .footer {
         padding: 0;
+    }
+    & .footer_before {
+        & h2 {
+            font-size: 25px;
+        }
     }
     & .footer_after {
         width: 980px;

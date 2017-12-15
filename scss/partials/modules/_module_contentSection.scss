@@ -39,9 +39,9 @@
             float: left;
             & .text {
                 float: right;
-                width: 70%;
+                width: 100%;
                 text-align: right;
-                padding: 50px 20px;
+                padding: 0 20px;
                 overflow: hidden;
             }
             &:after {
@@ -58,7 +58,7 @@
         & .image-wrapper {
             float: right;
             overflow: hidden;
-            height: 450px;
+            height: 300px;
             background-position: left center;
             &:after {
                 clear: both;
@@ -74,6 +74,9 @@
         padding: 0;
         & h1 {
             font-size: $font-size-26;
+        }
+        .text-wrapper .text {
+            width: 70%;
         }
     }
 }

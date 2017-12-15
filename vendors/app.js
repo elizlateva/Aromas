@@ -32,36 +32,36 @@ $(document).ready(function() {
         autoplay: true,
         speed: 3000,
         loop: true,
-        slidesPerView: 7,
-        spaceBetween: 10,
+        slidesPerView: 6,
+        spaceBetween: 2,
         // Responsive breakpoints
         breakpoints: {
             // when window width is <= 320px
             320: {
                 slidesPerView: 1,
-                spaceBetween: 5,
+                spaceBetween: 10,
 
             },
             // when window width is <= 480px
             480: {
-                slidesPerView: 2,
-                spaceBetween: 5,
+                slidesPerView: 1,
+                spaceBetween: 10,
 
             },
             // when window width is <= 640px
-            640: {
-                slidesPerView: 3,
-                spaceBetween: 5,
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
 
             },
             1024: {
                 slidesPerView: 4,
-                spaceBetween: 5,
+                spaceBetween: 2,
                 // touchEventsTarget: 'swiper-container'
             },
             1280: {
                 slidesPerView: 5,
-                spaceBetween: 10,
+                spaceBetween: 2,
                 // touchEventsTarget: 'swiper-container'
             }
         }
@@ -71,24 +71,29 @@ $(document).ready(function() {
     var partnersSwiper = new Swiper('.partners .swiper-container', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        slidesPerView: 4,
+        slidesPerView: 5,
         spaceBetween: 30,
         slidesPerGroup: 1,
         autoplay: 2500,
         speed: 500,
         loop: true,
         breakpoints: {
-            // when window width is <= 320px
+
             320: {
                 slidesPerView: 1,
 
 
             },
-            640: {
+            480: {
                 slidesPerView: 1,
                 spaceBetween: 30
 
-            }
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+
+            },
         }
     });
     var partnersSwiper = new Swiper('.technology-slider .swiper-container', {
@@ -101,7 +106,7 @@ $(document).ready(function() {
         speed: 500,
         loop: true,
         breakpoints: {
-            // when window width is <= 320px
+
             320: {
                 slidesPerView: 1,
                 spaceBetween: 20

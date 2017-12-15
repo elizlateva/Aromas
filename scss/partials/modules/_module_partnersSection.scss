@@ -10,16 +10,27 @@
     }
     & .slider {
         position: relative;
+        margin: 30px auto;
     }
     & .swiper-container {
-        margin: 50px auto;
         width: 80%;
         & .swiper-slide {
-            width: 300px;
             & .swiper-slide-image-container {
                 text-align: center;
                 & .DS_logo {
-                    padding: 30px 0;
+                    padding-top: 51px;
+                }
+                & .cl_logo {
+                    padding-top: 25px;
+                }
+                & .telenor_logo {
+                    padding-top: 30px;
+                }
+                & .pp_logo {
+                    padding-top: 6px;
+                }
+                & .v6_logo {
+                    padding-top: 13px;
                 }
             }
         }
@@ -40,7 +51,6 @@
         }
         & .slider {
             width: 980px;
-            margin: 0 auto;
         }
     }
 }
