@@ -561,7 +561,7 @@ h2 {
 }
 
 .about .inner p {
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
   line-height: 20px;
   font-weight: 300;
@@ -573,7 +573,7 @@ h2 {
 .about .inner ul li {
   list-style: disc;
   list-style-position: inside;
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
   line-height: 20px;
   font-weight: 300;
@@ -649,6 +649,11 @@ h2 {
 @media only screen and (min-width: 1023px) {
   .about h1 {
     font-size: 26px;
+  }
+  .about .inner p,
+  .about .inner ul li {
+    font-size: 15px;
+    line-height: 25px;
   }
   .gallery {
     margin: 50px 0;

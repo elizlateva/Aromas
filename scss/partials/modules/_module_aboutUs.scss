@@ -9,7 +9,7 @@
     & .inner {
         background: rgba(255, 255, 255, .8);
         & p {
-            font-size: 15px;
+            font-size: 13px;
             font-family: $font-family;
             line-height: 20px;
             font-weight: 300;
@@ -20,7 +20,7 @@
         & ul li {
             list-style: disc;
             list-style-position: inside;
-            font-size: 15px;
+            font-size: 13px;
             font-family: $font-family;
             line-height: 20px;
             font-weight: 300;
@@ -95,6 +95,13 @@
     .about {
         & h1 {
             font-size: $font-size-26;
+        }
+        & .inner {
+            & p,
+            & ul li {
+                font-size: $font-size-15;
+                line-height: 25px;
+            }
         }
     }
     .gallery {
