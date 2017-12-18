@@ -63,10 +63,10 @@
     .blog {
         & .inner {
             & .blog_wrapper {
-                width: 49%;
+                width: 48%;
                 overflow: hidden;
                 float: left;
-                margin: 2px;
+                margin: 0 0 10px 10px;
                 &:after {
                     clear: both;
                     content: "";
@@ -93,7 +93,7 @@
             & .blog_wrapper {
                 width: 31%;
                 overflow: hidden;
-                margin: 0 10px 20px;
+                margin: 0 10px 10px;
             }
             & h2 {
                 font-size: 20px;

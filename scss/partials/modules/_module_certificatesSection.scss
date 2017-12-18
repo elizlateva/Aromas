@@ -15,7 +15,7 @@
                 padding: 10px 0;
             }
             & p {
-                font-size: 17px;
+                font-size: 13px;
                 font-weight: 300;
             }
         }
@@ -24,14 +24,19 @@
 
 @media #{$tablet} {
     .certificates {
-        & .certificates_wrapper {
-            width: 50%;
-            float: left;
-        }
-        &:after {
-            clear: both;
-            content: "";
-            display: block;
+        & .inner {
+            & .certificates_wrapper {
+                width: 50%;
+                float: left;
+            }
+            & p {
+                font-size: 15px;
+            }
+            &:after {
+                clear: both;
+                content: "";
+                display: block;
+            }
         }
     }
 }
