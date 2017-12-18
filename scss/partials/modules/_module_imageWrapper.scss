@@ -2,24 +2,24 @@
 	Image-wrapper
 \* ------------------------------------------------------------ */
 
-.content .image-wrapper {
+.content .image_wrapper {
     width: 100%;
     overflow: hidden;
 }
 
 @media #{$tablet} {
-    .content .image-wrapper {
+    .content .image_wrapper {
         width: 50%;
     }
 }
 
-.technology .image-wrapper {
+.technology .image_wrapper {
     width: 100%;
     overflow: hidden;
 }
 
 @media #{$tablet} {
-    .technology .image-wrapper {
+    .technology .image_wrapper {
         width: 50%;
     }
 }

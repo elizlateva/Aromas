@@ -14,7 +14,7 @@
         line-height: 20px;
         font-weight: 300;
         word-break: keep-all;
-        text-align: left;
+        text-align: center;
         padding: 5px 0;
     }
 }
@@ -29,7 +29,7 @@
         position: relative;
         & .swiper-container {
             width: 80%;
-            & .technology-products {
+            & .technology_products {
                 text-align: center;
                 display: block;
                 position: relative;
@@ -100,7 +100,7 @@
         & p {
             text-align: center;
             font-size: 15px;
-            padding: 10px 0;
+            padding: 10px 150px;
         }
     }
     .technology-slider {
@@ -112,7 +112,7 @@
             width: 980px;
             margin: 0 auto;
             & .swiper-container {
-                & .technology-products {
+                & .technology_products {
                     & h2 {
                         font-size: 25px;
                     }

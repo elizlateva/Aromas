@@ -709,7 +709,7 @@ h2 {
   margin-top: 15px;
 }
 
-.intro .read-more {
+.intro .read_more {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 13px;
@@ -718,7 +718,7 @@ h2 {
   margin-right: 30px;
 }
 
-.intro .read-more:hover {
+.intro .read_more:hover {
   font-weight: 400;
 }
 
@@ -733,7 +733,7 @@ h2 {
   .intro span {
     font-size: 35px;
   }
-  .intro .read-more {
+  .intro .read_more {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
   }
@@ -752,7 +752,7 @@ h2 {
   font-size: 20px;
 }
 
-.content .text-wrapper .text {
+.content .text_wrapper .text {
   overflow: hidden;
   margin: 20px 0;
 }
@@ -766,7 +766,7 @@ h2 {
   color: #fff;
 }
 
-.content .image-wrapper {
+.content .image_wrapper {
   width: 100%;
   height: 200px;
   background: url("../css/images/Fully-White-Office.png") no-repeat;
@@ -778,17 +778,17 @@ h2 {
   .content {
     padding: 0 20px;
   }
-  .content .text-wrapper {
+  .content .text_wrapper {
     float: left;
   }
-  .content .text-wrapper .text {
+  .content .text_wrapper .text {
     float: right;
     width: 100%;
     text-align: right;
     padding: 0 20px;
     overflow: hidden;
   }
-  .content .text-wrapper:after {
+  .content .text_wrapper:after {
     clear: both;
     content: '';
     display: block;
@@ -798,13 +798,13 @@ h2 {
     float: right;
     overflow: hidden;
   }
-  .content .image-wrapper {
+  .content .image_wrapper {
     float: right;
     overflow: hidden;
     height: 300px;
     background-position: left center;
   }
-  .content .image-wrapper:after {
+  .content .image_wrapper:after {
     clear: both;
     content: '';
     display: block;
@@ -818,16 +818,16 @@ h2 {
   .content h1 {
     font-size: 26px;
   }
-  .content .text-wrapper .text {
+  .content .text_wrapper .text {
     width: 70%;
   }
 }
 
 @media only screen and (min-width: 1366px) {
-  .content .text-wrapper .text {
+  .content .text_wrapper .text {
     width: 60%;
   }
-  .content .image-wrapper {
+  .content .image_wrapper {
     background-position: bottom center;
   }
 }
@@ -1340,7 +1340,7 @@ a.button.white_border {
   font-size: 20px;
 }
 
-.technology .image-wrapper {
+.technology .image_wrapper {
   text-align: center;
   background: #fff;
   background: url(../css/images/techology.png) no-repeat;
@@ -1351,18 +1351,18 @@ a.button.white_border {
   background-position: bottom center;
 }
 
-.technology .text-wrapper {
+.technology .text_wrapper {
   background: #000;
   padding: 20px;
   text-align: center;
 }
 
-.technology .text-wrapper .text p {
+.technology .text_wrapper .text p {
   line-height: 25px;
   color: #fff;
 }
 
-.technology .text-wrapper .text p:first-child {
+.technology .text_wrapper .text p:first-child {
   font-weight: 400;
 }
 
@@ -1379,16 +1379,16 @@ a.button.white_border {
   .technology {
     padding: 0 20px;
   }
-  .technology .image-wrapper {
+  .technology .image_wrapper {
     float: left;
     height: 300px;
   }
-  .technology .text-wrapper {
+  .technology .text_wrapper {
     float: right;
     height: 300px;
     padding: 50px 20px;
   }
-  .technology .text-wrapper .text p {
+  .technology .text_wrapper .text p {
     line-height: 30px;
     text-align: left;
   }
@@ -1418,31 +1418,33 @@ a.button.white_border {
 
 /* ------------------------------------------------------------ * Technology page
 \* ------------------------------------------------------------ */
-.technology-page h1 {
+.technology_page h1 {
   font-size: 20px;
   word-break: break-all;
 }
 
-.technology-page .technology-description {
+.technology_page .technology_description {
   background: rgba(255, 255, 255, 0.8);
   margin-bottom: 100px;
 }
 
-.technology-page .technology-description p {
+.technology_page .technology_description p {
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
   font-weight: 300;
   line-height: 20px;
+  font-size: 13px;
 }
 
-.technology-page .technology-products {
+.technology_page .technology_products {
   text-align: center;
   background: rgba(255, 255, 255, 0.8);
   display: block;
   position: relative;
+  margin-bottom: 10px;
 }
 
-.technology-page .technology-products h2 {
+.technology_page .technology_products h2 {
   color: #000;
   font-weight: 400;
   font-size: 30px;
@@ -1450,7 +1452,7 @@ a.button.white_border {
   padding: 20px 0;
 }
 
-.technology-page .technology-products h3 {
+.technology_page .technology_products h3 {
   font-size: 25px;
   font-weight: 300;
   margin: 20px 0;
@@ -1458,14 +1460,14 @@ a.button.white_border {
   word-break: break-all;
 }
 
-.technology-page .technology-products .picture {
+.technology_page .technology_products .picture {
   position: relative;
   display: block;
   overflow: hidden;
   min-height: 400px;
 }
 
-.technology-page .technology-products .picture img {
+.technology_page .technology_products .picture img {
   position: absolute;
   top: 0;
   right: 0;
@@ -1474,24 +1476,37 @@ a.button.white_border {
   margin: auto;
 }
 
-.technology-page .technology-products:nth-child(2n) {
+.technology_page .technology_products .technology_overlay p {
+  font-size: 13px;
+  line-height: 20px;
+  color: #000;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.technology_page .technology_products:nth-child(2n) {
   background: #000;
 }
 
-.technology-page .technology-products:nth-child(2n) h2 {
+.technology_page .technology_products:nth-child(2n) h2 {
   color: #fff;
 }
 
-.technology-page .technology-products:nth-child(2n) h3 {
+.technology_page .technology_products:nth-child(2n) h3 {
+  color: #fff;
+}
+
+.technology_page .technology_products:nth-child(2n) .technology_overlay p {
   color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
-  .technology-page .technology-products {
+  .technology_page .technology_products {
     width: 50%;
     float: left;
+    margin: 0;
   }
-  .technology-page:after {
+  .technology_page:after {
     clear: both;
     content: "";
     display: block;
@@ -1499,13 +1514,18 @@ a.button.white_border {
 }
 
 @media only screen and (min-width: 1023px) {
-  .technology-page h1 {
+  .technology_page h1 {
     font-size: 26px;
   }
-  .technology-page .technology-products {
+  .technology_page .technology_description p {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 10px 150px;
+  }
+  .technology_page .technology_products {
     width: 33%;
   }
-  .technology-page .technology-products .technology-overlay {
+  .technology_page .technology_products .technology_overlay {
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     height: 100%;
@@ -1519,14 +1539,14 @@ a.button.white_border {
     -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
   }
-  .technology-page .technology-products .technology-overlay p {
+  .technology_page .technology_products .technology_overlay p {
     font-size: 18px;
     line-height: 25px;
     color: #fff;
     text-align: center;
     padding: 150px 20px;
   }
-  .technology-page .technology-products:hover .technology-overlay {
+  .technology_page .technology_products:hover .technology_overlay {
     opacity: 1;
   }
 }
@@ -1559,22 +1579,22 @@ a.button.white_border {
   font-size: 20px;
 }
 
-.contact-icons {
+.contact_icons {
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   padding: 20px;
 }
 
-.contact-icons ul.contact_icons_list {
+.contact_icons ul.contact_icons_list {
   display: block;
 }
 
-.contact-icons ul.contact_icons_list li {
+.contact_icons ul.contact_icons_list li {
   display: block;
 }
 
-.contact-icons ul.contact_icons_list li.email:before {
+.contact_icons ul.contact_icons_list li.email:before {
   content: "\f003";
   font-family: FontAwesome;
   display: inline-block;
@@ -1582,7 +1602,7 @@ a.button.white_border {
   font-size: 18px;
 }
 
-.contact-icons ul.contact_icons_list li.phone:before {
+.contact_icons ul.contact_icons_list li.phone:before {
   content: "\f10b";
   font-family: FontAwesome;
   display: inline-block;
@@ -1590,7 +1610,7 @@ a.button.white_border {
   font-size: 23px;
 }
 
-.contact-icons ul.contact_icons_list li.address:before {
+.contact_icons ul.contact_icons_list li.address:before {
   content: "\f041";
   font-family: FontAwesome;
   display: inline-block;
@@ -1605,23 +1625,23 @@ a.button.white_border {
   background: url("../css/images/map.png");
 }
 
-.contact-form {
+.contact_form {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.contact-form h2 {
+.contact_form h2 {
   color: #000;
   text-align: center;
   padding: 10px 0 20px 0;
   border-bottom: 1px solid #000;
 }
 
-.contact-form form.conrtol-form {
+.contact_form form.conrtol_form {
   width: 100%;
   margin-top: 20px;
 }
 
-.contact-form form.conrtol-form .form-text {
+.contact_form form.conrtol_form .form_text {
   display: block;
   height: 200px;
   width: 85%;
@@ -1636,7 +1656,7 @@ a.button.white_border {
   overflow: hidden;
 }
 
-.contact-form form.conrtol-form .form-control {
+.contact_form form.conrtol_form .form_control {
   display: block;
   width: 85%;
   padding: 8px 20px;
@@ -1648,11 +1668,11 @@ a.button.white_border {
   font-size: 13px;
 }
 
-.contact-form form.conrtol-form .dropdown {
+.contact_form form.conrtol_form .dropdown {
   position: relative;
 }
 
-.contact-form form.conrtol-form .dropdown .dropbtn {
+.contact_form form.conrtol_form .dropdown .dropbtn {
   display: block;
   width: 99%;
   padding: 7px 17px;
@@ -1667,13 +1687,13 @@ a.button.white_border {
   font-size: 13px;
 }
 
-.contact-form form.conrtol-form .dropdown .dropbtn .fa.fa-angle-down {
+.contact_form form.conrtol_form .dropdown .dropbtn .fa.fa-angle-down {
   font-size: 30px;
   float: right;
   line-height: 20px;
 }
 
-.contact-form form.conrtol-form .dropdown .dropdown-content {
+.contact_form form.conrtol_form .dropdown .dropdown_content {
   display: none;
   position: absolute;
   background-color: #fff;
@@ -1683,14 +1703,14 @@ a.button.white_border {
   z-index: 1;
 }
 
-.contact-form form.conrtol-form .dropdown .dropdown-content.dropdown-content a {
+.contact_form form.conrtol_form .dropdown .dropdown_content.dropdown_content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.contact-form form.conrtol-form .submit {
+.contact_form form.conrtol_form .submit {
   display: block;
   width: 50%;
   padding: 10px 0;
@@ -1703,50 +1723,73 @@ a.button.white_border {
   font-weight: 400;
 }
 
-.contact-form form.conrtol-form .show {
+.contact_form form.conrtol_form .show {
   display: block;
 }
 
 @media only screen and (min-width: 412px) {
-  .contact-form form.conrtol-form .dropdown .dropbtn {
+  .contact_form form.conrtol_form .dropdown .dropbtn {
     width: 97%;
   }
 }
 
 @media only screen and (min-width: 480px) {
-  .contact-form form.conrtol-form .dropdown .dropbtn {
+  .contact_form form.conrtol_form .dropdown .dropbtn {
     width: 95%;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .contact-form form.conrtol-form .dropdown .dropbtn {
+  .contact_form form.conrtol_form .dropdown .dropbtn {
     width: 92%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-form form.conrtol-form .form-text {
+  .contact_icons ul.contact_icons_list {
+    position: relative;
+  }
+  .contact_icons ul.contact_icons_list .email {
+    float: left;
+    overflow: hidden;
+  }
+  .contact_icons ul.contact_icons_list .phone {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 155px;
+  }
+  .contact_icons ul.contact_icons_list .address {
+    float: right;
+    overflow: hidden;
+  }
+  .contact_icons:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+  .contact_form form.conrtol_form .form_text {
     width: 92%;
   }
-  .contact-form form.conrtol-form .form-control {
+  .contact_form form.conrtol_form .form_control {
     width: 42%;
     display: inline-block;
     margin: 10px 7px 15px;
   }
-  .contact-form form.conrtol-form .dropdown .dropbtn {
+  .contact_form form.conrtol_form .dropdown .dropbtn {
     width: 48%;
     float: left;
     margin: 10px 7px 25px;
   }
-  .contact-form form.conrtol-form .dropdown-content {
+  .contact_form form.conrtol_form .dropdown_content {
     display: none;
   }
-  .contact-form form.conrtol-form .submit {
+  .contact_form form.conrtol_form .submit {
     width: 40%;
     margin-top: 20px;
   }
-  .contact-form form.conrtol-form .show {
+  .contact_form form.conrtol_form .show {
     display: block;
   }
 }
@@ -1755,57 +1798,34 @@ a.button.white_border {
   .contacts h1 {
     font-size: 26px;
   }
-  .contact-icons {
+  .contact_icons {
     width: 980px;
     margin: 0 auto;
     padding: 20px 0;
   }
-  .contact-icons ul.contact_icons_list {
-    position: relative;
-  }
-  .contact-icons ul.contact_icons_list .email {
-    float: left;
-    overflow: hidden;
-  }
-  .contact-icons ul.contact_icons_list .phone {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 155px;
-  }
-  .contact-icons ul.contact_icons_list .address {
-    float: right;
-    overflow: hidden;
-  }
-  .contact-icons:after {
-    clear: both;
-    display: block;
-    content: '';
-  }
-  .contact-form .inner {
+  .contact_form .inner {
     padding-bottom: 40px;
   }
-  .contact-form .inner h2 {
+  .contact_form .inner h2 {
     text-align: left;
     font-size: 20px;
     margin-left: 9px;
     padding-top: 40px;
   }
-  .contact-form .inner form.conrtol-form {
+  .contact_form .inner form.conrtol_form {
     width: 75%;
     text-align: left;
   }
-  .contact-form .inner form.conrtol-form .form-text {
+  .contact_form .inner form.conrtol_form .form-text {
     width: 93%;
   }
-  .contact-form .inner form.conrtol-form .dropdown-content {
+  .contact_form .inner form.conrtol_form .dropdown_content {
     display: none;
   }
-  .contact-form .inner form.conrtol-form .submit {
+  .contact_form .inner form.conrtol_form .submit {
     width: 26%;
   }
-  .contact-form .inner form.conrtol-form .show {
+  .contact_form .inner form.conrtol_form .show {
     display: block;
   }
 }
@@ -1995,36 +2015,36 @@ a.button.white_border {
 
 /* ------------------------------------------------------------ *	Text-wrapper
 \* ------------------------------------------------------------ */
-.text-wrapper {
+.text_wrapper {
   width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-  .text-wrapper {
+  .text_wrapper {
     width: 50%;
   }
 }
 
 /* ------------------------------------------------------------ *	Image-wrapper
 \* ------------------------------------------------------------ */
-.content .image-wrapper {
+.content .image_wrapper {
   width: 100%;
   overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
-  .content .image-wrapper {
+  .content .image_wrapper {
     width: 50%;
   }
 }
 
-.technology .image-wrapper {
+.technology .image_wrapper {
   width: 100%;
   overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
-  .technology .image-wrapper {
+  .technology .image_wrapper {
     width: 50%;
   }
 }
@@ -2051,7 +2071,7 @@ a.button.white_border {
   display: block;
   background-color: black;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   text-align: left;
   word-break: break-word;
   font-family: "Open Sans", sans-serif;
@@ -2127,7 +2147,7 @@ a.button.white_border {
   .blog .inner .blog_wrapper {
     width: 31%;
     overflow: hidden;
-    margin: 0 10px 10px;
+    margin: 0 10px 40px 10px;
   }
   .blog .inner h2 {
     font-size: 20px;
@@ -2400,7 +2420,7 @@ ul.user li a {
   line-height: 20px;
   font-weight: 300;
   word-break: keep-all;
-  text-align: left;
+  text-align: center;
   padding: 5px 0;
 }
 
@@ -2418,13 +2438,13 @@ ul.user li a {
   width: 80%;
 }
 
-.technology-slider .technology-slider-wrapper .swiper-container .technology-products {
+.technology-slider .technology-slider-wrapper .swiper-container .technology_products {
   text-align: center;
   display: block;
   position: relative;
 }
 
-.technology-slider .technology-slider-wrapper .swiper-container .technology-products h2 {
+.technology-slider .technology-slider-wrapper .swiper-container .technology_products h2 {
   color: #000;
   font-weight: 400;
   font-size: 20px;
@@ -2432,7 +2452,7 @@ ul.user li a {
   padding: 20px 0;
 }
 
-.technology-slider .technology-slider-wrapper .swiper-container .technology-products h3 {
+.technology-slider .technology-slider-wrapper .swiper-container .technology_products h3 {
   font-size: 18px;
   font-weight: 300;
   margin: 20px 0;
@@ -2440,14 +2460,14 @@ ul.user li a {
   word-break: break-all;
 }
 
-.technology-slider .technology-slider-wrapper .swiper-container .technology-products .picture {
+.technology-slider .technology-slider-wrapper .swiper-container .technology_products .picture {
   position: relative;
   display: block;
   overflow: hidden;
   min-height: 400px;
 }
 
-.technology-slider .technology-slider-wrapper .swiper-container .technology-products .picture img {
+.technology-slider .technology-slider-wrapper .swiper-container .technology_products .picture img {
   position: absolute;
   top: 0;
   right: 0;
@@ -2491,7 +2511,7 @@ ul.user li a {
   .services p {
     text-align: center;
     font-size: 15px;
-    padding: 10px 0;
+    padding: 10px 150px;
   }
   .technology-slider h1 {
     font-size: 26px;
@@ -2501,10 +2521,10 @@ ul.user li a {
     width: 980px;
     margin: 0 auto;
   }
-  .technology-slider .technology-slider-wrapper .swiper-container .technology-products h2 {
+  .technology-slider .technology-slider-wrapper .swiper-container .technology_products h2 {
     font-size: 25px;
   }
-  .technology-slider .technology-slider-wrapper .swiper-container .technology-products h3 {
+  .technology-slider .technology-slider-wrapper .swiper-container .technology_products h3 {
     font-size: 20px;
   }
   .submit {

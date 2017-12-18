@@ -9,7 +9,7 @@
     & h1 {
         font-size: 20px;
     }
-    & .image-wrapper {
+    & .image_wrapper {
         text-align: center;
         background: $white;
         background: url(../css/images/techology.png) no-repeat;
@@ -19,7 +19,7 @@
         height: 200px;
         background-position: bottom center;
     }
-    & .text-wrapper {
+    & .text_wrapper {
         background: $black;
         padding: 20px;
         text-align: center;
@@ -43,11 +43,11 @@
 @media #{$tablet} {
     .technology {
         padding: 0 20px;
-        & .image-wrapper {
+        & .image_wrapper {
             float: left;
             height: 300px;
         }
-        & .text-wrapper {
+        & .text_wrapper {
             float: right;
             height: 300px;
             padding: 50px 20px;

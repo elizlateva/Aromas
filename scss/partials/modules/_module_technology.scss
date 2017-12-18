@@ -2,26 +2,28 @@
  Technology page
 \* ------------------------------------------------------------ */
 
-.technology-page {
+.technology_page {
     & h1 {
         font-size: 20px;
         word-break: break-all;
     }
-    & .technology-description {
+    & .technology_description {
         background: rgba(255, 255, 255, 0.8);
         margin-bottom: 100px;
         & p {
             text-align: center;
-            padding: 10px 0;
+            padding: 5px 0;
             font-weight: 300;
             line-height: 20px;
+            font-size: 13px;
         }
     }
-    & .technology-products {
+    & .technology_products {
         text-align: center;
         background: rgba(255, 255, 255, 0.8);
         display: block;
         position: relative;
+        margin-bottom: 10px;
         & h2 {
             color: $black;
             font-weight: 400;
@@ -50,6 +52,15 @@
                 margin: auto;
             }
         }
+        & .technology_overlay {
+            & p {
+                font-size: 13px;
+                line-height: 20px;
+                color: $black;
+                text-align: left;
+                padding: 10px 20px;
+            }
+        }
         &:nth-child(2n) {
             background: $black;
             & h2 {
@@ -58,15 +69,21 @@
             & h3 {
                 color: $white;
             }
+            & .technology_overlay {
+                & p {
+                    color: $white;
+                }
+            }
         }
     }
 }
 
 @media #{$tablet} {
-    .technology-page {
-        & .technology-products {
+    .technology_page {
+        & .technology_products {
             width: 50%;
             float: left;
+            margin: 0;
         }
         &:after {
             clear: both;
@@ -77,13 +94,20 @@
 }
 
 @media #{$desktop} {
-    .technology-page {
+    .technology_page {
         & h1 {
             font-size: $font-size-26;
         }
-        & .technology-products {
+        & .technology_description {
+            & p {
+                font-size: $font-size-15;
+                line-height: 25px;
+                padding: 10px 150px;
+            }
+        }
+        & .technology_products {
             width: 33%;
-            & .technology-overlay {
+            & .technology_overlay {
                 background: rgba(0, 0, 0, 0.8);
                 position: absolute;
                 height: 100%;
@@ -105,7 +129,7 @@
                 }
             }
             &:hover {
-                & .technology-overlay {
+                & .technology_overlay {
                     opacity: 1;
                 }
             }

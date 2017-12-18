@@ -2,12 +2,12 @@
 	Text-wrapper
 \* ------------------------------------------------------------ */
 
-.text-wrapper {
+.text_wrapper {
     width: 100%;
 }
 
 @media #{$tablet} {
-    .text-wrapper {
+    .text_wrapper {
         width: 50%;
     }
 }

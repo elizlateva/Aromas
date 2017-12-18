@@ -8,7 +8,7 @@
     }
 }
 
-.contact-icons {
+.contact_icons {
     font-size: $font-size-15;
     font-family: $font-family;
     font-weight: 400;
@@ -49,7 +49,7 @@
     background: url("../css/images/map.png");
 }
 
-.contact-form {
+.contact_form {
     background: rgba(255, 255, 255, 0.8);
     & h2 {
         color: $black;
@@ -57,10 +57,10 @@
         padding: 10px 0 20px 0;
         border-bottom: 1px solid $black;
     }
-    & form.conrtol-form {
+    & form.conrtol_form {
         width: 100%;
         margin-top: 20px;
-        & .form-text {
+        & .form_text {
             display: block;
             height: 200px;
             width: 85%;
@@ -74,7 +74,7 @@
             outline: none;
             overflow: hidden;
         }
-        & .form-control {
+        & .form_control {
             display: block;
             width: 85%;
             padding: 8px 20px;
@@ -106,7 +106,7 @@
                     line-height: 20px;
                 }
             }
-            & .dropdown-content {
+            & .dropdown_content {
                 display: none;
                 // display: block;
                 position: absolute;
@@ -115,7 +115,7 @@
                 overflow: auto;
                 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                 z-index: 1;
-                &.dropdown-content a {
+                &.dropdown_content a {
                     color: black;
                     padding: 12px 16px;
                     text-decoration: none;
@@ -142,30 +142,55 @@
 }
 
 @media only screen and (min-width: 412px) {
-    .contact-form form.conrtol-form .dropdown .dropbtn {
+    .contact_form form.conrtol_form .dropdown .dropbtn {
         width: 97%;
     }
 }
 
 @media #{$smartphone} {
-    .contact-form form.conrtol-form .dropdown .dropbtn {
+    .contact_form form.conrtol_form .dropdown .dropbtn {
         width: 95%;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    .contact-form form.conrtol-form .dropdown .dropbtn {
+    .contact_form form.conrtol_form .dropdown .dropbtn {
         width: 92%;
     }
 }
 
 @media #{$tablet} {
-    .contact-form {
-        & form.conrtol-form {
-            & .form-text {
+    .contact_icons {
+        & ul.contact_icons_list {
+            position: relative;
+            & .email {
+                float: left;
+                overflow: hidden;
+            }
+            & .phone {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 155px;
+            }
+            & .address {
+                float: right;
+                overflow: hidden;
+            }
+        }
+        &:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+    }
+    .contact_form {
+        & form.conrtol_form {
+            & .form_text {
                 width: 92%;
             }
-            & .form-control {
+            & .form_control {
                 width: 42%;
                 display: inline-block;
                 margin: 10px 7px 15px;
@@ -177,7 +202,7 @@
                     margin: 10px 7px 25px;
                 }
             }
-            & .dropdown-content {
+            & .dropdown_content {
                 display: none;
                 // display: block;
                 // position: absolute;
@@ -210,36 +235,12 @@
             font-size: $font-size-26;
         }
     }
-    .contact-icons {
+    .contact_icons {
         width: 980px;
         margin: 0 auto;
-        // overflow: hidden;
         padding: 20px 0;
-        & ul.contact_icons_list {
-            position: relative;
-            & .email {
-                float: left;
-                overflow: hidden;
-            }
-            & .phone {
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: auto;
-                width: 155px;
-            }
-            & .address {
-                float: right;
-                overflow: hidden;
-            }
-        }
-        &:after {
-            clear: both;
-            display: block;
-            content: '';
-        }
     }
-    .contact-form {
+    .contact_form {
         & .inner {
             padding-bottom: 40px;
             & h2 {
@@ -248,13 +249,13 @@
                 margin-left: 9px;
                 padding-top: 40px;
             }
-            & form.conrtol-form {
+            & form.conrtol_form {
                 width: 75%;
                 text-align: left;
                 & .form-text {
                     width: 93%;
                 }
-                & .dropdown-content {
+                & .dropdown_content {
                     display: none;
                     // display: block;
                     // position: absolute;

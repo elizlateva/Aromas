@@ -10,7 +10,7 @@
     & h1 {
         font-size: 20px;
     }
-    & .text-wrapper {
+    & .text_wrapper {
         & .text {
             overflow: hidden;
             margin: 20px 0;
@@ -23,7 +23,7 @@
             color: $white;
         }
     }
-    & .image-wrapper {
+    & .image_wrapper {
         width: 100%;
         height: 200px;
         background: url("../css/images/Fully-White-Office.png") no-repeat;
@@ -35,7 +35,7 @@
 @media #{$tablet} {
     .content {
         padding: 0 20px;
-        & .text-wrapper {
+        & .text_wrapper {
             float: left;
             & .text {
                 float: right;
@@ -55,7 +55,7 @@
             float: right;
             overflow: hidden;
         }
-        & .image-wrapper {
+        & .image_wrapper {
             float: right;
             overflow: hidden;
             height: 300px;
@@ -75,17 +75,17 @@
         & h1 {
             font-size: $font-size-26;
         }
-        .text-wrapper .text {
+        .text_wrapper .text {
             width: 70%;
         }
     }
 }
 
 @media #{$hd_desktop} {
-    .content .text-wrapper .text {
+    .content .text_wrapper .text {
         width: 60%;
     }
-    .content .image-wrapper {
+    .content .image_wrapper {
         background-position: bottom center;
     }
 }

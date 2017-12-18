@@ -17,7 +17,7 @@
             display: block;
             background-color: black;
             margin: 0 auto;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             text-align: left;
             word-break: break-word;
             font-family: $font-family;
@@ -93,7 +93,7 @@
             & .blog_wrapper {
                 width: 31%;
                 overflow: hidden;
-                margin: 0 10px 10px;
+                margin: 0 10px 40px 10px;
             }
             & h2 {
                 font-size: 20px;
