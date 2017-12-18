@@ -1069,7 +1069,7 @@ a.button.white_border {
   position: relative;
   display: block;
   overflow: hidden;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .list_container .list_box a {
@@ -1130,8 +1130,8 @@ a.button.white_border {
 
 @media only screen and (min-width: 768px) {
   .list_container .list_box {
-    width: 49%;
-    margin: 1px;
+    width: 48%;
+    margin: 0 0 10px 10px;
     float: left;
     overflow: hidden;
   }
@@ -1564,15 +1564,15 @@ a.button.white_border {
   padding: 20px;
 }
 
-.contact-icons ul {
+.contact-icons ul.contact_icons_list {
   display: block;
 }
 
-.contact-icons ul li {
+.contact-icons ul.contact_icons_list li {
   display: block;
 }
 
-.contact-icons ul li.email:before {
+.contact-icons ul.contact_icons_list li.email:before {
   content: "\f003";
   font-family: FontAwesome;
   display: inline-block;
@@ -1580,7 +1580,7 @@ a.button.white_border {
   font-size: 18px;
 }
 
-.contact-icons ul li.phone:before {
+.contact-icons ul.contact_icons_list li.phone:before {
   content: "\f10b";
   font-family: FontAwesome;
   display: inline-block;
@@ -1588,7 +1588,7 @@ a.button.white_border {
   font-size: 23px;
 }
 
-.contact-icons ul li.address:before {
+.contact-icons ul.contact_icons_list li.address:before {
   content: "\f041";
   font-family: FontAwesome;
   display: inline-block;
@@ -1653,7 +1653,7 @@ a.button.white_border {
 .contact-form form.conrtol-form .dropdown .dropbtn {
   display: block;
   width: 99%;
-  padding: 5px 17px;
+  padding: 7px 17px;
   margin: 10px auto;
   border: 1px solid #000;
   border-radius: 0;
@@ -1668,7 +1668,7 @@ a.button.white_border {
 .contact-form form.conrtol-form .dropdown .dropbtn .fa.fa-angle-down {
   font-size: 30px;
   float: right;
-  line-height: 25px;
+  line-height: 20px;
 }
 
 .contact-form form.conrtol-form .dropdown .dropdown-content {
@@ -1756,27 +1756,30 @@ a.button.white_border {
   .contact-icons {
     width: 980px;
     margin: 0 auto;
-    position: relative;
-    overflow: hidden;
     padding: 20px 0;
   }
-  .contact-icons ul .email {
-    display: inline-block;
+  .contact-icons ul.contact_icons_list {
+    position: relative;
+  }
+  .contact-icons ul.contact_icons_list .email {
     float: left;
     overflow: hidden;
   }
-  .contact-icons ul .phone {
-    display: inline-block;
+  .contact-icons ul.contact_icons_list .phone {
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
     width: 155px;
   }
-  .contact-icons ul .address {
-    display: inline-block;
+  .contact-icons ul.contact_icons_list .address {
     float: right;
     overflow: hidden;
+  }
+  .contact-icons:after {
+    clear: both;
+    display: block;
+    content: '';
   }
   .contact-form .inner {
     padding-bottom: 40px;
@@ -1822,7 +1825,7 @@ a.button.white_border {
   color: black;
   background-blend-mode: darken;
   word-break: break-all;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 24px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -1841,6 +1844,11 @@ a.button.white_border {
   background: -o-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
   background: -ms-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
   background: linear-gradient(to top, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
+}
+
+.zone-up p {
+  width: 100px;
+  margin: 0 auto;
 }
 
 .zone-middle {
@@ -1892,7 +1900,7 @@ a.button.white_border {
 
 .aromas .inner p {
   font-family: "Open Sans", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 20px;
   font-weight: 300;
   word-break: keep-all;
@@ -1932,7 +1940,7 @@ a.button.white_border {
   .zone-up,
   .zone-middle,
   .zone-down {
-    font-size: 15px;
+    font-size: 13px;
     margin: 15px auto;
     padding: 40px 0;
   }
@@ -1944,7 +1952,7 @@ a.button.white_border {
     -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
   }
   .zone-up p {
-    width: 100px;
+    width: 150px;
     margin: 0 auto;
   }
   .zone-middle {
@@ -1955,7 +1963,7 @@ a.button.white_border {
     -webkit-clip-path: polygon(18% 0%, 82% 0, 100% 100%, 0% 100%);
   }
   .zone-middle p {
-    width: 300px;
+    width: 320px;
     margin: 0 auto;
   }
   .zone-down {
@@ -1979,6 +1987,7 @@ a.button.white_border {
   }
   .aromas .inner p {
     padding: 0 150px;
+    font-size: 15px;
   }
 }
 
