@@ -713,9 +713,8 @@ h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 13px;
-  display: block;
-  text-align: right;
-  padding-top: 35px;
+  float: right;
+  padding-top: 15px;
   margin-right: 30px;
 }
 
@@ -1059,44 +1058,45 @@ a.button.white_border {
 
 /* ------------------------------------------------------------ *	Products-list
 \* ------------------------------------------------------------ */
-.list-container {
+.list_container {
   padding: 0 20px;
   margin: 0 auto;
   text-align: center;
   background: rgba(255, 255, 255, 0.8);
 }
 
-.list-container .list-box {
+.list_container .list_box {
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 2px;
+  margin-bottom: 5px;
 }
 
-.list-container .list-box a {
+.list_container .list_box a {
   width: 100%;
   display: block;
   max-height: 320px;
   height: 100%;
 }
 
-.list-container .list-box a img {
+.list_container .list_box a img {
   width: 100%;
+  min-height: 320px;
 }
 
-.list-container .list-box a span {
+.list_container .list_box a span {
   font-family: "DancingScript";
   font-size: 35px;
   font-weight: 300;
   color: #fff;
   position: absolute;
   z-index: 1;
-  top: 35%;
+  top: 45%;
   left: 10%;
   text-align: left;
 }
 
-.list-container .list-box a span:hover span:after {
+.list_container .list_box a span:hover span:after {
   width: 90%;
   left: 1%;
   content: "";
@@ -1105,37 +1105,37 @@ a.button.white_border {
   border-bottom: 2px solid #fff;
 }
 
-.list-container .overlay {
+.list_container .overlay {
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
-  height: 99%;
+  height: 100%;
   width: 100%;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
   opacity: 0;
-  margin: 2px;
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
 }
 
-.list-container .overlay a.button.white_border.overlay {
+.list_container .overlay a.button.white_border.overlay {
   width: 150px;
   height: 40px;
   text-align: center;
   left: 7%;
-  top: 60%;
+  top: 66%;
 }
 
 @media only screen and (min-width: 768px) {
-  .list-container .list-box {
-    width: 50%;
+  .list_container .list_box {
+    width: 49%;
+    margin: 1px;
     float: left;
     overflow: hidden;
   }
-  .list-container:after {
+  .list_container:after {
     clear: both;
     display: block;
     content: '';
@@ -1143,22 +1143,38 @@ a.button.white_border {
 }
 
 @media only screen and (min-width: 1023px) {
-  .list-container .list-box {
-    width: 25%;
+  .list_container {
+    padding: 0;
   }
-  .list-container .list-box:hover .overlay {
+  .list_container .list_box {
+    width: 25%;
+    margin: 0;
+  }
+  .list_container .list_box a span {
+    top: 25%;
+  }
+  .list_container .list_box:hover .overlay {
     opacity: 1;
   }
-  .list-container .list-box:hover a.button.white_border.overlay {
+  .list_container .list_box:hover a.button.white_border.overlay {
     background: none;
   }
-  .list-container .list-box:hover span:after {
+  .list_container .list_box:hover span:after {
     width: 90%;
     left: 1%;
     content: "";
     position: absolute;
     bottom: -10px;
     border-bottom: 2px solid #fff;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .list_container .list_box a span {
+    top: 35%;
+  }
+  .list_container .list_box:hover .overlay {
+    opacity: 1;
   }
 }
 
@@ -2301,7 +2317,7 @@ ul.user li a {
     text-align: left;
   }
   .blog_submit_form .submit {
-    width: 20%;
+    width: 15%;
     display: block;
     margin-left: 200px;
     font-size: 25px;
