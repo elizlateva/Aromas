@@ -117,7 +117,23 @@ ul.user {
         padding: 10px 0;
         text-indent: 20px;
         color: $black;
-        font: 400 15px "Open Sans", sans-serif;
+        font: 400 13px "Open Sans", sans-serif;
+        &::-webkit-input-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &:-moz-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &::-moz-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &:-ms-input-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
     }
     & .enter_text {
         border: 1px solid $black;
@@ -129,6 +145,22 @@ ul.user {
         color: $black;
         font: 400 15px "Open Sans", sans-serif;
         outline: none;
+        &::-webkit-input-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &:-moz-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &::-moz-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &:-ms-input-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
     }
     & .submit {
         width: 50%;

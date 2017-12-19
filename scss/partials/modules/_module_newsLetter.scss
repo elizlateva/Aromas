@@ -11,11 +11,27 @@
         width: 100%;
         text-indent: 15px;
         color: #898989;
-        font-size: 17px;
+        font-size: 13px;
         font-family: $font-family;
-        font-weight: 300;
+        font-weight: 400;
         margin: 20px 0;
         display: block;
+        &::-webkit-input-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &:-moz-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &::-moz-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
+        &:-ms-input-placeholder {
+            color: $black;
+            font: 400 13px "Open Sans", sans-serif;
+        }
     }
     & .submit_input {
         height: 45px;

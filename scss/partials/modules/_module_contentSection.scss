@@ -4,7 +4,7 @@
 
 .content {
     padding: 0 20px 20px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     overflow: hidden;
     margin-bottom: 100px;
     & h1 {
@@ -26,7 +26,7 @@
     & .image_wrapper {
         width: 100%;
         height: 200px;
-        background: url("../css/images/Fully-White-Office.png") no-repeat;
+        background: url("../css/images/modern-luxury-hotel.png") no-repeat;
         background-size: cover;
         background-position: center center;
     }
@@ -59,7 +59,7 @@
             float: right;
             overflow: hidden;
             height: 300px;
-            background-position: left center;
+            // background-position: center center;
             &:after {
                 clear: both;
                 content: '';
@@ -85,7 +85,7 @@
     .content .text_wrapper .text {
         width: 60%;
     }
-    .content .image_wrapper {
-        background-position: bottom center;
-    }
+    // .content .image_wrapper {
+    //     background-position: bottom center;
+    // }
 }

@@ -181,7 +181,7 @@ input {
 /* ------------------------------------------------------------ *	Base
 \* ------------------------------------------------------------ */
 body {
-  background: url("../css/images/background.png") repeat fixed;
+  background: url("../css/images/dotted_background.png") repeat fixed;
   background-size: cover;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -258,7 +258,7 @@ h2 {
 
 .header .nav-lang ul {
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 10px 0;
 }
 
@@ -277,7 +277,7 @@ h2 {
 
 .header .nav-lang ul li a:hover {
   background-color: #fff;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .header .nav-lang ul li a:hover:after {
@@ -286,7 +286,7 @@ h2 {
 
 .header .phone {
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
   display: block;
   margin-top: -35px;
@@ -325,6 +325,9 @@ h2 {
     top: -70px;
     right: 10px;
   }
+  .header .nav-lang ul li a:hover {
+    background: none;
+  }
   .nav {
     display: block;
   }
@@ -357,7 +360,7 @@ h2 {
 }
 
 .nav ul a:hover {
-  background-color: #dcd9de;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav.active {
@@ -381,6 +384,7 @@ h2 {
 
 .nav ul.sub-list li a {
   padding: 20px 0;
+  text-transform: capitalize;
 }
 
 .nav li.has-sub-list a.down:after {
@@ -410,13 +414,12 @@ h2 {
 .nav li.active .sub-list {
   display: inline-block;
   position: static;
-  text-transform: uppercase;
 }
 
 .nav-trigger {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 33px;
   display: inline-block;
   z-index: 3;
   width: 40px;
@@ -681,28 +684,32 @@ h2 {
 /* ------------------------------------------------------------ *	Intro
 \* ------------------------------------------------------------ */
 .intro {
+  background: url("../css/images/intro-icon.png") left bottom no-repeat, url("../css/images/spraying-perfume.png") center center no-repeat;
+  background-position: left 15% bottom 15%, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  min-height: 650px;
+  height: 100%;
+  width: 100%;
+  margin-top: -120px;
   position: relative;
-  background-image: url("../css/images/intro-icon.png");
-  background-repeat: no-repeat;
-  background-position: left 0% bottom 0%;
-  padding: 50px 0;
-  width: 90%;
-  margin: auto;
+  padding-top: 300px;
 }
 
 .intro p {
   font-size: 20px;
   font-family: "Monotype Corsiva";
-  color: #371648;
+  color: #fff;
   text-align: center;
   line-height: 30px;
   word-break: keep-all;
+  padding: 20px;
 }
 
 .intro span {
   font-size: 20px;
   font-family: "Monotype Corsiva";
-  color: #371648;
+  color: #fff;
   text-align: right;
   display: block;
   margin-right: 30px;
@@ -711,21 +718,35 @@ h2 {
 
 .intro .read_more {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
   float: right;
-  padding-top: 15px;
+  padding: 10px;
   margin-right: 30px;
+  color: #fff;
 }
 
 .intro .read_more:hover {
-  font-weight: 400;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro p {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .intro span {
+    margin-right: 20%;
+    padding: 0;
+  }
+  .intro .read_more {
+    margin-right: 20%;
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 1023px) {
-  .intro {
-    width: 980px;
-  }
   .intro p {
     font-size: 35px;
     line-height: 40px;
@@ -739,11 +760,23 @@ h2 {
   }
 }
 
+@media only screen and (min-width: 1366px) {
+  .intro {
+    min-height: 850px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .intro {
+    min-height: 950px;
+  }
+}
+
 /* ------------------------------------------------------------ *	Content
 \* ------------------------------------------------------------ */
 .content {
   padding: 0 20px 20px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   overflow: hidden;
   margin-bottom: 100px;
 }
@@ -769,7 +802,7 @@ h2 {
 .content .image_wrapper {
   width: 100%;
   height: 200px;
-  background: url("../css/images/Fully-White-Office.png") no-repeat;
+  background: url("../css/images/modern-luxury-hotel.png") no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -802,7 +835,6 @@ h2 {
     float: right;
     overflow: hidden;
     height: 300px;
-    background-position: left center;
   }
   .content .image_wrapper:after {
     clear: both;
@@ -826,9 +858,6 @@ h2 {
 @media only screen and (min-width: 1366px) {
   .content .text_wrapper .text {
     width: 60%;
-  }
-  .content .image_wrapper {
-    background-position: bottom center;
   }
 }
 
@@ -1342,9 +1371,7 @@ a.button.white_border {
 
 .technology .image_wrapper {
   text-align: center;
-  background: #fff;
-  background: url(../css/images/techology.png) no-repeat;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8) url(../css/images/techology.png) no-repeat;
   background-size: contain;
   width: 100%;
   height: 200px;
@@ -2287,7 +2314,27 @@ ul.user li a {
   padding: 10px 0;
   text-indent: 20px;
   color: #000;
-  font: 400 15px "Open Sans", sans-serif;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.blog_submit_form .name_input::-webkit-input-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.blog_submit_form .name_input:-moz-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.blog_submit_form .name_input::-moz-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.blog_submit_form .name_input:-ms-input-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
 }
 
 .blog_submit_form .enter_text {
@@ -2300,6 +2347,26 @@ ul.user li a {
   color: #000;
   font: 400 15px "Open Sans", sans-serif;
   outline: none;
+}
+
+.blog_submit_form .enter_text::-webkit-input-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.blog_submit_form .enter_text:-moz-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.blog_submit_form .enter_text::-moz-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.blog_submit_form .enter_text:-ms-input-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
 }
 
 .blog_submit_form .submit {
@@ -2661,11 +2728,31 @@ ul.user li a {
   width: 100%;
   text-indent: 15px;
   color: #898989;
-  font-size: 17px;
+  font-size: 13px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 20px 0;
   display: block;
+}
+
+.newsletter_form .email_input::-webkit-input-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.newsletter_form .email_input:-moz-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.newsletter_form .email_input::-moz-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
+}
+
+.newsletter_form .email_input:-ms-input-placeholder {
+  color: #000;
+  font: 400 13px "Open Sans", sans-serif;
 }
 
 .newsletter_form .submit_input {

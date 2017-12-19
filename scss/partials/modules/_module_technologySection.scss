@@ -11,9 +11,8 @@
     }
     & .image_wrapper {
         text-align: center;
-        background: $white;
-        background: url(../css/images/techology.png) no-repeat;
-        background-color: $white;
+        // background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.8) url(../css/images/techology.png) no-repeat;
         background-size: contain;
         width: 100%;
         height: 200px;
