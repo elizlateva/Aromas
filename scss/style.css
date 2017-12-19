@@ -943,7 +943,7 @@ a.button.white_border {
   text-align: left;
 }
 
-.products .swiper-container .swiper-slide a span:hover span:after {
+.products .swiper-container .swiper-slide:hover span:after {
   width: 90%;
   left: 1%;
   content: "";
@@ -1125,7 +1125,7 @@ a.button.white_border {
   text-align: left;
 }
 
-.list_container .list_box a span:hover span:after {
+.list_container .list_box:hover span:after {
   width: 90%;
   left: 1%;
   content: "";
@@ -1748,6 +1748,11 @@ a.button.white_border {
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
+}
+
+.contact_form form.conrtol_form .submit:hover {
+  color: #fff;
+  background: #000;
 }
 
 .contact_form form.conrtol_form .show {
@@ -2548,7 +2553,7 @@ ul.user li a {
   margin: auto;
 }
 
-.technology-slider .technology-slider-wrapper .swiper-container .technology_products .picture:hover {
+.technology-slider .technology-slider-wrapper .swiper-container .technology_products:hover {
   transform: scale(1.1);
   -ms-transform: scale(1.1);
   /* IE 9 */
@@ -2580,6 +2585,11 @@ ul.user li a {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   margin-top: 50px;
+}
+
+.submit:hover {
+  background: #000;
+  color: #fff;
 }
 
 @media only screen and (min-width: 768px) {

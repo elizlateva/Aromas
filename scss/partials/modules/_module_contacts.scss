@@ -134,6 +134,10 @@
             font-size: 18px;
             font-family: $font-family;
             font-weight: 400;
+            &:hover {
+                color: $white;
+                background: $black;
+            }
         }
         & .show {
             display: block; /// to inser js for the button
