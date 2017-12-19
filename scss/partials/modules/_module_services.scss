@@ -60,7 +60,29 @@
                         left: 0;
                         margin: auto;
                     }
+                    &:hover {
+                        transform: scale(1.1);
+                        -ms-transform: scale(1.1);
+                        /* IE 9 */
+                        -moz-transform: scale(1.1);
+                        /* Firefox */
+                        -webkit-transform: scale(1.1);
+                        /* Safari and Chrome */
+                        -o-transform: scale(1.1);
+                        /* Opera */
+                    }
                 }
+                // &:hover {
+                //     transform: scale(1.1);
+                //     -ms-transform: scale(1.1);
+                //     /* IE 9 */
+                //     -moz-transform: scale(1.1);
+                //     /* Firefox */
+                //     -webkit-transform: scale(1.1);
+                //     /* Safari and Chrome */
+                //     -o-transform: scale(1.1);
+                //     /* Opera */
+                // }
             }
         }
         & .swiper-button-next {

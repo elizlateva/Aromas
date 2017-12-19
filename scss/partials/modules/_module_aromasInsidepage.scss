@@ -172,9 +172,14 @@
         }
         & .inner {
             padding: 20px 0;
+            width: 100%;
             & p {
-                padding: 0 150px;
+                width: 50%;
+                margin: 0 auto;
                 font-size: $font-size-15;
+            }
+            & button {
+                width: 15%;
             }
         }
     }

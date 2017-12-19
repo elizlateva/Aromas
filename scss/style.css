@@ -2033,10 +2033,15 @@ a.button.white_border {
   }
   .aromas .inner {
     padding: 20px 0;
+    width: 100%;
   }
   .aromas .inner p {
-    padding: 0 150px;
+    width: 50%;
+    margin: 0 auto;
     font-size: 15px;
+  }
+  .aromas .inner button {
+    width: 15%;
   }
 }
 
@@ -2541,6 +2546,18 @@ ul.user li a {
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+.technology-slider .technology-slider-wrapper .swiper-container .technology_products .picture:hover {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -moz-transform: scale(1.1);
+  /* Firefox */
+  -webkit-transform: scale(1.1);
+  /* Safari and Chrome */
+  -o-transform: scale(1.1);
+  /* Opera */
 }
 
 .technology-slider .technology-slider-wrapper .swiper-button-next {
