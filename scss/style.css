@@ -685,7 +685,7 @@ h2 {
 \* ------------------------------------------------------------ */
 .intro {
   background: url("../css/images/intro-icon.png") left bottom no-repeat, url("../css/images/spraying-perfume.png") center center no-repeat;
-  background-position: left 15% bottom 15%, center center;
+  background-position: left 21% bottom 31%, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: auto, cover;
   min-height: 650px;
@@ -693,7 +693,6 @@ h2 {
   width: 100%;
   margin-top: -120px;
   position: relative;
-  padding-top: 300px;
 }
 
 .intro p {
@@ -703,7 +702,13 @@ h2 {
   text-align: center;
   line-height: 30px;
   word-break: keep-all;
-  padding: 20px;
+  position: absolute;
+  top: 32%;
+  width: 80%;
+  width: 80%;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
 .intro span {
@@ -712,18 +717,19 @@ h2 {
   color: #fff;
   text-align: right;
   display: block;
-  margin-right: 30px;
-  margin-top: 15px;
+  position: absolute;
+  top: 57%;
+  right: 6%;
 }
 
 .intro .read_more {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 13px;
-  float: right;
-  padding: 10px;
-  margin-right: 30px;
   color: #fff;
+  position: absolute;
+  top: 62%;
+  right: 5%;
 }
 
 .intro .read_more:hover {
@@ -733,36 +739,50 @@ h2 {
 @media only screen and (min-width: 768px) {
   .intro p {
     width: 60%;
-    margin: 0 auto;
+    top: 32%;
+    right: -11%;
     padding: 0;
   }
   .intro span {
-    margin-right: 20%;
-    padding: 0;
+    top: 47%;
+    right: 15%;
   }
   .intro .read_more {
-    margin-right: 20%;
-    padding: 0;
+    top: 52%;
+    right: 15%;
   }
 }
 
 @media only screen and (min-width: 1023px) {
+  .intro {
+    background-position: left 21% bottom 31%, center center;
+  }
   .intro p {
     font-size: 35px;
     line-height: 40px;
+    top: 30%;
+    right: 0;
   }
   .intro span {
     font-size: 35px;
+    top: 52%;
+    right: 21%;
   }
   .intro .read_more {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
+    top: 60%;
+    right: 21%;
   }
 }
 
 @media only screen and (min-width: 1366px) {
   .intro {
     min-height: 850px;
+  }
+  .intro p {
+    width: 50%;
+    right: -8%;
   }
 }
 
