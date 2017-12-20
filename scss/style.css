@@ -911,7 +911,7 @@ a.button.white_border {
 
 @media only screen and (min-width: 1023px) {
   a.button {
-    width: 15%;
+    width: 12%;
     font-size: 20px;
   }
 }
@@ -1251,7 +1251,7 @@ a.button.white_border {
 
 .brands_list img {
   display: block;
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
 
 .brands_list .brands_text {
@@ -1683,12 +1683,12 @@ a.button.white_border {
   border-bottom: 1px solid #000;
 }
 
-.contact_form form.conrtol_form {
+form.conrtol_form {
   width: 100%;
   margin-top: 20px;
 }
 
-.contact_form form.conrtol_form .form_text {
+form.conrtol_form .form_text {
   display: block;
   height: 200px;
   width: 85%;
@@ -1703,7 +1703,7 @@ a.button.white_border {
   overflow: hidden;
 }
 
-.contact_form form.conrtol_form .form_control {
+form.conrtol_form .form_control {
   display: block;
   width: 85%;
   padding: 8px 20px;
@@ -1715,11 +1715,11 @@ a.button.white_border {
   font-size: 13px;
 }
 
-.contact_form form.conrtol_form .dropdown {
+form.conrtol_form .dropdown {
   position: relative;
 }
 
-.contact_form form.conrtol_form .dropdown .dropbtn {
+form.conrtol_form .dropdown .dropbtn {
   display: block;
   width: 99%;
   padding: 7px 17px;
@@ -1734,30 +1734,71 @@ a.button.white_border {
   font-size: 13px;
 }
 
-.contact_form form.conrtol_form .dropdown .dropbtn .fa.fa-angle-down {
+form.conrtol_form .dropdown .dropbtn .fa.fa-angle-down {
   font-size: 30px;
   float: right;
   line-height: 20px;
 }
 
-.contact_form form.conrtol_form .dropdown .dropdown_content {
+form.conrtol_form .dropdown .dropdown_content.left {
   display: none;
   position: absolute;
   background-color: #fff;
-  min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  min-width: 220px;
+  top: 38px;
+  left: -1px;
 }
 
-.contact_form form.conrtol_form .dropdown .dropdown_content.dropdown_content a {
+form.conrtol_form .dropdown .dropdown_content.left a {
   color: black;
-  padding: 12px 16px;
+  padding: 10px;
   text-decoration: none;
+  display: block;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+form.conrtol_form .dropdown .dropdown_content.left a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+form.conrtol_form .dropdown .dropdown_content.right {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 220px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 38px;
+}
+
+form.conrtol_form .dropdown .dropdown_content.right a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+form.conrtol_form .dropdown .dropdown_content.right a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+form.conrtol_form .dropdown:hover .dropdown_content.left,
+form.conrtol_form .dropdown:hover .dropdown_content.right {
   display: block;
 }
 
-.contact_form form.conrtol_form .submit {
+form.conrtol_form .submit {
   display: block;
   width: 50%;
   padding: 10px 0;
@@ -1765,34 +1806,30 @@ a.button.white_border {
   background: none;
   border: 2px solid #000;
   border-radius: 0;
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
 
-.contact_form form.conrtol_form .submit:hover {
+form.conrtol_form .submit:hover {
   color: #fff;
   background: #000;
 }
 
-.contact_form form.conrtol_form .show {
-  display: block;
-}
-
 @media only screen and (min-width: 412px) {
-  .contact_form form.conrtol_form .dropdown .dropbtn {
+  form.conrtol_form .dropdown .dropbtn {
     width: 97%;
   }
 }
 
 @media only screen and (min-width: 480px) {
-  .contact_form form.conrtol_form .dropdown .dropbtn {
+  form.conrtol_form .dropdown .dropbtn {
     width: 95%;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .contact_form form.conrtol_form .dropdown .dropbtn {
+  form.conrtol_form .dropdown .dropbtn {
     width: 92%;
   }
 }
@@ -1821,28 +1858,32 @@ a.button.white_border {
     display: block;
     content: '';
   }
-  .contact_form form.conrtol_form .form_text {
+  form.conrtol_form .form_text {
     width: 92%;
   }
-  .contact_form form.conrtol_form .form_control {
+  form.conrtol_form .form_control {
     width: 42%;
     display: inline-block;
     margin: 10px 7px 15px;
   }
-  .contact_form form.conrtol_form .dropdown .dropbtn {
+  form.conrtol_form .dropdown .dropbtn {
     width: 48%;
     float: left;
     margin: 10px 7px 25px;
   }
-  .contact_form form.conrtol_form .dropdown_content {
-    display: none;
+  form.conrtol_form .dropdown .dropdown_content.left {
+    min-width: 300px;
+    left: 5px;
+    top: 47px;
   }
-  .contact_form form.conrtol_form .submit {
+  form.conrtol_form .dropdown .dropdown_content.right {
+    min-width: 300px;
+    top: 49px;
+    right: 62px;
+  }
+  form.conrtol_form .submit {
     width: 40%;
     margin-top: 20px;
-  }
-  .contact_form form.conrtol_form .show {
-    display: block;
   }
 }
 
@@ -1864,21 +1905,16 @@ a.button.white_border {
     margin-left: 9px;
     padding-top: 40px;
   }
-  .contact_form .inner form.conrtol_form {
+  form.conrtol_form {
     width: 75%;
     text-align: left;
   }
-  .contact_form .inner form.conrtol_form .form-text {
+  form.conrtol_form .form-text {
     width: 93%;
   }
-  .contact_form .inner form.conrtol_form .dropdown_content {
-    display: none;
-  }
-  .contact_form .inner form.conrtol_form .submit {
+  form.conrtol_form .submit {
     width: 26%;
-  }
-  .contact_form .inner form.conrtol_form .show {
-    display: block;
+    font-size: 18px;
   }
 }
 
@@ -2445,10 +2481,10 @@ ul.user li a {
     text-align: left;
   }
   .blog_submit_form .submit {
-    width: 15%;
+    width: 20%;
     display: block;
     margin-left: 200px;
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 
