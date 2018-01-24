@@ -126,21 +126,20 @@
             <!--/# googleMap2 -->
 
             <div class="contact_form">
-
                 <div class="inner">
-
                     <h2>Изпрати запитване</h2>
-
                     <form class="conrtol_form">
 
-                        <input required="" class="form_control" value="Име" name="first_name" type="text">
-
-                        <input required="" class="form_control" value="Email" name="email" type="email">
-
+                        <div class="form_group">
+                            <input class="form_field" onfocus="this.value=''" value="Име" name="first_name" type="text">
+                        </div>
+                        <!--/.form_group-->
+                        <div class="form_group">
+                            <input class="form_field" onfocus="this.value=''" value="Email" name="email" type="email">
+                        </div>
+                        <!--/.form_group-->
                         <div class="dropdown">
-
                             <button class="dropbtn" value="Избери услуга">Избери услуга<i class="fa fa-angle-down" fa-3x aria-hidden="true"></i>
-
                             <div class="dropdown_content left">
                                 <a href="#">услуга</a>
                                 <a href="#">услуга</a>
@@ -149,28 +148,28 @@
                             <!--/.dropdown_content-->
                         </div>
                         <!--/.dropdown-->
-
                         <div class="dropdown">
-
                             <button class="dropbtn">Избери продукт<i class="fa fa-angle-down" fa-3x aria-hidden="true"></i></button>
-
                             <div class="dropdown_content right">
                                 <a href="#">продукт</a>
                                 <a href="#">продукт</a>
                                 <a href="#">продукт</a>
                             </div>
                             <!--/.dropdown_content-->
-
                         </div>
                         <!--/.dropdown-->
 
-                        <textarea class="form_text" value="Текст" name="message" rows="10"></textarea>
+                        <div class="text_area">
 
+                            <textarea name="message" rows="10" onblur="if (this.value == '') {this.value = 'Текст';}" onfocus="if (this.value == 'Текст') {this.value = '';}">Текст</textarea>
+                        </div>
+                        <!--/.text_area-->
                         <input class="submit" type="submit" value="Изпрати">
 
                     </form>
                     <!--/.control_form-->
                 </div>
+                <!--/div-->
             </div>
             <!--/.contact_form-->
 

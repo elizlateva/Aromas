@@ -17,29 +17,32 @@
         display: block;
         & li {
             display: block;
-            &.email:before {
-                content: "\f003";
-                font-family: FontAwesome;
-                display: inline-block;
-                padding: 10px;
-                font-size: 18px;
-            }
-            &.phone:before {
-                content: "\f10b";
-                font-family: FontAwesome;
-                display: inline-block;
-                padding: 10px;
-                font-size: 23px;
-            }
-            &.address:before {
-                content: "\f041";
-                font-family: FontAwesome;
-                display: inline-block;
-                padding: 10px;
-                font-size: 20px;
-            }
         }
     }
+}
+
+li.email:before {
+    content: "\f003";
+    font-family: FontAwesome;
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+}
+
+li.phone:before {
+    content: "\f10b";
+    font-family: FontAwesome;
+    display: inline-block;
+    padding: 10px;
+    font-size: 23px;
+}
+
+li.address:before {
+    content: "\f041";
+    font-family: FontAwesome;
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
 }
 
 #googleMap2 {
@@ -62,196 +65,194 @@
 form.conrtol_form {
     width: 100%;
     margin-top: 20px;
-    & .form_text {
+}
+
+.form_text {
+    display: block;
+    height: 200px;
+    width: 85%;
+    margin: 10px auto;
+    padding: 8px 20px;
+    border: 1px solid $black;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 13px;
+    color: $black;
+    outline: none;
+    overflow: hidden;
+}
+
+.form_group {
+    display: block;
+    width: 100%;
+    padding: 8px 20px;
+    margin: 10px auto;
+    border: 1px solid $black;
+}
+
+.form_group input {
+    width: 100%;
+    display: block;
+    color: #000;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    border: none;
+    background: none;
+}
+
+.dropdown {
+    position: relative;
+    & .dropbtn {
         display: block;
-        height: 200px;
-        width: 85%;
-        margin: 10px auto;
+        width: 100%;
         padding: 8px 20px;
-        border: 1px solid $black;
-        font-family: $font-family;
-        font-weight: 400;
-        font-size: 13px;
-        color: $black;
-        outline: none;
-        overflow: hidden;
-    }
-    & .form_control {
-        display: block;
-        width: 85%;
-        padding: 8px 20px;
         margin: 10px auto;
-        border: 1px solid $black;
-        color: $black;
-        font-family: $font-family;
-        font-weight: 400;
-        font-size: 13px;
-    }
-    & .dropdown {
-        position: relative;
-        & .dropbtn {
-            display: block;
-            width: 99%;
-            padding: 7px 17px;
-            margin: 10px auto;
-            border: 1px solid #000;
-            border-radius: 0;
-            color: #000;
-            cursor: pointer;
-            text-align: left;
-            font-family: $font-family;
-            font-weight: 400;
-            font-size: 13px;
-            & .fa.fa-angle-down {
-                font-size: 30px;
-                float: right;
-                line-height: 20px;
-            }
-        }
-        & .dropdown_content.left {
-            display: none;
-            position: absolute;
-            background-color: $white;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            min-width: 220px;
-            top: 38px;
-            left: -1px;
-            & a {
-                color: black;
-                padding: 10px;
-                text-decoration: none;
-                display: block;
-                font-size: 13px;
-                font-family: $font-family;
-                font-weight: 300;
-                line-height: 20px;
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.1);
-                }
-            }
-        }
-        & .dropdown_content.right {
-            display: none;
-            position: absolute;
-            background-color: $white;
-            min-width: 220px;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            top: 38px;
-            & a {
-                color: black;
-                padding: 10px;
-                text-decoration: none;
-                display: block;
-                font-size: 13px;
-                font-family: $font-family;
-                font-weight: 300;
-                line-height: 20px;
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.1);
-                }
-            }
-        }
-        &:hover .dropdown_content.left,
-        &:hover .dropdown_content.right {
-            display: block;
-        }
-    }
-    & .submit {
-        display: block;
-        width: 50%;
-        padding: 10px 0;
-        margin: 0 auto;
-        background: none;
-        border: 2px solid #000;
+        border: 1px solid #000;
         border-radius: 0;
-        font-size: 15px;
+        color: #000;
+        cursor: pointer;
+        text-align: left;
         font-family: $font-family;
         font-weight: 400;
-        &:hover {
-            color: $white;
-            background: $black;
+        font-size: 13px;
+        & .fa.fa-angle-down {
+            font-size: 30px;
+            float: right;
+            line-height: 20px;
         }
     }
 }
 
-@media only screen and (min-width: 412px) {
-    form.conrtol_form .dropdown .dropbtn {
-        width: 97%;
+.dropdown_content.left,
+.dropdown_content.right {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 220px;
+    top: 38px;
+    left: -1px;
+    & a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        font-size: 13px;
+        font-family: $font-family;
+        font-weight: 300;
+        line-height: 20px;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
     }
 }
 
-@media #{$smartphone} {
-    form.conrtol_form .dropdown .dropbtn {
-        width: 95%;
-    }
+.dropdown_content.right {
+    left: auto;
 }
 
-@media only screen and (min-width: 600px) {
-    form.conrtol_form .dropdown .dropbtn {
-        width: 92%;
+.dropdown:hover .dropdown_content.left,
+.dropdown:hover .dropdown_content.right {
+    display: block;
+}
+
+.text_area {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 8px 20px;
+    border: 1px solid $black;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 13px;
+    color: $black;
+    overflow: hidden;
+}
+
+.text_area textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 13px;
+    color: $black;
+    overflow: hidden;
+}
+
+.submit {
+    display: block;
+    width: 50%;
+    padding: 10px 0;
+    margin: 0 auto;
+    background: none;
+    border: 2px solid #000;
+    border-radius: 0;
+    font-size: 15px;
+    font-family: $font-family;
+    font-weight: 400;
+    &:hover {
+        color: $white;
+        background: $black;
     }
 }
 
 @media #{$tablet} {
-    .contact_icons {
-        & ul.contact_icons_list {
-            position: relative;
-            & .email {
-                float: left;
-                overflow: hidden;
-            }
-            & .phone {
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: auto;
-                width: 155px;
-            }
-            & .address {
-                float: right;
-                overflow: hidden;
-            }
-        }
+    .contact_icons ul.contact_icons_list {
+        position: relative;
         &:after {
             clear: both;
             display: block;
             content: '';
         }
     }
-    form.conrtol_form {
-        & .form_text {
-            width: 92%;
-        }
-        & .form_control {
-            width: 42%;
-            display: inline-block;
-            margin: 10px 7px 15px;
-        }
-        & .dropdown {
-            & .dropbtn {
-                width: 48%;
-                float: left;
-                margin: 10px 7px 25px;
-            }
-            & .dropdown_content.left {
-                min-width: 300px;
-                left: 5px;
-                top: 47px;
-            }
-            & .dropdown_content.right {
-                min-width: 300px;
-                top: 49px;
-                right: 62px;
-            }
-        }
-        & .submit {
-            width: 40%;
-            margin-top: 20px;
-        }
+    .contact_icons .email {
+        float: left;
+        overflow: hidden;
+    }
+    .contact_icons .phone {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 155px;
+    }
+    .contact_icons .address {
+        float: right;
+        overflow: hidden;
+    }
+    .form_group {
+        width: 49%;
+        display: inline-block;
+        float: left;
+        margin: 10px 3px;
+    }
+    .dropdown .dropbtn {
+        width: 49%;
+        float: left;
+        display: inline-block;
+        margin: 10px 3px;
+    }
+    .dropdown_content.left {
+        min-width: 300px;
+        left: 5px;
+        top: 107px;
+    }
+    .dropdown_content.right {
+        min-width: 300px;
+        top: 107px;
+        right: 62px;
+    }
+    .text_area {
+        width: 99%;
+    }
+    .submit {
+        width: 40%;
+        margin-top: 20px;
     }
 }
 
@@ -270,22 +271,16 @@ form.conrtol_form {
         & .inner {
             padding-bottom: 40px;
             & h2 {
-                text-align: left;
                 font-size: 20px;
-                margin-left: 9px;
-                padding-top: 40px;
             }
         }
     }
     form.conrtol_form {
         width: 75%;
-        text-align: left;
-        & .form-text {
-            width: 93%;
-        }
-        & .submit {
-            width: 26%;
-            font-size: 18px;
-        }
+        margin: 20px auto;
+    }
+    .submit {
+        width: 26%;
+        font-size: 18px;
     }
 }

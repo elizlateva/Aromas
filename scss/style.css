@@ -1641,7 +1641,7 @@ a.button.white_border {
   display: block;
 }
 
-.contact_icons ul.contact_icons_list li.email:before {
+li.email:before {
   content: "\f003";
   font-family: FontAwesome;
   display: inline-block;
@@ -1649,7 +1649,7 @@ a.button.white_border {
   font-size: 18px;
 }
 
-.contact_icons ul.contact_icons_list li.phone:before {
+li.phone:before {
   content: "\f10b";
   font-family: FontAwesome;
   display: inline-block;
@@ -1657,7 +1657,7 @@ a.button.white_border {
   font-size: 23px;
 }
 
-.contact_icons ul.contact_icons_list li.address:before {
+li.address:before {
   content: "\f041";
   font-family: FontAwesome;
   display: inline-block;
@@ -1688,7 +1688,7 @@ form.conrtol_form {
   margin-top: 20px;
 }
 
-form.conrtol_form .form_text {
+.form_text {
   display: block;
   height: 200px;
   width: 85%;
@@ -1703,26 +1703,33 @@ form.conrtol_form .form_text {
   overflow: hidden;
 }
 
-form.conrtol_form .form_control {
+.form_group {
   display: block;
-  width: 85%;
+  width: 100%;
   padding: 8px 20px;
   margin: 10px auto;
   border: 1px solid #000;
+}
+
+.form_group input {
+  width: 100%;
+  display: block;
   color: #000;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 13px;
+  border: none;
+  background: none;
 }
 
-form.conrtol_form .dropdown {
+.dropdown {
   position: relative;
 }
 
-form.conrtol_form .dropdown .dropbtn {
+.dropdown .dropbtn {
   display: block;
-  width: 99%;
-  padding: 7px 17px;
+  width: 100%;
+  padding: 8px 20px;
   margin: 10px auto;
   border: 1px solid #000;
   border-radius: 0;
@@ -1734,13 +1741,14 @@ form.conrtol_form .dropdown .dropbtn {
   font-size: 13px;
 }
 
-form.conrtol_form .dropdown .dropbtn .fa.fa-angle-down {
+.dropdown .dropbtn .fa.fa-angle-down {
   font-size: 30px;
   float: right;
   line-height: 20px;
 }
 
-form.conrtol_form .dropdown .dropdown_content.left {
+.dropdown_content.left,
+.dropdown_content.right {
   display: none;
   position: absolute;
   background-color: #fff;
@@ -1752,7 +1760,8 @@ form.conrtol_form .dropdown .dropdown_content.left {
   left: -1px;
 }
 
-form.conrtol_form .dropdown .dropdown_content.left a {
+.dropdown_content.left a,
+.dropdown_content.right a {
   color: black;
   padding: 10px;
   text-decoration: none;
@@ -1763,42 +1772,46 @@ form.conrtol_form .dropdown .dropdown_content.left a {
   line-height: 20px;
 }
 
-form.conrtol_form .dropdown .dropdown_content.left a:hover {
+.dropdown_content.left a:hover,
+.dropdown_content.right a:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-form.conrtol_form .dropdown .dropdown_content.right {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  min-width: 220px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  top: 38px;
+.dropdown_content.right {
+  left: auto;
 }
 
-form.conrtol_form .dropdown .dropdown_content.right a {
-  color: black;
-  padding: 10px;
-  text-decoration: none;
+.dropdown:hover .dropdown_content.left,
+.dropdown:hover .dropdown_content.right {
   display: block;
-  font-size: 13px;
+}
+
+.text_area {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 8px 20px;
+  border: 1px solid #000;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  line-height: 20px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #000;
+  overflow: hidden;
 }
 
-form.conrtol_form .dropdown .dropdown_content.right a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.text_area textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #000;
+  overflow: hidden;
 }
 
-form.conrtol_form .dropdown:hover .dropdown_content.left,
-form.conrtol_form .dropdown:hover .dropdown_content.right {
-  display: block;
-}
-
-form.conrtol_form .submit {
+.submit {
   display: block;
   width: 50%;
   padding: 10px 0;
@@ -1811,77 +1824,61 @@ form.conrtol_form .submit {
   font-weight: 400;
 }
 
-form.conrtol_form .submit:hover {
+.submit:hover {
   color: #fff;
   background: #000;
-}
-
-@media only screen and (min-width: 412px) {
-  form.conrtol_form .dropdown .dropbtn {
-    width: 97%;
-  }
-}
-
-@media only screen and (min-width: 480px) {
-  form.conrtol_form .dropdown .dropbtn {
-    width: 95%;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  form.conrtol_form .dropdown .dropbtn {
-    width: 92%;
-  }
 }
 
 @media only screen and (min-width: 768px) {
   .contact_icons ul.contact_icons_list {
     position: relative;
   }
-  .contact_icons ul.contact_icons_list .email {
+  .contact_icons ul.contact_icons_list:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+  .contact_icons .email {
     float: left;
     overflow: hidden;
   }
-  .contact_icons ul.contact_icons_list .phone {
+  .contact_icons .phone {
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
     width: 155px;
   }
-  .contact_icons ul.contact_icons_list .address {
+  .contact_icons .address {
     float: right;
     overflow: hidden;
   }
-  .contact_icons:after {
-    clear: both;
-    display: block;
-    content: '';
-  }
-  form.conrtol_form .form_text {
-    width: 92%;
-  }
-  form.conrtol_form .form_control {
-    width: 42%;
+  .form_group {
+    width: 49%;
     display: inline-block;
-    margin: 10px 7px 15px;
-  }
-  form.conrtol_form .dropdown .dropbtn {
-    width: 48%;
     float: left;
-    margin: 10px 7px 25px;
+    margin: 10px 3px;
   }
-  form.conrtol_form .dropdown .dropdown_content.left {
+  .dropdown .dropbtn {
+    width: 49%;
+    float: left;
+    display: inline-block;
+    margin: 10px 3px;
+  }
+  .dropdown_content.left {
     min-width: 300px;
     left: 5px;
-    top: 47px;
+    top: 107px;
   }
-  form.conrtol_form .dropdown .dropdown_content.right {
+  .dropdown_content.right {
     min-width: 300px;
-    top: 49px;
+    top: 107px;
     right: 62px;
   }
-  form.conrtol_form .submit {
+  .text_area {
+    width: 99%;
+  }
+  .submit {
     width: 40%;
     margin-top: 20px;
   }
@@ -1900,19 +1897,13 @@ form.conrtol_form .submit:hover {
     padding-bottom: 40px;
   }
   .contact_form .inner h2 {
-    text-align: left;
     font-size: 20px;
-    margin-left: 9px;
-    padding-top: 40px;
   }
   form.conrtol_form {
     width: 75%;
-    text-align: left;
+    margin: 20px auto;
   }
-  form.conrtol_form .form-text {
-    width: 93%;
-  }
-  form.conrtol_form .submit {
+  .submit {
     width: 26%;
     font-size: 18px;
   }
@@ -2965,6 +2956,4 @@ ul.user li a {
     padding: 0;
   }
 }
- 
-
- /*# sourceMappingURL= style.css.map */
+/*# sourceMappingURL=style.css.map */
