@@ -10,98 +10,194 @@
     right: 0;
     z-index: 22;
     padding: 13px 0;
-    & .nav {
-        text-transform: uppercase;
-        font-weight: 300;
-        color: $black;
-        // color: $white;
-        font-family: $font-family;
-        font-size: $font-size-15;
-        & a {
-            color: $black;
-            // color: $white;
-        }
-    }
-    & .logo {
-        & img {
-            width: 75px;
-            height: 40px;
-        }
-    }
-    & .nav-lang ul {
-        font-size: $font-size-15;
-        font-weight: 300;
-        margin: 10px 0;
-        & li {
-            display: inline-block;
-            &:nth-child(2) {
-                border-left: 1px solid $black;
-                // border-left: 1px solid $white;
-                line-height: 8px;
-            }
-            & a {
-                padding: 4px 0 4px 4px;
-                &:hover {
-                    background-color: $white;
-                    font-weight: 400;
-                }
-                &:hover:after {
-                    border-bottom: 0;
-                }
-            }
-        }
-    }
-    & .phone {
-        font-size: $font-size-15;
-        font-weight: 300;
-        text-align: center;
-        display: block;
-        margin-top: -35px;
-        // color: $white;
-        &:before {
-            content: url("../css/images/phone.png");
-            // content: url("../css/images/phone-white.png");
-            vertical-align: middle;
-            padding-right: 10px;
-            display: inline-block;
-        }
-    }
-    &.scrolled,
-    &.active {
-        background: $white;
+}
+
+
+/*----------- White navigation menu ----------*/
+
+.header.homepage {
+    background: none;
+}
+
+.header.homepage .logo.logo_white {
+    display: block;
+}
+
+.header.homepage .logo.logo_color {
+    display: none;
+}
+
+.header.homepage.scrolled .logo.logo_white,
+.header.homepage.active .logo.logo_white {
+    display: none;
+}
+
+.header.homepage.scrolled .logo.logo_color,
+.header.homepage.active .logo.logo_color {
+    display: block;
+}
+
+.header.homepage .phone {
+    color: $white;
+    &:before {
+        content: url("../css/images/phone-white.png");
     }
 }
 
-@media #{$desktop} {
-    .header {
-        & .logo {
-            & img {
-                width: 121px;
-                height: 59px;
-            }
+.header.homepage.scrolled .phone {
+    color: $black;
+    &:before {
+        content: url("../css/images/phone-black.png");
+    }
+}
+
+.header.homepage.active .phone {
+    color: $black;
+    &:before {
+        content: url("../css/images/phone-black.png");
+    }
+}
+
+.header.homepage .nav a {
+    color: $white;
+}
+
+.header.homepage.scrolled .nav a,
+.header.homepage.active .nav a {
+    color: $black;
+}
+
+.header.homepage .nav-lang ul li:nth-child(2) {
+    border-left: 1px solid $white;
+}
+
+.header.homepage.scrolled .nav-lang ul li:nth-child(2),
+.header.homepage.active .nav-lang ul li:nth-child(2) {
+    border-left: 1px solid $black;
+}
+
+.header.homepage .nav-lang ul li a:hover:after {
+    border-bottom: 0;
+}
+
+.header.homepage.scrolled .nav-lang ul li a:hover:after,
+.header.homepage.active .nav-lang ul li a:hover:after {
+    border-bottom: 0;
+}
+
+.header.homepage .nav-lang ul li a:hover {
+    color: $black
+}
+
+.header.homepage.scrollrd .nav-lang ul li a:hover,
+.header.homepage.active .nav-lang ul li a:hover {
+    font-weight: 400;
+}
+
+
+/*---------end--------*/
+
+.nav {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $black;
+    font-family: $font-family;
+    font-size: $font-size-15;
+    & a {
+        color: $black;
+    }
+}
+
+.logo img {
+    width: 75px;
+    height: 40px;
+}
+
+.nav-lang ul {
+    font-size: $font-size-15;
+    font-weight: 300;
+    margin: 10px 0;
+    & li {
+        display: inline-block;
+        &:nth-child(2) {
+            border-left: 1px solid $black;
+            line-height: 8px;
         }
-        & .phone {
-            font-size: 18px;
-            float: right;
-            margin-right: 80px;
-            margin-top: 0;
-            overflow: hidden;
-            &:after {
-                clear: both;
-                display: block;
-                content: '';
+        & a {
+            padding: 4px 0 4px 4px;
+            &:hover {
+                background-color: $white;
+                font-weight: 400;
             }
-        }
-        & .nav-lang ul {
-            position: absolute;
-            top: -70px;
-            right: 10px;
-            & li a:hover {
-                background: none;
+            &:hover:after {
+                border-bottom: 0;
             }
         }
     }
-    & .nav {
+}
+
+.phone {
+    font-size: $font-size-15;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    margin-top: -35px;
+    color: $black;
+    &:before {
+        content: url("../css/images/phone-black.png");
+        vertical-align: middle;
+        padding-right: 10px;
+        display: inline-block;
+    }
+}
+
+.header.scrolled,
+.header.active {
+    background: $white;
+}
+
+@media #{$desktop} {
+    .logo {
+        & img {
+            width: 121px;
+            height: 59px;
+        }
+    }
+    .header .phone {
+        font-size: 18px;
+        float: right;
+        margin-right: 80px;
+        margin-top: 0;
+        overflow: hidden;
+        &:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+    }
+    .header.homepage .phone {
+        color: $white;
+        margin-top: -56px;
+        &:before {
+            content: url("../css/images/phone-white.png");
+        }
+    }
+    .header.homepage.scrolled .phone {
+        color: $black;
+        margin-top: -56px;
+        &:before {
+            content: url("../css/images/phone-black.png");
+        }
+    }
+    .header .nav-lang ul {
+        position: absolute;
+        top: -70px;
+        right: 10px;
+        & li a:hover {
+            background: none;
+        }
+    }
+    .nav {
         display: block;
     }
 }

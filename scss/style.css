@@ -19,6 +19,11 @@
   src: url("../fonts/Dancing_Script/DancingScript-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Annabelle';
+  src: url("../fonts/Annabelle/annabelle_[allfont.net].ttf") format("truetype");
+}
+
 /* ------------------------------------------------------------ *    Variables
 \* ------------------------------------------------------------ */
 /*  Colors  */
@@ -239,7 +244,91 @@ h2 {
   padding: 13px 0;
 }
 
-.header .nav {
+/*----------- White navigation menu ----------*/
+.header.homepage {
+  background: none;
+}
+
+.header.homepage .logo.logo_white {
+  display: block;
+}
+
+.header.homepage .logo.logo_color {
+  display: none;
+}
+
+.header.homepage.scrolled .logo.logo_white,
+.header.homepage.active .logo.logo_white {
+  display: none;
+}
+
+.header.homepage.scrolled .logo.logo_color,
+.header.homepage.active .logo.logo_color {
+  display: block;
+}
+
+.header.homepage .phone {
+  color: #fff;
+}
+
+.header.homepage .phone:before {
+  content: url("../css/images/phone-white.png");
+}
+
+.header.homepage.scrolled .phone {
+  color: #000;
+}
+
+.header.homepage.scrolled .phone:before {
+  content: url("../css/images/phone-black.png");
+}
+
+.header.homepage.active .phone {
+  color: #000;
+}
+
+.header.homepage.active .phone:before {
+  content: url("../css/images/phone-black.png");
+}
+
+.header.homepage .nav a {
+  color: #fff;
+}
+
+.header.homepage.scrolled .nav a,
+.header.homepage.active .nav a {
+  color: #000;
+}
+
+.header.homepage .nav-lang ul li:nth-child(2) {
+  border-left: 1px solid #fff;
+}
+
+.header.homepage.scrolled .nav-lang ul li:nth-child(2),
+.header.homepage.active .nav-lang ul li:nth-child(2) {
+  border-left: 1px solid #000;
+}
+
+.header.homepage .nav-lang ul li a:hover:after {
+  border-bottom: 0;
+}
+
+.header.homepage.scrolled .nav-lang ul li a:hover:after,
+.header.homepage.active .nav-lang ul li a:hover:after {
+  border-bottom: 0;
+}
+
+.header.homepage .nav-lang ul li a:hover {
+  color: #000;
+}
+
+.header.homepage.scrollrd .nav-lang ul li a:hover,
+.header.homepage.active .nav-lang ul li a:hover {
+  font-weight: 400;
+}
+
+/*---------end--------*/
+.nav {
   text-transform: uppercase;
   font-weight: 300;
   color: #000;
@@ -247,64 +336,66 @@ h2 {
   font-size: 15px;
 }
 
-.header .nav a {
+.nav a {
   color: #000;
 }
 
-.header .logo img {
+.logo img {
   width: 75px;
   height: 40px;
 }
 
-.header .nav-lang ul {
+.nav-lang ul {
   font-size: 15px;
   font-weight: 300;
   margin: 10px 0;
 }
 
-.header .nav-lang ul li {
+.nav-lang ul li {
   display: inline-block;
 }
 
-.header .nav-lang ul li:nth-child(2) {
+.nav-lang ul li:nth-child(2) {
   border-left: 1px solid #000;
   line-height: 8px;
 }
 
-.header .nav-lang ul li a {
+.nav-lang ul li a {
   padding: 4px 0 4px 4px;
 }
 
-.header .nav-lang ul li a:hover {
+.nav-lang ul li a:hover {
   background-color: #fff;
   font-weight: 400;
 }
 
-.header .nav-lang ul li a:hover:after {
+.nav-lang ul li a:hover:after {
   border-bottom: 0;
 }
 
-.header .phone {
+.phone {
   font-size: 15px;
   font-weight: 300;
   text-align: center;
   display: block;
   margin-top: -35px;
+  color: #000;
 }
 
-.header .phone:before {
-  content: url("../css/images/phone.png");
+.phone:before {
+  content: url("../css/images/phone-black.png");
   vertical-align: middle;
   padding-right: 10px;
   display: inline-block;
 }
 
-.header.scrolled, .header.active {
+.header.scrolled,
+.header.active {
   background: #fff;
 }
 
 @media only screen and (min-width: 1023px) {
-  .header .logo img {
+  .logo img {
     width: 121px;
     height: 59px;
   }
@@ -319,6 +410,20 @@ h2 {
     clear: both;
     display: block;
     content: '';
+  }
+  .header.homepage .phone {
+    color: #fff;
+    margin-top: -56px;
+  }
+  .header.homepage .phone:before {
+    content: url("../css/images/phone-white.png");
+  }
+  .header.homepage.scrolled .phone {
+    color: #000;
+    margin-top: -56px;
+  }
+  .header.homepage.scrolled .phone:before {
+    content: url("../css/images/phone-black.png");
   }
   .header .nav-lang ul {
     position: absolute;
@@ -449,6 +554,17 @@ h2 {
   top: 25px;
 }
 
+/*---------white navigation-------*/
+.header.homepage .nav-trigger span {
+  background: #fff;
+}
+
+.header.homepage.active .nav-trigger span,
+.header.homepage.scrolled .nav-trigger span {
+  background: #000;
+}
+
+/*---------end-------*/
 .nav-trigger.active span {
   transition: background .2s, top .2s, left .2s, opacity .2s, -webkit-transform .2s .25s;
   transition: background .2s, top .2s, left .2s, opacity .2s, transform .2s .25s;
@@ -539,6 +655,37 @@ h2 {
   .fa.fa-caret-down {
     display: none;
   }
+  /*---------white navigation-------*/
+  header.homepage .nav ul a:hover:after {
+    border-bottom: 2px solid #fff;
+  }
+  header.homepage.scrolled .nav ul a:hover:after {
+    border-bottom: 2px solid #000;
+  }
+  header.homepage .nav li.has-sub-list a:hover:after {
+    border-bottom: 0;
+  }
+  header.homepage.scrolled .nav li.has-sub-list a:hover:after {
+    border-bottom: 0;
+  }
+  .header.homepage .nav ul.sub-list {
+    background: none;
+  }
+  .header.homepage.scrolled .nav ul.sub-list {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .header.homepage .nav ul.sub-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .header.homepage .nav ul.sub-list li a:hover::after {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: none;
+  }
+  .header.homepage.scrolled .nav ul.sub-list li a:hover:after {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: none;
+  }
+  /*---------end-------*/
 }
 
 /* ------------------------------------------------------------ *	Main
@@ -684,10 +831,10 @@ h2 {
 /* ------------------------------------------------------------ *	Intro
 \* ------------------------------------------------------------ */
 .intro {
-  background: url("../css/images/intro-icon.png") left bottom no-repeat, url("../css/images/spraying-perfume.png") center center no-repeat;
-  background-position: left 21% bottom 31%, center center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, cover;
+  background: url("../css/images/spraying-perfume.png") center center no-repeat;
+  background-position: left 50% center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 650px;
   height: 100%;
   width: 100%;
@@ -695,84 +842,100 @@ h2 {
   position: relative;
 }
 
-.intro p {
-  font-size: 20px;
-  font-family: "Monotype Corsiva";
-  color: #fff;
-  text-align: center;
-  line-height: 30px;
-  word-break: keep-all;
-  position: absolute;
-  top: 32%;
-  width: 80%;
-  width: 80%;
-  margin: auto;
-  left: 0;
-  right: 0;
+.intro_left {
+  margin: 0 auto;
+  width: 300px;
+  padding-top: 280px;
+  margin-bottom: 30px;
 }
 
-.intro span {
-  font-size: 20px;
-  font-family: "Monotype Corsiva";
+.intro_slogan {
+  color: #fff;
+  font-family: 'Annabelle';
+  font-size: 30px;
+  display: block;
+  text-align: center;
+}
+
+.intro_right {
+  width: 300px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.intro_quote {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  line-height: 22px;
+  word-break: keep-all;
+}
+
+.intro_author {
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Open Sans", sans-serif;
   color: #fff;
   text-align: right;
   display: block;
-  position: absolute;
-  top: 57%;
-  right: 6%;
+  margin: 20px 0;
 }
 
-.intro .read_more {
+.read_more {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: #fff;
-  position: absolute;
-  top: 62%;
-  right: 5%;
+  text-align: right;
+  display: block;
+  position: relative;
+  text-align: center;
 }
 
-.intro .read_more:hover {
-  text-decoration: underline;
+.read_more:hover:after {
+  width: 15%;
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: -10px;
+  border-bottom: 2px solid #fff;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
-  .intro p {
-    width: 60%;
-    top: 32%;
-    right: -11%;
-    padding: 0;
+  .intro {
+    background-position: center center;
   }
-  .intro span {
-    top: 47%;
-    right: 15%;
+  .intro_left {
+    float: left;
+    margin-top: 28%;
+    margin-left: 10%;
   }
-  .intro .read_more {
-    top: 52%;
-    right: 15%;
+  .intro_right {
+    width: 290px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
   }
 }
 
 @media only screen and (min-width: 1023px) {
-  .intro {
-    background-position: left 21% bottom 31%, center center;
+  .intro_right {
+    right: 19%;
   }
-  .intro p {
-    font-size: 35px;
-    line-height: 40px;
-    top: 30%;
-    right: 0;
+  .intro_left {
+    width: auto;
+    margin-top: 21%;
+    margin-left: 5%;
   }
-  .intro span {
-    font-size: 35px;
-    top: 52%;
-    right: 21%;
-  }
-  .intro .read_more {
-    font-family: "Open Sans", sans-serif;
-    font-size: 15px;
-    top: 60%;
-    right: 21%;
+  .intro_slogan {
+    font-size: 50px;
   }
 }
 
@@ -780,15 +943,61 @@ h2 {
   .intro {
     min-height: 850px;
   }
-  .intro p {
-    width: 50%;
-    right: -8%;
+  .intro_right {
+    right: 19%;
+    width: 380px;
+  }
+  .intro_quote {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .intro_author,
+  .read_more {
+    font-size: 17px;
+  }
+  .intro_left {
+    margin-top: 26%;
+    margin-left: 7%;
+  }
+  .intro_slogan {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .intro_right {
+    width: 450px;
+  }
+  .intro_quote {
+    font-size: 23px;
+  }
+  .intro_author,
+  .read_more {
+    font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 1920px) {
   .intro {
     min-height: 950px;
+  }
+  .intro_right {
+    right: 19%;
+    width: 500px;
+  }
+  .intro_quote {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .intro_author {
+    font-size: 22px;
+    margin: 40px 0 60px;
+  }
+  .read_more {
+    font-size: 22px;
+  }
+  .intro_slogan {
+    font-size: 70px;
   }
 }
 
@@ -1453,7 +1662,7 @@ a.button.white_border {
     font-size: 26px;
   }
   .technology a.button.white_border {
-    width: 25%;
+    width: 30%;
   }
 }
 
@@ -1932,80 +2141,83 @@ form.conrtol_form {
   font-weight: 300;
 }
 
-.zone_up {
-  padding: 50px 0;
-  width: 44%;
-  clip-path: url("#part1");
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-  background: #c7cfed;
-  background: -moz-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #c7cfed), color-stop(50%, #dde1f4), color-stop(100%, #f7f8fc));
-  background: -webkit-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-  background: -o-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-  background: -ms-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-  background: linear-gradient(to top, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-}
-
-.zone_up p {
-  width: 100px;
-  margin: 0 auto;
-}
-
-.zone_middle {
-  padding: 20px 0;
-  width: 71%;
-  clip-path: url("#part2");
-  clip-path: polygon(20.5% 0%, 79.5% 0, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(19% 0%, 81% 0, 100% 100%, 0% 100%);
-  background: #8197d9;
-  background: -moz-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #8197d9), color-stop(50%, #a0afe2), color-stop(100%, #b8c3e9));
-  background: -webkit-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-  background: -o-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-  background: -ms-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-  background: linear-gradient(to top, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-}
-
-.zone_middle p {
-  width: 150px;
-  margin: 0 auto;
-}
-
-.zone_down {
-  padding: 30px 0;
-  width: 94%;
-  clip-path: polygon(13% 0, 87% 0, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
-  background: #5171cb;
-  background: -moz-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #5171cb), color-stop(100%, #718ad4));
-  background: -webkit-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-  background: -o-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-  background: -ms-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-  background: linear-gradient(to top, #5171cb 0%, #718ad4 100%);
-}
-
-.zone_down p {
-  width: 300px;
-  margin: 0 auto;
-}
-
-.aromas h1 {
-  font-size: 20px;
+/*Support for Clip-path CSS*/
+@supports (-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) {
+  .zone_up {
+    padding: 50px 0;
+    width: 48%;
+    clip-path: url("#part1");
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    background: #c5e1ef;
+    background: -moz-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #c5e1ef), color-stop(50%, #d3e8f2), color-stop(100%, #f0f7fa));
+    background: -webkit-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+    background: -o-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+    background: -ms-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+    background: linear-gradient(to top, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+  }
+  .zone_up p {
+    width: 100px;
+    margin: 0 auto;
+  }
+  .zone_middle {
+    padding: 20px 0;
+    width: 72%;
+    clip-path: url("#part2");
+    clip-path: polygon(16% 0%, 84% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(16% 0%, 84% 0, 100% 100%, 0% 100%);
+    background: #65b2d6;
+    background: -moz-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #65b2d6), color-stop(50%, #7fbfdc), color-stop(100%, #9fcfe5));
+    background: -webkit-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+    background: -o-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+    background: -ms-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+    background: linear-gradient(to top, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+  }
+  .zone_middle p {
+    width: 150px;
+    margin: 0 auto;
+  }
+  .zone_down {
+    padding: 30px 0;
+    width: 95%;
+    clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
+    background: #2995c6;
+    background: -moz-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #2995c6), color-stop(100%, #3d9fcb));
+    background: -webkit-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+    background: -o-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+    background: -ms-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+    background: linear-gradient(to top, #2995c6 0%, #3d9fcb 100%);
+  }
+  .zone_down p {
+    width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .aromas .inner {
   background: rgba(255, 255, 255, 0.8);
+  padding: 0;
+  padding-bottom: 25px;
 }
 
-.aromas .inner p {
+.aromas .inner h1 {
+  background: none;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.aromas .inner .aromas_description {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
   word-break: keep-all;
   text-align: center;
+  padding: 10px;
 }
 
 .aromas .inner button {
@@ -2028,9 +2240,26 @@ form.conrtol_form {
   border: 2px dolid #fff;
 }
 
+.aromas_image {
+  background: url("/css/images/Angle_image.png") no-repeat center;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 250px;
+}
+
+.text_outside_up,
+.text_outside_middle,
+.text_outside_down {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .aromas .inner button {
     width: 30%;
+  }
+  .aromas .inner .aromas_description {
+    padding: 30px;
   }
   .pyramid {
     shape-outside: polygon(310px 0px, 130px 405px, 558px 405px);
@@ -2080,23 +2309,66 @@ form.conrtol_form {
 }
 
 @media only screen and (min-width: 1023px) {
-  .aromas h1 {
-    font-size: 26px;
-  }
   .aromas .inner {
     padding: 20px 0;
     width: 100%;
+    clear: both;
   }
-  .aromas .inner p {
-    width: 50%;
+  .aromas .inner h1 {
+    font-size: 26px;
+  }
+  .aromas .inner .aromas_description {
     margin: 0 auto;
     font-size: 15px;
+    padding: 20px;
+    width: 980px;
+    text-align: left;
   }
-  .aromas .inner button {
-    width: 15%;
+  .text_outside_up {
+    float: left;
+    margin-top: 23%;
+    margin-left: 20%;
+    display: inline-block;
+    text-decoration: underline;
+  }
+  .text_outside_middle {
+    display: inline-block;
+    margin-top: 7%;
+    float: left;
+    text-decoration: underline;
+  }
+  .text_outside_down {
+    display: inline-block;
+    float: left;
+    margin-top: 7%;
+    margin-left: -65px;
+    text-decoration: underline;
+  }
+  .aromas_image {
+    background: url("/css/images/Angle_image.png") no-repeat;
+    display: inline-block;
+    float: left;
+    height: 490px;
+    margin-top: 16%;
+  }
+  .pyramid_center {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    width: 980px;
+  }
+  .pyramid_center:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+  .pyramid {
+    float: left;
+    margin-left: 65px;
   }
 }
 
+/*------- browser support---------*/
 /* ------------------------------------------------------------ *	Text-wrapper
 \* ------------------------------------------------------------ */
 .text_wrapper {
@@ -2720,10 +2992,12 @@ ul.user li a {
 
 .partners .swiper-button-next {
   background: url("../css/images/arrow_next.png") no-repeat;
+  top: 65%;
 }
 
 .partners .swiper-button-prev {
   background: url("../css/images/arrow-prev.png") no-repeat;
+  top: 65%;
 }
 
 @media only screen and (min-width: 1023px) {

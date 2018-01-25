@@ -3,108 +3,175 @@
 \* ------------------------------------------------------------ */
 
 .intro {
-    background: url("../css/images/intro-icon.png") left bottom no-repeat, url("../css/images/spraying-perfume.png") center center no-repeat;
-    background-position: left 21% bottom 31%, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto, cover;
+    background: url("../css/images/spraying-perfume.png") center center no-repeat;
+    background-position: left 50% center;
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 650px;
     height: 100%;
     width: 100%;
     margin-top: -120px;
     position: relative;
-    & p {
-        font-size: 20px;
-        font-family: $font-family-1;
-        color: $white;
-        text-align: center;
-        line-height: 30px;
-        word-break: keep-all;
+}
+
+.intro_left {
+    margin: 0 auto;
+    width: 300px;
+    padding-top: 280px;
+    margin-bottom: 30px;
+}
+
+.intro_slogan {
+    color: $white;
+    font-family: 'Annabelle';
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+
+.intro_right {
+    width: 300px;
+    color: $white;
+    margin: 0 auto;
+}
+
+.intro_quote {
+    font-size: 14px;
+    font-family: $font-family;
+    font-style: italic;
+    color: $white;
+    font-weight: 300;
+    text-align: center;
+    line-height: 22px;
+    word-break: keep-all;
+}
+
+.intro_author {
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: $font-family;
+    color: $white;
+    text-align: right;
+    display: block;
+    margin: 20px 0;
+}
+
+.read_more {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 13px;
+    color: $white;
+    text-align: right;
+    display: block;
+    position: relative;
+    text-align: center;
+    &:hover:after {
+        width: 15%;
+        content: "";
         position: absolute;
-        top: 32%;
-        width: 80%;
-        width: 80%;
-        margin: auto;
+        height: 1px;
+        bottom: -10px;
+        border-bottom: 2px solid $white;
         left: 0;
         right: 0;
-    }
-    & span {
-        font-size: 20px;
-        font-family: $font-family-1;
-        color: $white;
-        text-align: right;
-        display: block;
-        position: absolute;
-        top: 57%;
-        right: 6%;
-    }
-    & .read_more {
-        font-family: $font-family;
-        font-weight: 400;
-        font-size: 13px;
-        color: $white;
-        position: absolute;
-        top: 62%;
-        right: 5%;
-        &:hover {
-            text-decoration: underline;
-        }
+        margin: auto;
     }
 }
 
 @media #{$tablet} {
     .intro {
-        & p {
-            width: 60%;
-            top: 32%;
-            right: -11%;
-            padding: 0;
-        }
-        & span {
-            top: 47%;
-            right: 15%;
-        }
-        & .read_more {
-            top: 52%;
-            right: 15%;
-        }
+        background-position: center center;
+    }
+    .intro_left {
+        float: left;
+        margin-top: 28%;
+        margin-left: 10%;
+    }
+    .intro_right {
+        width: 290px;
+        position: absolute;
+        top: 50%;
+        right: 10%;
     }
 }
 
 @media #{$desktop} {
-    .intro {
-        background-position: left 21% bottom 31%, center center;
-        & p {
-            font-size: 35px;
-            line-height: 40px;
-            top: 30%;
-            right: 0;
-        }
-        & span {
-            font-size: 35px;
-            top: 52%;
-            right: 21%;
-        }
-        & .read_more {
-            font-family: $font-family;
-            font-size: 15px;
-            top: 60%;
-            right: 21%;
-        }
+    .intro_right {
+        right: 19%;
+    }
+    .intro_left {
+        width: auto;
+        margin-top: 21%;
+        margin-left: 5%;
+    }
+    .intro_slogan {
+        font-size: 50px;
     }
 }
 
 @media #{$hd_desktop} {
     .intro {
         min-height: 850px;
-        & p {
-            width: 50%;
-            right: -8%;
-        }
+    }
+    .intro_right {
+        right: 19%;
+        width: 380px;
+    }
+    .intro_quote {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .intro_author,
+    .read_more {
+        font-size: 17px;
+    }
+    .intro_left {
+        margin-top: 26%;
+        margin-left: 7%;
+    }
+    .intro_slogan {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .intro_right {
+        width: 450px;
+    }
+    .intro_quote {
+        font-size: 23px;
+    }
+    .intro_author,
+    .read_more {
+        font-size: 20px;
     }
 }
 
 @media only screen and (min-width: 1920px) {
     .intro {
         min-height: 950px;
+    }
+    .intro_right {
+        right: 19%;
+        width: 500px;
+    }
+    .intro_quote {
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .intro_author {
+        font-size: 22px;
+        margin: 40px 0 60px;
+    }
+    .read_more {
+        font-size: 22px;
+    }
+    // .intro_left {
+    //     margin-top: 26%;
+    //     margin-left: 7%;
+    // }
+    .intro_slogan {
+        font-size: 70px;
     }
 }

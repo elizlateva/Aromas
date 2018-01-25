@@ -23,100 +23,126 @@
     font-weight: 300;
 }
 
-.zone_up {
-    padding: 50px 0;
-    width: 44%;
-    clip-path: url("#part1");
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    background: #c7cfed;
-    background: -moz-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #c7cfed), color-stop(50%, #dde1f4), color-stop(100%, #f7f8fc));
-    background: -webkit-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-    background: -o-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-    background: -ms-linear-gradient(bottom, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-    background: linear-gradient(to top, #c7cfed 0%, #dde1f4 50%, #f7f8fc 100%);
-    & p {
-        width: 100px;
-        margin: 0 auto;
-    }
-}
 
-.zone_middle {
-    padding: 20px 0;
-    width: 71%;
-    clip-path: url("#part2");
-    clip-path: polygon(20.5% 0%, 79.5% 0, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(19% 0%, 81% 0, 100% 100%, 0% 100%);
-    background: #8197d9;
-    background: -moz-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #8197d9), color-stop(50%, #a0afe2), color-stop(100%, #b8c3e9));
-    background: -webkit-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-    background: -o-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-    background: -ms-linear-gradient(bottom, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-    background: linear-gradient(to top, #8197d9 0%, #a0afe2 50%, #b8c3e9 100%);
-    & p {
-        width: 150px;
-        margin: 0 auto;
-    }
-}
+/*Support for Clip-path CSS*/
 
-.zone_down {
-    padding: 30px 0;
-    width: 94%;
-    clip-path: polygon(13% 0, 87% 0, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
-    background: #5171cb;
-    background: -moz-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #5171cb), color-stop(100%, #718ad4));
-    background: -webkit-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-    background: -o-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-    background: -ms-linear-gradient(bottom, #5171cb 0%, #718ad4 100%);
-    background: linear-gradient(to top, #5171cb 0%, #718ad4 100%);
-    & p {
-        width: 300px;
-        margin: 0 auto;
-    }
-}
-
-.aromas {
-    & h1 {
-        font-size: 20px;
-    }
-    & .inner {
-        background: rgba(255, 255, 255, 0.8);
+@supports(-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) {
+    .zone_up {
+        padding: 50px 0;
+        width: 48%;
+        clip-path: url("#part1");
+        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        background: #c5e1ef;
+        background: -moz-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #c5e1ef), color-stop(50%, #d3e8f2), color-stop(100%, #f0f7fa));
+        background: -webkit-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+        background: -o-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+        background: -ms-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+        background: linear-gradient(to top, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
         & p {
-            font-family: $font-family;
-            font-size: 13px;
-            line-height: 20px;
-            font-weight: 300;
-            word-break: keep-all;
-            text-align: center;
-        }
-        & button {
-            border: 2px solid $black;
-            padding: 10px;
-            font-family: $font-family;
-            font-size: 17px;
-            line-height: 20px;
-            font-weight: 400;
-            margin: 20px auto 0;
-            width: 80%;
-            display: block;
-            border-radius: 0;
-            color: $black;
-            &:hover {
-                background: $black;
-                color: $white;
-                border: 2px dolid $white;
-            }
+            width: 100px;
+            margin: 0 auto;
         }
     }
+    .zone_middle {
+        padding: 20px 0;
+        width: 72%;
+        clip-path: url("#part2");
+        clip-path: polygon(16% 0%, 84% 0, 100% 100%, 0% 100%);
+        -webkit-clip-path: polygon(16% 0%, 84% 0, 100% 100%, 0% 100%);
+        background: #65b2d6;
+        background: -moz-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #65b2d6), color-stop(50%, #7fbfdc), color-stop(100%, #9fcfe5));
+        background: -webkit-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+        background: -o-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+        background: -ms-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+        background: linear-gradient(to top, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+        & p {
+            width: 150px;
+            margin: 0 auto;
+        }
+    }
+    .zone_down {
+        padding: 30px 0;
+        width: 95%;
+        clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
+        -webkit-clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
+        background: #2995c6;
+        background: -moz-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #2995c6), color-stop(100%, #3d9fcb));
+        background: -webkit-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+        background: -o-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+        background: -ms-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+        background: linear-gradient(to top, #2995c6 0%, #3d9fcb 100%);
+        & p {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.aromas .inner {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0;
+    padding-bottom: 25px;
+}
+
+.aromas .inner h1 {
+    background: none;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.aromas .inner .aromas_description {
+    font-family: $font-family;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+    word-break: keep-all;
+    text-align: center;
+    padding: 10px;
+}
+
+.aromas .inner button {
+    border: 2px solid $black;
+    padding: 10px;
+    font-family: $font-family;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 20px auto 0;
+    width: 80%;
+    display: block;
+    border-radius: 0;
+    color: $black;
+    &:hover {
+        background: $black;
+        color: $white;
+        border: 2px dolid $white;
+    }
+}
+
+.aromas_image {
+    background: url("/css/images/Angle_image.png") no-repeat center;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 250px;
+}
+
+.text_outside_up,
+.text_outside_middle,
+.text_outside_down {
+    display: none;
 }
 
 @media #{$tablet} {
     .aromas .inner button {
         width: 30%;
+    }
+    .aromas .inner .aromas_description {
+        padding: 30px;
     }
     .pyramid {
         shape-outside: polygon(310px 0px, 130px 405px, 558px 405px);
@@ -166,23 +192,66 @@
 }
 
 @media #{$desktop} {
-    .aromas {
-        & h1 {
-            font-size: $font-size-26;
-        }
-        & .inner {
-            padding: 20px 0;
-            width: 100%;
-            & p {
-                width: 50%;
-                margin: 0 auto;
-                font-size: $font-size-15;
-            }
-            & button {
-                width: 15%;
-            }
+    .aromas .inner {
+        padding: 20px 0;
+        width: 100%;
+        clear: both;
+    }
+    .aromas .inner h1 {
+        font-size: $font-size-26;
+    }
+    .aromas .inner .aromas_description {
+        margin: 0 auto;
+        font-size: $font-size-15;
+        padding: 20px;
+        width: 980px;
+        text-align: left;
+    }
+    .text_outside_up {
+        float: left;
+        margin-top: 23%;
+        margin-left: 20%;
+        display: inline-block;
+        text-decoration: underline;
+    }
+    .text_outside_middle {
+        display: inline-block;
+        margin-top: 7%;
+        float: left;
+        text-decoration: underline;
+    }
+    .text_outside_down {
+        display: inline-block;
+        float: left;
+        margin-top: 7%;
+        margin-left: -65px;
+        text-decoration: underline;
+    }
+    .aromas_image {
+        background: url("/css/images/Angle_image.png") no-repeat;
+        display: inline-block;
+        float: left;
+        height: 490px;
+        margin-top: 16%;
+    }
+    .pyramid_center {
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden;
+        width: 980px;
+        &:after {
+            clear: both;
+            content: '';
+            display: block;
         }
     }
+    .pyramid {
+        float: left;
+        margin-left: 65px;
+    }
+    // .aromas .inner {
+    //     clear: both;
+    // }
 }
 
 // .level-up {
@@ -215,3 +284,7 @@
 //     margin-top: 20px;
 //     margin-bottom: 20px;
 // }
+
+/*------- browser support---------*/
+
+// https: //caniuse.com/#search=clip-path

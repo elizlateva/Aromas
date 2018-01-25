@@ -14,15 +14,16 @@
             }
         }
     }
-    &.active {
-        display: block;
-        transform: translateX(0);
-        height: 100vh;
-        width: 100%;
-        background: $white;
-        margin-top: 22px;
-        text-align: center;
-    }
+}
+
+.nav.active {
+    display: block;
+    transform: translateX(0);
+    height: 100vh;
+    width: 100%;
+    background: $white;
+    margin-top: 22px;
+    text-align: center;
 }
 
 .nav ul.sub-list {
@@ -79,7 +80,6 @@
         display: block;
         width: 100%;
         height: 3px;
-        // background: $white;
         background: $black;
         transition: top .2s .25s, left .2s .25s, opacity .2s .25s, -webkit-transform .2s 0s;
         transition: top .2s .25s, left .2s .25s, opacity .2s .25s, transform .2s 0s;
@@ -96,6 +96,21 @@
     }
 }
 
+
+/*---------white navigation-------*/
+
+.header.homepage .nav-trigger span {
+    background: $white;
+}
+
+.header.homepage.active .nav-trigger span,
+.header.homepage.scrolled .nav-trigger span {
+    background: $black;
+}
+
+
+/*---------end-------*/
+
 .nav-trigger.active span {
     transition: background .2s, top .2s, left .2s, opacity .2s, -webkit-transform .2s .25s;
     transition: background .2s, top .2s, left .2s, opacity .2s, transform .2s .25s;
@@ -106,7 +121,6 @@
 .nav-trigger.active span:nth-child(1) {
     top: 12px;
     background: $black;
-    // background: $white;
 }
 
 .nav-trigger.active span:nth-child(2) {
@@ -149,7 +163,6 @@
                     height: 1px;
                     bottom: 10px;
                     border-bottom: 2px solid $black;
-                    // border-bottom: 2px solid $white;
                 }
             }
         }
@@ -188,4 +201,35 @@
     .fa.fa-caret-down {
         display: none;
     }
+    /*---------white navigation-------*/
+    header.homepage .nav ul a:hover:after {
+        border-bottom: 2px solid $white;
+    }
+    header.homepage.scrolled .nav ul a:hover:after {
+        border-bottom: 2px solid $black;
+    }
+    header.homepage .nav li.has-sub-list a:hover:after {
+        border-bottom: 0;
+    }
+    header.homepage.scrolled .nav li.has-sub-list a:hover:after {
+        border-bottom: 0;
+    }
+    .header.homepage .nav ul.sub-list {
+        background: none;
+    }
+    .header.homepage.scrolled .nav ul.sub-list {
+        background: rgba(255, 255, 255, .8);
+    }
+    .header.homepage .nav ul.sub-list li a:hover {
+        background-color: rgba(255, 255, 255, .2);
+    }
+    .header.homepage .nav ul.sub-list li a:hover::after {
+        background-color: rgba(255, 255, 255, .2);
+        border-bottom: none;
+    }
+    .header.homepage.scrolled .nav ul.sub-list li a:hover:after {
+        background-color: rgba(255, 255, 255, .8);
+        border-bottom: none;
+    }
+    /*---------end-------*/
 }
