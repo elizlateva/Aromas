@@ -2535,14 +2535,14 @@ form.conrtol_form {
   background: transparent;
 }
 
-.blog_article .subtitle {
+.subtitle {
   font-size: 18px;
   line-height: 28px;
   padding: 10px 0;
   font-weight: 400;
 }
 
-.blog_article .blog_image {
+.blog_image {
   display: block;
   width: 100%;
   height: 200px;
@@ -2640,7 +2640,7 @@ ul.user li a {
   padding-bottom: 49px;
 }
 
-.blog_submit_form .name_input {
+.name_input {
   border: 1px solid #000;
   width: 100%;
   padding: 10px 0;
@@ -2649,27 +2649,27 @@ ul.user li a {
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .name_input::-webkit-input-placeholder {
+.name_input::-webkit-input-placeholder {
   color: #000;
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .name_input:-moz-placeholder {
+.name_input::-moz-placeholder {
   color: #000;
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .name_input::-moz-placeholder {
+.name_input::-moz-placeholder {
   color: #000;
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .name_input:-ms-input-placeholder {
+.name_input:-ms-input-placeholder {
   color: #000;
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .enter_text {
+.enter_text {
   border: 1px solid #000;
   width: 100%;
   height: 200px;
@@ -2681,27 +2681,27 @@ ul.user li a {
   outline: none;
 }
 
-.blog_submit_form .enter_text::-webkit-input-placeholder {
+.enter_text::-webkit-input-placeholder {
   color: #000;
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .enter_text:-moz-placeholder {
+.enter_text:-moz-placeholder {
   color: #000;
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .enter_text::-moz-placeholder {
+.enter_text::-moz-placeholder {
   color: #000;
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .enter_text:-ms-input-placeholder {
+.enter_text:-ms-input-placeholder {
   color: #000;
   font: 400 13px "Open Sans", sans-serif;
 }
 
-.blog_submit_form .submit {
+.submit {
   width: 50%;
   padding: 10px 0;
   border: 2px solid #000;
@@ -2716,13 +2716,13 @@ ul.user li a {
   .blog_article h1 {
     font-size: 26px;
   }
-  .blog_article .subtitle {
+  .subtitle {
     text-align: left;
     font-size: 20px;
     line-height: 30px;
     padding: 20px 0;
   }
-  .blog_article .blog_image {
+  .blog_image {
     height: 450px;
   }
   .blog_text p,

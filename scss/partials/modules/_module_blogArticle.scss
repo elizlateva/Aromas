@@ -14,19 +14,21 @@
         font-size: 20px;
         background: transparent;
     }
-    & .subtitle {
-        font-size: 18px;
-        line-height: 28px;
-        padding: 10px 0;
-        font-weight: 400;
-    }
-    & .blog_image {
-        display: block;
-        width: 100%;
-        height: 200px;
-        background: url("../css/images/peony-flower-white-summer.png") no-repeat center top;
-        background-size: cover;
-    }
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 10px 0;
+    font-weight: 400;
+}
+
+.blog_image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: url("../css/images/peony-flower-white-summer.png") no-repeat center top;
+    background-size: cover;
 }
 
 ul.user {
@@ -111,63 +113,74 @@ ul.user {
     width: 100%;
     margin: 20px auto;
     padding-bottom: 49px;
-    & .name_input {
-        border: 1px solid $black;
-        width: 100%;
-        padding: 10px 0;
-        text-indent: 20px;
-        color: $black;
-        font: 400 13px "Open Sans", sans-serif;
-        &::-webkit-input-placeholder {
-            color: $black;
-            font: 400 13px "Open Sans", sans-serif;
-        }
-        &:-moz-placeholder {
-            color: $black;
-            font: 400 13px "Open Sans", sans-serif;
-        }
-        &::-moz-placeholder {
-            color: $black;
-            font: 400 13px "Open Sans", sans-serif;
-        }
-        &:-ms-input-placeholder {
-            color: $black;
-            font: 400 13px "Open Sans", sans-serif;
-        }
-    }
-    & .enter_text {
-        border: 1px solid $black;
-        width: 100%;
-        height: 200px;
-        text-indent: 20px;
-        padding: 20px 0;
-        margin: 20px 0;
-        color: $black;
-        font: 400 15px "Open Sans", sans-serif;
-        outline: none;
-        &::-webkit-input-placeholder {
-            color: $black;
-            font: 400 13px "Open Sans", sans-serif;
-        }
-        &:-moz-placeholder {
-            color: $black;
-            font: 400 13px "Open Sans", sans-serif;
-        }
-        &::-moz-placeholder {
-            color: $black;
-            font: 400 13px "Open Sans", sans-serif;
-        }
-        &:-ms-input-placeholder {
-            color: $black;
-            font: 400 13px "Open Sans", sans-serif;
-        }
-    }
-    & .submit {
-        width: 50%;
-        padding: 10px 0;
-        border: 2px solid $black;
-        font-weight: 400;
-    }
+}
+
+.name_input {
+    border: 1px solid $black;
+    width: 100%;
+    padding: 10px 0;
+    text-indent: 20px;
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.name_input::-webkit-input-placeholder {
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.name_input::-moz-placeholder {
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.name_input::-moz-placeholder {
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.name_input:-ms-input-placeholder {
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.enter_text {
+    border: 1px solid $black;
+    width: 100%;
+    height: 200px;
+    text-indent: 20px;
+    padding: 20px 0;
+    margin: 20px 0;
+    color: $black;
+    font: 400 15px "Open Sans", sans-serif;
+    outline: none;
+}
+
+.enter_text::-webkit-input-placeholder {
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.enter_text:-moz-placeholder {
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.enter_text::-moz-placeholder {
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.enter_text:-ms-input-placeholder {
+    color: $black;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.submit {
+    width: 50%;
+    padding: 10px 0;
+    border: 2px solid $black;
+    font-weight: 400;
 }
 
 @media #{$desktop} {
@@ -177,15 +190,15 @@ ul.user {
         & h1 {
             font-size: 26px;
         }
-        & .subtitle {
-            text-align: left;
-            font-size: 20px;
-            line-height: 30px;
-            padding: 20px 0;
-        }
-        & .blog_image {
-            height: 450px;
-        }
+    }
+    .subtitle {
+        text-align: left;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 20px 0;
+    }
+    .blog_image {
+        height: 450px;
     }
     .blog_text p,
     .blog_comments p {
