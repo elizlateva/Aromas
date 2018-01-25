@@ -215,7 +215,8 @@
         border-bottom: 0;
     }
     .header.homepage .nav ul.sub-list {
-        background: none;
+        background: rgba(0, 0, 0, 0.3);
+        ;
     }
     .header.homepage.scrolled .nav ul.sub-list {
         background: rgba(255, 255, 255, .8);
