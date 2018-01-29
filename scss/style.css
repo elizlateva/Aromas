@@ -2131,21 +2131,18 @@ form.conrtol_form {
 }
 
 .zone_up {
-  width: 0px;
-  height: 0px;
-  border-style: inset;
-  border-width: 0 100px 173.2px 100px;
-  border-color: transparent transparent #007bff transparent;
-  transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
+  border-bottom: 130px solid #d3e8f2;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  height: 0;
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .zone_up p {
   text-align: center;
-  top: 80px;
+  top: 50px;
   left: -47px;
   position: relative;
   width: 93px;
@@ -2154,83 +2151,234 @@ form.conrtol_form {
 }
 
 .zone_middle {
-  border-bottom: 100px solid #007bff;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  border-bottom: 80px solid #7fbfdc;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
   height: 0;
-  width: 300px;
-  border-style: inset;
-  transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
+  width: 224px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
 }
 
 .zone_middle p {
   text-align: center;
   top: 10px;
   position: relative;
-  height: 93px;
-  margin: 0px;
 }
 
 .zone_down {
-  border-bottom: 100px solid #007bff;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  border-bottom: 80px solid #7fbfdc;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
   height: 0;
-  width: 300px;
-  border-style: inset;
-  transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
+  width: 306px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .zone_down p {
   text-align: center;
   top: 10px;
   position: relative;
-  height: 93px;
-  margin: 0px;
+}
+
+.aromas .inner {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0;
+  padding-bottom: 25px;
+}
+
+.aromas .inner h1 {
+  background: none;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.aromas .inner .aromas_description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  word-break: keep-all;
+  text-align: center;
+  padding: 10px;
+}
+
+.aromas .inner button {
+  border: 2px solid #000;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 20px auto 0;
+  width: 80%;
+  display: block;
+  border-radius: 0;
+  color: #000;
+}
+
+.aromas .inner button:hover {
+  background: #000;
+  color: #fff;
+  border: 2px dolid #fff;
+}
+
+.aromas_image {
+  background: url("/css/images/Angle_image.png") no-repeat center;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 250px;
+}
+
+.text_outside_up,
+.text_outside_middle,
+.text_outside_down {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .aromas .inner button {
+    width: 30%;
+  }
+  .aromas .inner .aromas_description {
+    padding: 30px;
+  }
+  .pyramid {
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .aromas .inner {
+    padding: 20px 0;
+    width: 100%;
+    clear: both;
+  }
+  .aromas .inner h1 {
+    font-size: 26px;
+  }
+  .aromas .inner .aromas_description {
+    margin: 0 auto;
+    font-size: 15px;
+    padding: 20px;
+    width: 980px;
+    text-align: left;
+  }
+  .text_outside_up {
+    float: left;
+    margin-top: 23%;
+    margin-left: 18%;
+    display: inline-block;
+    position: relative;
+  }
+  .text_outside_up:after {
+    width: 104%;
+    left: 0;
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -4px;
+    border-bottom: 1px solid #000;
+  }
+  .text_outside_middle {
+    display: inline-block;
+    margin-top: 7%;
+    margin-left: 11px;
+    float: left;
+    position: relative;
+  }
+  .text_outside_middle:after {
+    width: 104%;
+    left: 0;
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -4px;
+    border-bottom: 1px solid #000;
+  }
+  .text_outside_down {
+    display: inline-block;
+    float: left;
+    margin-top: 7%;
+    margin-left: -65px;
+    position: relative;
+  }
+  .text_outside_down:after {
+    width: 101%;
+    left: 0;
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -4px;
+    border-bottom: 1px solid #000;
+  }
+  .aromas_image {
+    background: url("/css/images/Angle_image.png") no-repeat;
+    display: inline-block;
+    float: left;
+    height: 400px;
+    margin-top: 18%;
+    margin-left: 12px;
+  }
+  .pyramid_center {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    width: 980px;
+  }
+  .pyramid_center:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+  .pyramid {
+    float: left;
+    margin-left: 65px;
+  }
+  .zone_up {
+    border-bottom: 200px solid #d3e8f2;
+    border-left: 108px solid transparent;
+    border-right: 108px solid transparent;
+    width: 219px;
+  }
+  .zone_middle {
+    border-bottom: 150px solid #7fbfdc;
+    border-left: 91px solid transparent;
+    border-right: 91px solid transparent;
+    width: 408px;
+  }
+  .zone_down {
+    border-bottom: 150px solid #7fbfdc;
+    border-left: 91px solid transparent;
+    border-right: 91px solid transparent;
+    width: 600px;
+  }
+  .aromas .inner button {
+    width: 20%;
+  }
+  .zone_up p {
+    top: 80px;
+  }
+  .zone_middle p,
+  .zone_down p {
+    top: 40px;
+  }
+  .aromas .inner button {
+    width: 20%;
+  }
+  .zone_up p {
+    top: 80px;
+  }
 }
 
 /*------for IE and Edge-----*/
-.ie .zone_up {
-  border-bottom: 130px solid blue;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  height: 0;
-  width: 0px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.ie .zone_middle {
-  border-bottom: 80px solid green;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  height: 0;
-  width: 222px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-}
-
-.ie .zone_down {
-  border-bottom: 80px solid red;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  height: 0;
-  width: 303px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 /*------- browser support---------*/
 /* ------------------------------------------------------------ *	Text-wrapper
 \* ------------------------------------------------------------ */
