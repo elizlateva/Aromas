@@ -6,7 +6,11 @@ $(document).ready(function() {
         $('.intro').css('height', $(window).height()+'px');
     }
     
-    
+    // var ua = window.navigator.userAgent;
+    // var msie = ua.indexOf("MSIE");
+    // if (msie > 0) {
+    //     $('.pyramid_center').addClass('ie');
+    // }
 
     $('.nav-trigger').click(function(e) {
         $(this).toggleClass('active');

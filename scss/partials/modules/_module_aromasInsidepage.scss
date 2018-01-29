@@ -2,291 +2,361 @@
 	Aromas-inside
 \* ------------------------------------------------------------ */
 
+// .pyramid {
+//     // shape-outside: polygon(310px 0px, 130px 405px, 558px 405px);
+//     // width: 320px;
+//     height: auto;
+//     margin: 0 auto;
+// }
 .pyramid {
-    shape-outside: polygon(310px 0px, 130px 405px, 558px 405px);
-    width: 320px;
-    height: auto;
-    margin: 0 auto;
+    width: 100%;
+}
+.zone_up {
+    width: 0px;
+    height: 0px;
+    border-style: inset;
+    border-width: 0 100px 173.2px 100px;
+    border-color: transparent transparent #007bff transparent;
+    
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
 }
 
-.zone_up,
-.zone_middle,
+.zone_up p {
+    text-align: center;
+    top: 80px;
+    left: -47px;
+    position: relative;
+    width: 93px;
+    height: 93px;
+    margin: 0px;
+}
+
+.zone_middle {
+    border-bottom: 100px solid #007bff;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 300px;;
+    border-style: inset;
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+}
+.zone_middle p{
+    text-align: center;
+    top: 10px;
+    
+    position: relative;
+   
+    height: 93px;
+    margin: 0px;
+}
 .zone_down {
-    margin: 5px auto;
+    border-bottom: 100px solid #007bff;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 300px;;
+    border-style: inset;
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+}
+.zone_down p{
     text-align: center;
-    color: black;
-    background-blend-mode: darken;
-    word-break: break-all;
-    font-size: 10px;
-    line-height: 24px;
-    font-family: $font-family;
-    font-weight: 300;
+    top: 10px;
+    
+    position: relative;
+   
+    height: 93px;
+    margin: 0px;
 }
-
-
-/*Support for Clip-path CSS*/
-
-@supports(-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) {
-    .zone_up {
-        padding: 50px 0;
-        width: 48%;
-        clip-path: url("#part1");
-        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-        -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-        background: #c5e1ef;
-        background: -moz-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #c5e1ef), color-stop(50%, #d3e8f2), color-stop(100%, #f0f7fa));
-        background: -webkit-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
-        background: -o-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
-        background: -ms-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
-        background: linear-gradient(to top, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
-        & p {
-            width: 100px;
-            margin: 0 auto;
-        }
-    }
-    .zone_middle {
-        padding: 20px 0;
-        width: 72%;
-        clip-path: url("#part2");
-        clip-path: polygon(16% 0%, 84% 0, 100% 100%, 0% 100%);
-        -webkit-clip-path: polygon(16% 0%, 84% 0, 100% 100%, 0% 100%);
-        background: #65b2d6;
-        background: -moz-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #65b2d6), color-stop(50%, #7fbfdc), color-stop(100%, #9fcfe5));
-        background: -webkit-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
-        background: -o-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
-        background: -ms-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
-        background: linear-gradient(to top, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
-        & p {
-            width: 150px;
-            margin: 0 auto;
-        }
-    }
-    .zone_down {
-        padding: 30px 0;
-        width: 95%;
-        clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
-        -webkit-clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
-        background: #2995c6;
-        background: -moz-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #2995c6), color-stop(100%, #3d9fcb));
-        background: -webkit-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
-        background: -o-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
-        background: -ms-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
-        background: linear-gradient(to top, #2995c6 0%, #3d9fcb 100%);
-        & p {
-            width: 300px;
-            margin: 0 auto;
-        }
-    }
-}
-
-.aromas .inner {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 0;
-    padding-bottom: 25px;
-}
-
-.aromas .inner h1 {
-    background: none;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-
-.aromas .inner .aromas_description {
-    font-family: $font-family;
-    font-size: 13px;
-    line-height: 20px;
-    font-weight: 300;
-    word-break: keep-all;
-    text-align: center;
-    padding: 10px;
-}
-
-.aromas .inner button {
-    border: 2px solid $black;
-    padding: 10px;
-    font-family: $font-family;
-    font-size: 17px;
-    line-height: 20px;
-    font-weight: 400;
-    margin: 20px auto 0;
-    width: 80%;
-    display: block;
-    border-radius: 0;
-    color: $black;
-    &:hover {
-        background: $black;
-        color: $white;
-        border: 2px dolid $white;
-    }
-}
-
-.aromas_image {
-    background: url("/css/images/Angle_image.png") no-repeat center;
-    display: block;
-    margin: 0 auto;
-    width: 300px;
-    height: 250px;
-}
-
-.text_outside_up,
-.text_outside_middle,
-.text_outside_down {
-    display: none;
-}
-
-@media #{$tablet} {
-    .aromas .inner button {
-        width: 30%;
-    }
-    .aromas .inner .aromas_description {
-        padding: 30px;
-    }
-    .pyramid {
-        shape-outside: polygon(310px 0px, 130px 405px, 558px 405px);
-        width: 600px;
-        height: auto;
-        margin: 0 auto;
-    }
-    .zone_up,
-    .zone_middle,
-    .zone_down {
-        font-size: 13px;
-        margin: 15px auto;
-        padding: 40px 0;
-    }
-    .zone_up {
-        width: 42%;
-        padding: 90px 0;
-        clip-path: url("#part1");
-        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-        -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-        & p {
-            width: 150px;
-            margin: 0 auto;
-        }
-    }
-    .zone_middle {
-        width: 67%;
-        padding: 60px 0;
-        clip-path: url("#part2");
-        clip-path: polygon(17% 0%, 83% 0, 100% 100%, 0% 100%);
-        -webkit-clip-path: polygon(18% 0%, 82% 0, 100% 100%, 0% 100%);
-        & p {
-            width: 320px;
-            margin: 0 auto;
-        }
-    }
-    .zone_down {
-        width: 96%;
-        padding: 60px 0;
-        clip-path: polygon(14% 0, 86% 0, 100% 100%, 0% 100%);
-        -webkit-clip-path: polygon(14% 0, 86% 0, 100% 100%, 0% 100%);
-        & p {
-            width: 500px;
-            margin: 0 auto;
-        }
-    }
-}
-
-@media #{$desktop} {
-    .aromas .inner {
-        padding: 20px 0;
-        width: 100%;
-        clear: both;
-    }
-    .aromas .inner h1 {
-        font-size: $font-size-26;
-    }
-    .aromas .inner .aromas_description {
-        margin: 0 auto;
-        font-size: $font-size-15;
-        padding: 20px;
-        width: 980px;
-        text-align: left;
-    }
-    .text_outside_up {
-        float: left;
-        margin-top: 23%;
-        margin-left: 20%;
-        display: inline-block;
-        text-decoration: underline;
-    }
-    .text_outside_middle {
-        display: inline-block;
-        margin-top: 7%;
-        float: left;
-        text-decoration: underline;
-    }
-    .text_outside_down {
-        display: inline-block;
-        float: left;
-        margin-top: 7%;
-        margin-left: -65px;
-        text-decoration: underline;
-    }
-    .aromas_image {
-        background: url("/css/images/Angle_image.png") no-repeat;
-        display: inline-block;
-        float: left;
-        height: 490px;
-        margin-top: 16%;
-    }
-    .pyramid_center {
-        margin: 0 auto;
-        text-align: center;
-        overflow: hidden;
-        width: 980px;
-        &:after {
-            clear: both;
-            content: '';
-            display: block;
-        }
-    }
-    .pyramid {
-        float: left;
-        margin-left: 65px;
-    }
-    .aromas .inner button {
-        width: 20%;
-    }
-    // .aromas .inner {
-    //     clear: both;
-    // }
-}
-
-// .level-up {
-//     border-bottom: 130px solid blue;
-//     border-left: 70px solid transparent;
-//     border-right: 70px solid transparent;
-//     height: 0;
-//     width: 0px;
-//     margin-right: auto;
-//     margin-left: auto;
+// .zone_up,
+// .zone_middle,
+// .zone_down {
+//     margin: 5px auto;
+//     text-align: center;
+//     color: black;
+//     background-blend-mode: darken;
+//     word-break: break-all;
+//     font-size: 10px;
+//     line-height: 24px;
+//     font-family: $font-family;
+//     font-weight: 300;
 // }
-// .level-middle {
-//     border-bottom: 80px solid green;
-//     border-left: 40px solid transparent;
-//     border-right: 40px solid transparent;
-//     height: 0;
-//     width: 222px;
-//     margin-right: auto;
-//     margin-left: auto;
-//     margin-top: 20px;
+
+
+// /*Support for Clip-path CSS*/
+
+// @supports(-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%)) {
+//     .zone_up {
+//         padding: 50px 0;
+//         width: 48%;
+//         clip-path: url("#part1");
+//         clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+//         -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+//         -o-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+//         -ms-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+//         background: #c5e1ef;
+//         background: -moz-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+//         background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #c5e1ef), color-stop(50%, #d3e8f2), color-stop(100%, #f0f7fa));
+//         background: -webkit-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+//         background: -o-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+//         background: -ms-linear-gradient(bottom, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+//         background: linear-gradient(to top, #c5e1ef 0%, #d3e8f2 50%, #f0f7fa 100%);
+//         & p {
+//             width: 100px;
+//             margin: 0 auto;
+//         }
+//     }
+//     .zone_middle {
+//         padding: 20px 0;
+//         width: 72%;
+//         clip-path: url("#part2");
+//         clip-path: polygon(16% 0%, 84% 0, 100% 100%, 0% 100%);
+//         -webkit-clip-path: polygon(16% 0%, 84% 0, 100% 100%, 0% 100%);
+//         background: #65b2d6;
+//         background: -moz-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+//         background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #65b2d6), color-stop(50%, #7fbfdc), color-stop(100%, #9fcfe5));
+//         background: -webkit-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+//         background: -o-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+//         background: -ms-linear-gradient(bottom, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+//         background: linear-gradient(to top, #65b2d6 0%, #7fbfdc 50%, #9fcfe5 100%);
+//         & p {
+//             width: 150px;
+//             margin: 0 auto;
+//         }
+//     }
+//     .zone_down {
+//         padding: 30px 0;
+//         width: 95%;
+//         clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
+//         -webkit-clip-path: polygon(12.1% 0, 87.9% 0, 100% 100%, 0% 100%);
+//         background: #2995c6;
+//         background: -moz-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+//         background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #2995c6), color-stop(100%, #3d9fcb));
+//         background: -webkit-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+//         background: -o-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+//         background: -ms-linear-gradient(bottom, #2995c6 0%, #3d9fcb 100%);
+//         background: linear-gradient(to top, #2995c6 0%, #3d9fcb 100%);
+//         & p {
+//             width: 300px;
+//             margin: 0 auto;
+//         }
+//     }
 // }
-// .level-down {
-//     border-bottom: 80px solid red;
-//     border-left: 40px solid transparent;
-//     border-right: 40px solid transparent;
-//     height: 0;
-//     width: 303px;
-//     margin-right: auto;
-//     margin-left: auto;
-//     margin-top: 20px;
-//     margin-bottom: 20px;
+
+// .aromas .inner {
+//     background: rgba(255, 255, 255, 0.8);
+//     padding: 0;
+//     padding-bottom: 25px;
 // }
+
+// .aromas .inner h1 {
+//     background: none;
+//     font-size: 20px;
+//     text-transform: capitalize;
+// }
+
+// .aromas .inner .aromas_description {
+//     font-family: $font-family;
+//     font-size: 13px;
+//     line-height: 20px;
+//     font-weight: 300;
+//     word-break: keep-all;
+//     text-align: center;
+//     padding: 10px;
+// }
+
+// .aromas .inner button {
+//     border: 2px solid $black;
+//     padding: 10px;
+//     font-family: $font-family;
+//     font-size: 17px;
+//     line-height: 20px;
+//     font-weight: 400;
+//     margin: 20px auto 0;
+//     width: 80%;
+//     display: block;
+//     border-radius: 0;
+//     color: $black;
+//     &:hover {
+//         background: $black;
+//         color: $white;
+//         border: 2px dolid $white;
+//     }
+// }
+
+// .aromas_image {
+//     background: url("/css/images/Angle_image.png") no-repeat center;
+//     display: block;
+//     margin: 0 auto;
+//     width: 300px;
+//     height: 250px;
+// }
+
+// .text_outside_up,
+// .text_outside_middle,
+// .text_outside_down {
+//     display: none;
+// }
+
+// @media #{$tablet} {
+//     .aromas .inner button {
+//         width: 30%;
+//     }
+//     .aromas .inner .aromas_description {
+//         padding: 30px;
+//     }
+//     .pyramid {
+//         // shape-outside: polygon(310px 0px, 130px 405px, 558px 405px);
+//         width: 600px;
+//         height: auto;
+//         margin: 0 auto;
+//     }
+//     .zone_up,
+//     .zone_middle,
+//     .zone_down {
+//         font-size: 13px;
+//         margin: 15px auto;
+//         padding: 40px 0;
+//     }
+//     .zone_up {
+//         width: 42%;
+//         padding: 90px 0;
+//         clip-path: url("#part1");
+//         clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+//         -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+//         & p {
+//             width: 150px;
+//             margin: 0 auto;
+//         }
+//     }
+//     .zone_middle {
+//         width: 67%;
+//         padding: 60px 0;
+//         clip-path: url("#part2");
+//         clip-path: polygon(18% 0%, 82% 0, 100% 100%, 0% 100%);
+//         -webkit-clip-path: polygon(18% 0%, 82% 0, 100% 100%, 0% 100%);
+//         & p {
+//             width: 320px;
+//             margin: 0 auto;
+//         }
+//     }
+//     .zone_down {
+//         width: 96%;
+//         padding: 60px 0;
+//         clip-path: polygon(14% 0, 86% 0, 100% 100%, 0% 100%);
+//         -webkit-clip-path: polygon(14% 0, 86% 0, 100% 100%, 0% 100%);
+//         & p {
+//             width: 500px;
+//             margin: 0 auto;
+//         }
+//     }
+// }
+
+// @media #{$desktop} {
+//     .aromas .inner {
+//         padding: 20px 0;
+//         width: 100%;
+//         clear: both;
+//     }
+//     .aromas .inner h1 {
+//         font-size: $font-size-26;
+//     }
+//     .aromas .inner .aromas_description {
+//         margin: 0 auto;
+//         font-size: $font-size-15;
+//         padding: 20px;
+//         width: 980px;
+//         text-align: left;
+//     }
+//     .text_outside_up {
+//         float: left;
+//         margin-top: 23%;
+//         margin-left: 20%;
+//         display: inline-block;
+//         text-decoration: underline;
+//     }
+//     .text_outside_middle {
+//         display: inline-block;
+//         margin-top: 7%;
+//         float: left;
+//         text-decoration: underline;
+//     }
+//     .text_outside_down {
+//         display: inline-block;
+//         float: left;
+//         margin-top: 7%;
+//         margin-left: -65px;
+//         text-decoration: underline;
+//     }
+//     .aromas_image {
+//         background: url("/css/images/Angle_image.png") no-repeat;
+//         display: inline-block;
+//         float: left;
+//         height: 490px;
+//         margin-top: 16%;
+//     }
+//     .pyramid_center {
+//         margin: 0 auto;
+//         text-align: center;
+//         overflow: hidden;
+//         width: 980px;
+//         &:after {
+//             clear: both;
+//             content: '';
+//             display: block;
+//         }
+//     }
+//     .pyramid {
+//         float: left;
+//         margin-left: 65px;
+//     }
+//     .aromas .inner button {
+//         width: 20%;
+//     }
+    
+// }
+/*------for IE and Edge-----*/
+.ie .zone_up {
+    border-bottom: 130px solid blue;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    height: 0;
+    width: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.ie .zone_middle {
+    border-bottom: 80px solid green;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    height: 0;
+    width: 222px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+.ie .zone_down {
+    border-bottom: 80px solid red;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    height: 0;
+    width: 303px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 /*------- browser support---------*/
 
