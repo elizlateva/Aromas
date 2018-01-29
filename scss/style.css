@@ -190,6 +190,8 @@ body {
   background-size: cover;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
+  height: 100%;
+  min-height: 100%;
 }
 
 a {
@@ -427,7 +429,7 @@ h2 {
   }
   .header .nav-lang ul {
     position: absolute;
-    top: -70px;
+    top: -68px;
     right: 10px;
   }
   .header .nav-lang ul li a:hover {
@@ -831,8 +833,8 @@ h2 {
 /* ------------------------------------------------------------ *	Intro
 \* ------------------------------------------------------------ */
 .intro {
-  background: url("../css/images/spraying-perfume.png") center center no-repeat;
-  background-position: left 50% center;
+  background: url("../css/images/airlia_home pic.jpg") center center no-repeat;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 650px;
@@ -909,95 +911,99 @@ h2 {
 }
 
 @media only screen and (min-width: 768px) {
-  .intro {
-    background-position: center center;
-  }
   .intro_left {
     float: left;
-    margin-top: 28%;
+    margin-top: 29%;
     margin-left: 10%;
+    width: auto;
+  }
+  .intro_slogan {
+    font-size: 40px;
   }
   .intro_right {
     width: 290px;
     position: absolute;
-    top: 50%;
-    right: 10%;
+    top: 48%;
+    right: 10px;
+  }
+  .intro_quote {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .intro_author {
+    font-size: 16px;
+  }
+  .read_more {
+    font-size: 15px;
   }
 }
 
 @media only screen and (min-width: 1023px) {
   .intro_right {
-    right: 19%;
+    top: 46%;
+    right: 2%;
+    width: 400px;
   }
   .intro_left {
-    width: auto;
-    margin-top: 21%;
-    margin-left: 5%;
+    position: absolute;
+    float: none;
+    margin: 0;
+    top: 50%;
+    left: 2%;
   }
   .intro_slogan {
-    font-size: 50px;
+    font-size: 65px;
+  }
+  .intro_quote {
+    font-size: 25px;
+    line-height: 37px;
+  }
+  .intro_author {
+    font-size: 22px;
+  }
+  .read_more {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .intro_left {
+    left: 5%;
+  }
+  .intro_right {
+    width: 500px;
   }
 }
 
 @media only screen and (min-width: 1366px) {
-  .intro {
-    min-height: 850px;
-  }
   .intro_right {
-    right: 19%;
-    width: 380px;
-  }
-  .intro_quote {
-    font-size: 20px;
-    line-height: 30px;
-  }
-  .intro_author,
-  .read_more {
-    font-size: 17px;
-  }
-  .intro_left {
-    margin-top: 26%;
-    margin-left: 7%;
+    right: 6%;
   }
   .intro_slogan {
-    font-size: 60px;
+    font-size: 70px;
   }
 }
 
-@media only screen and (min-width: 1600px) {
-  .intro_right {
-    width: 450px;
-  }
-  .intro_quote {
-    font-size: 23px;
-  }
-  .intro_author,
-  .read_more {
-    font-size: 20px;
+@media only screen and (min-width: 1440px) {
+  .intro_left {
+    top: 54%;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .intro {
-    min-height: 950px;
+  .intro_left {
+    top: 60%;
   }
   .intro_right {
-    right: 19%;
-    width: 500px;
+    right: 10%;
+    top: 50%;
+    width: 580px;
   }
   .intro_quote {
-    font-size: 25px;
-    line-height: 40px;
+    line-height: 44px;
   }
   .intro_author {
-    font-size: 22px;
     margin: 40px 0 60px;
-  }
-  .read_more {
-    font-size: 22px;
-  }
-  .intro_slogan {
-    font-size: 70px;
   }
 }
 
@@ -3156,7 +3162,7 @@ ul.user li a {
 }
 
 .footer_menu li {
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .footer_menu li a {
@@ -3164,6 +3170,7 @@ ul.user li a {
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
+  line-height: 20px;
 }
 
 .footer_menu li a:hover {

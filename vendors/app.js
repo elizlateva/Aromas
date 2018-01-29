@@ -3,7 +3,10 @@ $(document).ready(function() {
         skrollr.init({
             forceHeight: false
         });
+        $('.intro').css('height', $(window).height()+'px');
     }
+    
+    
 
     $('.nav-trigger').click(function(e) {
         $(this).toggleClass('active');
