@@ -2151,7 +2151,7 @@ form.conrtol_form {
 }
 
 .zone_middle {
-  border-bottom: 80px solid #7fbfdc;
+  border-bottom: 80px solid #95cae2;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   height: 0;
@@ -2168,7 +2168,7 @@ form.conrtol_form {
 }
 
 .zone_down {
-  border-bottom: 80px solid #7fbfdc;
+  border-bottom: 80px solid #2f98c7;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   height: 0;
@@ -2323,8 +2323,8 @@ form.conrtol_form {
     background: url("/css/images/Angle_image.png") no-repeat;
     display: inline-block;
     float: left;
-    height: 400px;
-    margin-top: 18%;
+    height: 450px;
+    margin-top: 13%;
     margin-left: 12px;
   }
   .pyramid_center {
@@ -2349,13 +2349,13 @@ form.conrtol_form {
     width: 219px;
   }
   .zone_middle {
-    border-bottom: 150px solid #7fbfdc;
+    border-bottom: 150px solid #95cae2;
     border-left: 91px solid transparent;
     border-right: 91px solid transparent;
     width: 408px;
   }
   .zone_down {
-    border-bottom: 150px solid #7fbfdc;
+    border-bottom: 150px solid #2f98c7;
     border-left: 91px solid transparent;
     border-right: 91px solid transparent;
     width: 600px;
