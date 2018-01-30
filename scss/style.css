@@ -246,6 +246,10 @@ h2 {
   padding: 13px 0;
 }
 
+.header .inner {
+  padding: 30px 20px;
+}
+
 /*----------- White navigation menu ----------*/
 .header.homepage {
   background: none;
@@ -269,27 +273,27 @@ h2 {
   display: block;
 }
 
-.header.homepage .phone {
+.header.homepage .phone_numbers a {
   color: #fff;
 }
 
-.header.homepage .phone:before {
+.header.homepage .phone_numbers a.phone:before {
   content: url("../css/images/phone-white.png");
 }
 
-.header.homepage.scrolled .phone {
+.header.homepage.scrolled .phone_numbers a {
   color: #000;
 }
 
-.header.homepage.scrolled .phone:before {
+.header.homepage.scrolled .phone_numbers a.phone:before {
   content: url("../css/images/phone-black.png");
 }
 
-.header.homepage.active .phone {
+.header.homepage.active .phone_numbers a {
   color: #000;
 }
 
-.header.homepage.active .phone:before {
+.header.homepage.active .phone_numbers a.phone:before {
   content: url("../css/images/phone-black.png");
 }
 
@@ -375,20 +379,24 @@ h2 {
   border-bottom: 0;
 }
 
-.phone {
+.phone_numbers {
   font-size: 15px;
   font-weight: 300;
   text-align: center;
   display: block;
-  margin-top: -35px;
+  margin-top: -65px;
   color: #000;
 }
 
-.phone:before {
+.phone_numbers .phone:before {
   content: url("../css/images/phone-black.png");
   vertical-align: middle;
   padding-right: 10px;
   display: inline-block;
+}
+
+.phone_numbers a {
+  margin: 0 3px;
 }
 
 .header.scrolled,
@@ -397,34 +405,38 @@ h2 {
 }
 
 @media only screen and (min-width: 1023px) {
+  .header .inner {
+    padding: 0;
+  }
   .logo img {
     width: 121px;
     height: 59px;
   }
-  .header .phone {
+  .phone_numbers {
     font-size: 18px;
+    line-height: 21px;
     float: right;
+    margin-top: 1px;
     margin-right: 80px;
-    margin-top: 0;
     overflow: hidden;
   }
-  .header .phone:after {
+  .phone_numbers:after {
     clear: both;
     display: block;
     content: '';
   }
-  .header.homepage .phone {
+  .header.homepage .phone_numbers {
     color: #fff;
     margin-top: -56px;
   }
-  .header.homepage .phone:before {
+  .header.homepage .phone_numbers .phone:before {
     content: url("../css/images/phone-white.png");
   }
-  .header.homepage.scrolled .phone {
+  .header.homepage.scrolled .phone_numbers {
     color: #000;
     margin-top: -56px;
   }
-  .header.homepage.scrolled .phone:before {
+  .header.homepage.scrolled .phone_numbers .phone:before {
     content: url("../css/images/phone-black.png");
   }
   .header .nav-lang ul {
@@ -476,7 +488,7 @@ h2 {
   height: 100vh;
   width: 100%;
   background: #fff;
-  margin-top: 22px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -526,7 +538,7 @@ h2 {
 .nav-trigger {
   position: absolute;
   right: 20px;
-  top: 33px;
+  top: 50px;
   display: inline-block;
   z-index: 3;
   width: 40px;
@@ -948,7 +960,7 @@ h2 {
     position: absolute;
     float: none;
     margin: 0;
-    top: 50%;
+    top: 45%;
     left: 2%;
   }
   .intro_slogan {
@@ -981,12 +993,6 @@ h2 {
   }
   .intro_slogan {
     font-size: 70px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .intro_left {
-    top: 54%;
   }
 }
 

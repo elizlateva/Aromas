@@ -12,7 +12,9 @@
     padding: 13px 0;
 }
 
-
+.header .inner{
+    padding: 30px 20px;
+}
 /*----------- White navigation menu ----------*/
 
 .header.homepage {
@@ -37,23 +39,23 @@
     display: block;
 }
 
-.header.homepage .phone {
+.header.homepage .phone_numbers a{
     color: $white;
-    &:before {
+    &.phone:before {
         content: url("../css/images/phone-white.png");
     }
 }
 
-.header.homepage.scrolled .phone {
+.header.homepage.scrolled .phone_numbers a{
     color: $black;
-    &:before {
+    &.phone:before {
         content: url("../css/images/phone-black.png");
     }
 }
 
-.header.homepage.active .phone {
+.header.homepage.active .phone_numbers a {
     color: $black;
-    &:before {
+    &.phone:before {
         content: url("../css/images/phone-black.png");
     }
 }
@@ -136,19 +138,22 @@
     }
 }
 
-.phone {
+.phone_numbers {
     font-size: $font-size-15;
     font-weight: 300;
     text-align: center;
     display: block;
-    margin-top: -35px;
+    margin-top: -65px;
     color: $black;
-    &:before {
+    & .phone:before {
         content: url("../css/images/phone-black.png");
         vertical-align: middle;
         padding-right: 10px;
         display: inline-block;
     }
+}
+.phone_numbers a{
+    margin: 0 3px;
 }
 
 .header.scrolled,
@@ -157,17 +162,21 @@
 }
 
 @media #{$desktop} {
+    .header .inner{
+        padding: 0;
+    }
     .logo {
         & img {
             width: 121px;
             height: 59px;
         }
     }
-    .header .phone {
+    .phone_numbers {
         font-size: 18px;
+        line-height: 21px;
         float: right;
+        margin-top: 1px;
         margin-right: 80px;
-        margin-top: 0;
         overflow: hidden;
         &:after {
             clear: both;
@@ -175,17 +184,17 @@
             content: '';
         }
     }
-    .header.homepage .phone {
+    .header.homepage .phone_numbers {
         color: $white;
         margin-top: -56px;
-        &:before {
+        & .phone:before {
             content: url("../css/images/phone-white.png");
         }
     }
-    .header.homepage.scrolled .phone {
+    .header.homepage.scrolled .phone_numbers {
         color: $black;
         margin-top: -56px;
-        &:before {
+        & .phone:before {
             content: url("../css/images/phone-black.png");
         }
     }

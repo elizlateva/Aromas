@@ -121,7 +121,7 @@
         position: absolute;
         float: none;
         margin: 0;
-        top: 50%;
+        top: 45%;
         left: 2%;
     }
     .intro_slogan {
@@ -158,11 +158,11 @@
     }
 }
 
-@media only screen and (min-width: 1440px) {
-    .intro_left {
-        top: 54%;
-    }
-}
+// @media only screen and (min-width: 1440px) {
+//     .intro_left {
+//         top: 54%;
+//     }
+// }
 
 @media only screen and (min-width: 1920px) {
     .intro_left {
